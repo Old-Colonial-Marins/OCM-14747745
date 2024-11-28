@@ -157,8 +157,8 @@
     impactEffect: BulletImpactEffect
     damage:
       types:
-        Heat: 5
-        Structural: 7
+        Heat: 25
+        Structural: 45
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
   - type: TimedDespawn
