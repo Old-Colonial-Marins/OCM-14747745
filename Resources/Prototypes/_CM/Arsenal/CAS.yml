@@ -72,13 +72,15 @@
     - state: red
   - type: Appearance
   - type: ClusterGrenade
-    fillPrototype: ArtyGrenade
-    maxGrenadesCount: 5
-    delay: 6
+    fillPrototype: ArtyGrenadebombard
+    baseTriggerDelay: 4
+    maxGrenadesCount: 3
     distance: 5
   - type: ContainerContainer
     containers:
-      cluster-flash: !type:Container
+      cluster-payload: !type:Container
+  - type: OnUseTimerTrigger
+    delay: 6.0
   - type: PointLight
     color: Red
     castShadows: false
@@ -96,6 +98,33 @@
         enabled: true
   - type: EmitSoundOnUse
     sound: /Audio/Announcements/bloblarm.ogg
+
+- type: entity
+  id: ArtyGrenadebombard
+  name: разрывная Кассета
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: OnUseTimerTrigger
+    delay: 0.019
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: CASBombExplosion
+    maxIntensity: 15
+    intensitySlope: 2
+    totalIntensity: 700 # about a ~6 tile radius
+    canCreateVacuum: false
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 20
 
 - type: entity
   id: ArtyGrenade
@@ -290,7 +319,7 @@
 - type: entity
   parent: BaseItem
   id: MarineCASNapalm
-  name: Напалмавая Бомба
+  name: Напалмовая бомба
   suffix: MarinesGear
   components:
   - type: Sprite
