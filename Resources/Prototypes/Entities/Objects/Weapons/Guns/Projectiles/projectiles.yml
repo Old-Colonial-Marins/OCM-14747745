@@ -763,6 +763,23 @@
     maxIntensity: 10
 
 - type: entity
+  id: BulletGrenadeFragCMTURRET
+  name: frag grenade
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 60 # about a ~6 tile radius
+    intensitySlope: 1
+    maxIntensity: 10
+
+- type: entity
   id: BulletGrenadeEMP
   name: EMP rocket
   parent: BaseBulletTrigger
@@ -808,7 +825,7 @@
     - type: Projectile
       damage:
         types:
-          Caustic: 5
+          Caustic: 30
     - type: Sprite
       sprite: Objects/Weapons/Guns/Projectiles/xeno_toxic.rsi
       layers:

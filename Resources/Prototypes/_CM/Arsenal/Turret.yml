@@ -45,7 +45,26 @@
         - Opaque
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifle
-    capacity: 350
+    capacity: 500
+
+- type: entity
+  parent: WeaponTurretMarine
+  name: гранатометная турель
+  id: WeaponGrenadeTurretMarine
+  components:
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      maxAngle: 50
+      minAngle: 5
+    - type: BallisticAmmoProvider
+      proto: GrenadeFragCMTurret
+      capacity: 100
+    - type: Sprite
+      sprite: _CM/TGMSArsenal/Textures/turrets.rsi
 
 - type: entity
   parent: WeaponTurretMarine
@@ -165,3 +184,157 @@
   - type: Tag
     tags:
     - FlameTurret
+
+#oldcolonialmarinsstart
+
+- type: constructionGraph
+  id: MarineGrenadeGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponGrenadeTurretMarine
+          steps:
+            - tag: TurretGren
+              name: folding grenade turret
+              icon:
+                sprite: _CM/TGMSArsenal/Textures/turrets2.rsi
+                state: syndie_stun
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponGrenadeTurretMarine
+      entity: WeaponGrenadeTurretMarine
+
+- type: construction
+  name: "- folding turret Grenade"
+  id: MarineGrenadeTurretConstruction
+  graph: MarineGrenadeGraph
+  startNode: start
+  targetNode: weaponGrenadeTurretMarine
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: _CM/TGMSArsenal/Textures/turrets2.rsi
+    state: syndie_stun
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MarineMineGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponMineMarine
+          steps:
+            - tag: MinaCM
+              name: folding mine
+              icon:
+                sprite: Objects/Misc/landmine.rsi
+                state: landmine
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponMineMarine
+      entity: LandMineExplosiveCM
+
+- type: construction
+  name: "- folding mine"
+  id: MarineMineConstruction
+  graph: MarineMineGraph
+  startNode: start
+  targetNode: weaponMineMarine
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: Objects/Misc/landmine.rsi
+    state: landmine
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: entity
+  name: ящик с лазерной турелью
+  suffix: Marine, Turret
+  id: ToolboxTurretMarineLaser
+  description: A toolbox with turret.
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - TurretLaz
+
+- type: constructionGraph
+  id: MarineTurretGraphLaz
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponTurretMarinezaler
+          steps:
+            - tag: TurretLaz
+              name: folding laz turret
+              icon:
+                sprite: _CM/TGMSArsenal/Textures/laser.rsi
+                state: onestar
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponTurretMarinezaler
+      entity: weaponTurretMarinezalerCM
+
+- type: construction
+  name: "- folding turret"
+  id: MarineTurretConstructionLaz
+  graph: MarineTurretGraphLaz
+  startNode: start
+  targetNode: weaponTurretMarinezaler
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: _CM/TGMSArsenal/Textures/laser.rsi
+    state: onestar
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: entity
+  name: ящик с гранатометной турелью
+  suffix: Marine, Turret
+  id: ToolboxTurretMarineGrenade
+  description: A toolbox with turret.
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - TurretGren
+
+- type: entity
+  name: набор для создания мины
+  suffix: Marine, мина
+  id: ToolboxMinaCM
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - MinaCM

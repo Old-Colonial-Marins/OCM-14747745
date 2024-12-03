@@ -62,6 +62,23 @@
         entities:
         - ToolboxFlameTurretMarine
         - ToolboxFlameTurretMarine
+      - name: Ящик гранатометных турелей(1x турель)
+        cost: 25000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxTurretMarineGrenade
+      - name: Набор для создания мин(2x мины)
+        cost: 30000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxMinaCM
+        - ToolboxMinaCM
+      - name: Ящик лазерных турелей(2x турель)
+        cost: 25000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxTurretMarineLaser
+        - ToolboxTurretMarineLaser
       - name: Ящик проводов(LV x30, MV x40, HV x40)
         cost: 3000
         crate: CrateEngineering
@@ -125,7 +142,7 @@
         entities:
           - CMMortarGrenadeCartridgeIllumination
           - CMMortarGrenadeCartridgeIllumination
-      - name: Ящик гранат(5x granade)
+      - name: Ящик гранат(4x granade)
         cost: 5000
         crate: CrateWeaponSecure
         entities:
@@ -133,7 +150,22 @@
         - ExGrenade
         - ExGrenade
         - ExGrenade
-        - ExGrenade
+      - name: Ящик осколочных гранат(4x granade)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+        - GrenadeShrapnelCM
+        - GrenadeShrapnelCM
+        - GrenadeShrapnelCM
+        - GrenadeShrapnelCM
+      - name: Ящик зажигательных гранат(4x granade)
+        cost: 5000
+        crate: CrateWeaponSecure
+        entities:
+        - GrenadeIncendiaryCM
+        - GrenadeIncendiaryCM
+        - GrenadeIncendiaryCM
+        - GrenadeIncendiaryCM
       - name: Ящик C4(4x C4)
         cost: 5000
         crate: CrateEngineeringSecure

@@ -40,3 +40,173 @@
   - type: CartridgeAmmo
     proto: BulletGrenadeFragMarine
     deleteOnSpawn: true
+
+#OldColonialMarinsStart
+
+- type: entity
+  parent: GrenadeBase
+  id: GrenadeIncendiaryCM
+  name: Зажигательная граната
+  description: Guaranteed to light up the mood.
+  components:
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/pyrogrenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: ClusterGrenade
+    fillPrototype: PelletClusterIncendiaryCM
+    maxGrenadesCount: 60
+    grenadeType: enum.GrenadeType.Shoot
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 2
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Item
+    size: Normal
+
+- type: entity
+  id: PelletClusterIncendiaryCM
+  name: pellet (ball, incendiary)
+  noSpawn: true
+  parent: BaseBulletIncendiary
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot-flare
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Blunt: 3
+        Heat: 25
+  - type: IgniteOnCollide
+    fireStacks: 1
+    count: 10
+  - type: TimedDespawn
+    lifetime: 1
+
+- type: entity
+  parent: GrenadeBase
+  id: GrenadeShrapnelCM
+  name: Осколочная граната
+  description: Releases a deadly spray of shrapnel that causes severe bleeding.
+  components:
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/shrapnelgrenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: ClusterGrenade
+    fillPrototype: PelletClusterLethalCM
+    maxGrenadesCount: 60
+    grenadeType: enum.GrenadeType.Shoot
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 2
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Item
+    size: Normal
+
+- type: entity
+  id: PelletClusterLethalCM
+  name: pellet (ball, Lethal)
+  noSpawn: true
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Piercing: 150
+  - type: TimedDespawn
+    lifetime: 1
+
+- type: entity
+  id: BaseLandMineCM
+  abstract: true
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Pullable
+  - type: MovedByPressure
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Sprite
+    drawdepth: Items
+    sprite: Objects/Misc/landmine.rsi
+    state: landmine
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: LandMine
+    sound:
+        path: /Audio/Effects/beep_landmine.ogg
+        params:
+            maxDistance: 10
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    stepOn: true
+
+- type: entity
+  name: разрывная мина
+  parent: BaseLandMineCM
+  id: LandMineExplosiveCM
+  components:
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DefaultCMMine
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 60 # about a ~4 tile radius
+    canCreateVacuum: false
+  - type: Construction
+    graph: MarineMineGraph
+    node: MarineMine
