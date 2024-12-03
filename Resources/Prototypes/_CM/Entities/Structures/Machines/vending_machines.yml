@@ -152,8 +152,17 @@
       - id: MacheteMarine
         amount: 4
       - id: SmokeGrenade
-        amount: 8
-
+        amount: 16
+    - name: Лазеры
+      entries:
+      - id: WeaponTerraMachinegunCM
+        amount: 2
+      - id: WeaponTerraSniperCM
+        amount: 2
+      - id: WeaponTerraShotgunCM
+        amount: 2
+      - id: MagazineBatteryCM
+        amount: 12
 
 - type: entity
   parent: ColMarTechBase
