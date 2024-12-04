@@ -89,26 +89,25 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
+            - Cartridge10x24mm
+  - type: MotionDetector
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ProximityBeeperVisuals.Enabled:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
-  - type: ProximityBeeper
-    component: HTN
-    beepSound:
-      path: "/Audio/_CM/TGMSArsenal/Audio/AlienLocate.ogg"
-      params:
-        maxdistance: 1
-        volume: -8
+      enum.MotionDetectorLayer.Setting:
+        switch:
+          Short: { state: detector_short_switch }
+          Long: { state: detector_long_switch }
+      enum.MotionDetectorLayer.Number:
+        number:
+          -1: { visible: false }
+          0: { state: detector_on_0, visible: true }
+          1: { state: detector_on_1, visible: true }
+          2: { state: detector_on_2, visible: true }
+          3: { state: detector_on_3, visible: true }
+          4: { state: detector_on_4, visible: true }
+          5: { state: detector_on_5, visible: true }
+          6: { state: detector_on_6, visible: true }
+          7: { state: detector_on_7, visible: true }
+          8: { state: detector_on_8, visible: true }
+          9: { state: detector_on_9, visible: true }
