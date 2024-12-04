@@ -50,6 +50,7 @@
         350: 0.80
         400: 0.75
         450: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT2
@@ -111,6 +112,7 @@
         280: 0.80
         320: 0.75
         360: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT2
@@ -184,6 +186,7 @@
         350: 0.80
         400: 0.75
         450: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT2
@@ -233,6 +236,8 @@
     - type: XenoDegradation
       prototype: MobWarriorXeno
       timeUsage: 30
+    - type: MotionDetectorTracked
+
     - type: SlowOnDamage
       speedModifierThresholds:
         400: 0.9

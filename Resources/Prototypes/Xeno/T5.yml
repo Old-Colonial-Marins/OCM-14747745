@@ -85,3 +85,4 @@
         3500: 0.80
         4000: 0.75
         4500: 0.70
+    - type: MotionDetectorTracked

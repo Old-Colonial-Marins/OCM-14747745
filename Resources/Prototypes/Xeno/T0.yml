@@ -94,6 +94,10 @@
         Male: XenoLarva
         Female: XenoLarva
         Unsexed: XenoLarva
+    - type: ClothingSpeedModifier
+      walkModifier: 0.65
+      sprintModifier: 0.65
+    - type: MotionDetectorTracked
 
 - type: entity
   id: ActionFaceHuggerJump
@@ -170,6 +174,7 @@
         Male: XenoLarva
         Female: XenoLarva
         Unsexed: XenoLarva
+    - type: MotionDetectorTracked
 
 - type: entity
   id: MobEggedLarvaXeno

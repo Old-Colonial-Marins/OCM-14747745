@@ -47,6 +47,7 @@
         280: 0.80
         320: 0.75
         360: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT1
@@ -109,6 +110,7 @@
         210: 0.80
         240: 0.75
         270: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT1
@@ -172,6 +174,7 @@
         280: 0.80
         320: 0.75
         360: 0.70
+    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT1
@@ -220,3 +223,4 @@
         420: 0.80
         480: 0.75
         540: 0.70
+    - type: MotionDetectorTracked

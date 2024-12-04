@@ -181,6 +181,10 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepMedium
+    - type: XenoVision
+      color: "#FFFFFF"
+    - type: CMXenoRemoveStatusIcon
+    - type: MotionDetectorTracked
 
 - type: entity
   id: ActionXenoAcid
@@ -225,6 +229,7 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: BarestepHard
+    - type: MotionDetectorTracked
 
 - type: entity
   abstract: true
@@ -265,6 +270,8 @@
       - ArtyGrenade # CM14 CAS crenade
       - MobRavagerXeno # XENOS Ravager and king are not pullable
       - MobKingXeno # XENOS Ravager and king are not pullable
+    - type: MotionDetectorTracked
+
 - type: entity
   abstract: true
   parent: MobXenoBase
@@ -304,7 +311,7 @@
       - ArtyGrenade # CM14 CAS crenade
       - MobRavagerXeno # XENOS Ravager and king are not pullable
       - MobKingXeno # XENOS Ravager and king are not pullable
-
+    - type: MotionDetectorTracked
 
 - type: entity
   abstract: true
@@ -345,6 +352,8 @@
       - ArtyGrenade # CM14 CAS crenade
       - MobRavagerXeno # XENOS Ravager and king are not pullable
       - MobKingXeno # XENOS Ravager and king are not pullable
+    - type: MotionDetectorTracked
+
 
 - type: entity
   abstract: true
@@ -388,6 +397,7 @@
       - ArtyGrenade # CM14 CAS crenade
       - MobRavagerXeno # XENOS Ravager and king are not pullable
       - MobKingXeno # XENOS Ravager and king are not pullable
+    - type: MotionDetectorTracked
 
 - type: entity
   abstract: true
@@ -431,6 +441,7 @@
       - ArtyGrenade # CM14 CAS crenade
       - MobRavagerXeno # XENOS Ravager and king are not pullable
       - MobKingXeno # XENOS Ravager and king are not pullable
+    - type: MotionDetectorTracked
 
 - type: entity
   id: MobXenoPassiveEvades
