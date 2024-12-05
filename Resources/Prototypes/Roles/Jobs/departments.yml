@@ -115,4 +115,10 @@
     - Quinn
     - Runi
     - King
+
+- type: department
+  id: Planetallow
+  description: Другие
+  color: "#120a8f"
+  roles:
     - SurvivalMarine
