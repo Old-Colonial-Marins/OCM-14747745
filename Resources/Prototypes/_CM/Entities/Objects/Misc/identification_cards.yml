@@ -253,7 +253,7 @@
   - type: IdCard
     jobIcon: JobIconSurvivalMarine
   - type: PresetIdCard
-    job: AlfaMarine
+    job: SurvivalMarine
 
 - type: entity
   parent: IDCardMarine
