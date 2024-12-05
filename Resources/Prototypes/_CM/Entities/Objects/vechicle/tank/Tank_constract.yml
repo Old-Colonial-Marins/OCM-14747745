@@ -489,6 +489,19 @@
     walkModifier: 0.001
     sprintModifier: 0.001
   - type: HeldSpeedModifier
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.2,-1.9,1.2,1.9"
+        density: 1000
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
 
 - type: constructionGraph
   id: Tank

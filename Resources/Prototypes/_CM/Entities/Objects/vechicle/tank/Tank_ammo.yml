@@ -88,7 +88,7 @@
   id: BaseMechEquipmentTank
   abstract: true
   components:
-  - type: MechEquipment
+#  - type: MechEquipment
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -107,8 +107,8 @@
   parent: BaseMechEquipmentTank
   abstract: true
   components:
-  - type: Item
-    size: Ginormous
+#  - type: Item
+#    size: Ginormous
   - type: Gun
     fireRate: 2
     selectedMode: SemiAuto
@@ -118,7 +118,7 @@
     maxCharge: 30
     startingCharge: 30
   - type: Appearance
-  - type: MechEquipment
+#  - type: MechEquipment
     canbeused: False
   - type: MechGun
   - type: Tag
@@ -142,7 +142,10 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/_CM/Vehicle/cannon_fire2.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
     proto: TankcartageFugas
     fireCost: 10
     zeroVisible: true
@@ -165,7 +168,10 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/_CM/Vehicle/cannon_fire2.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
     proto: TankcartageAP
     fireCost: 10
     zeroVisible: true
@@ -188,8 +194,11 @@
       - FullAuto
     soundGunshot:
       path: /Audio/_CM/Vehicle/gun_hpr.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: CM_RedHeavyLaser
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeLightRifle
     fireCost: 5
     zeroVisible: true
   - type: Appearance
@@ -214,7 +223,10 @@
       - SemiAuto
     soundGunshot:
       path: /Audio/_CM/Vehicle/smokelauncher_fire.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: ContainerContainer
+    containers:
+        ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
     proto: GrenadeBlastMarine
     fireCost: 10
     zeroVisible: true

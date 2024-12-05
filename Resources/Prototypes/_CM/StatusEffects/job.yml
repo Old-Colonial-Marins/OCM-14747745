@@ -8,6 +8,13 @@
 
 - type: statusIcon
   parent: JobIcon
+  id: JobIconSurvivalMarine
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Visitor
+
+- type: statusIcon
+  parent: JobIcon
   id: JobIconDeltaMarine
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi

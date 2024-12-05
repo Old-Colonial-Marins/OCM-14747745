@@ -90,6 +90,11 @@
   - SquadAlpha
 
 - type: accessGroup
+  id: Survival
+  tags:
+  - Maintenance
+
+- type: accessGroup
   id: SquadBravo
   tags:
   - Maintenance

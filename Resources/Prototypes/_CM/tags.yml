@@ -36,3 +36,39 @@
 
 - type: Tag
   id:  TankMainTurret
+
+- type: Tag
+  id:  TankTrans
+
+- type: Tag
+  id:  TankMainGunCannon
+
+- type: Tag
+  id:  TankGrenadeLaun
+
+- type: Tag
+  id:  Tanktreen
+
+- type: Tag
+  id:  TankcableEnter
+
+- type: Tag
+  id:  TankASO
+
+- type: Tag
+  id:  Tankprotect
+
+- type: Tag
+  id:  TankammoCon
+
+- type: Tag
+  id:  TankAmmoSupport
+
+- type: Tag
+  id:  TankAmmoMain
+
+- type: Tag
+  id:  TankSupportTurret
+
+- type: Tag
+  id:  Tankengine
