@@ -3,19 +3,12 @@
   name: Выживший
   description: Небольшие остатки выживших на планете
   playTimeTracker: JobSurvivalMarine
-  startingGear: SurvivalMarineGear
+  startingGear: RMCGearSurvivor
   icon: "JobIconSurvivalMarine"
   supervisors: job-supervisors-commander
   canBeAntag: false
   accessGroups:
     - Survival
-
-- type: startingGear
-  id: SurvivalMarineGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitAlpha_mar
-    id: ARiflemanIDCard
-    pocket1: EmergencyMedipen
 
 - type: startingGear
   id: RMCGearSurvivor
