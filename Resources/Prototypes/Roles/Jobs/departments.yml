@@ -118,6 +118,7 @@
 
 - type: department
   id: Planetallow
+  description: ...
   name: Выжившие
   color: "#120a8f"
   roles:
