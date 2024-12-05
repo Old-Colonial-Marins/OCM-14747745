@@ -20,7 +20,7 @@
 - type: startingGear
   id: RMCGearSurvivor
   equipment:
-    jumpsuit: ClothingUniformJumpsuitDesert_mar
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
     back: ClothingBackpackMilitarySatchel
     shoes: ClothingShoesBootsMarine
     id: SurvivalIDCard
