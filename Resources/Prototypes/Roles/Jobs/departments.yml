@@ -118,7 +118,7 @@
 
 - type: department
   id: Planetallow
-  description: Другие
+  name: Выжившие
   color: "#120a8f"
   roles:
     - SurvivalMarine
