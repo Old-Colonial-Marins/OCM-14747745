@@ -29,7 +29,7 @@
   suffix: Job Spawn
   description: A RMC14 job spawner. Used for roundstart and late joins.
   components:
-  - type: MarineSpawn
+  - type: SurvivalSpawn
   - type: SpawnPoint
     spawn_type: Job
   - type: Sprite
@@ -40,7 +40,7 @@
   id: CMSpawnPointSurvivor
   name: survivor spawn point
   components:
-  - type: MarineSpawn
+  - type: SurvivalSpawn
   - type: SpawnPoint
     job_id: SurvivalMarine
   - type: Sprite
