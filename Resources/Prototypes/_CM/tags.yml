@@ -30,3 +30,9 @@
 
 - type: Tag
   id: EnergyMagazineCM
+
+- type: Tag
+  id: TankEKF
+
+- type: Tag
+  id:  TankMainTurret
