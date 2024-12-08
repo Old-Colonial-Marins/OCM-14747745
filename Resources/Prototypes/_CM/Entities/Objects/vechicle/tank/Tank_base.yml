@@ -40,8 +40,8 @@
     joinSystem: true
   - type: DoAfter
   - type: Repairable
-    fuelCost: 35
-    doAfterDelay: 15
+    fuelCost: 55
+    doAfterDelay: 35
   - type: UserInterface
     interfaces:
       enum.MechUiKey.Key:
@@ -119,6 +119,17 @@
           path: /Audio/Effects/Vehicle/vehiclestartup.ogg
           params:
             volume: 3
+  - type: DamageVisuals
+    thresholds: [8, 16, 25]
+    damageDivisor: 2
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _CM/vehicle/tank/tank_damage_overlay.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 6000
 
 - type: entity
   id: VehicleTank
@@ -140,7 +151,7 @@
     baseState: base
     openState: base
     brokenState: broken
-    mechToPilotDamageMultiplier: 0.75
+    mechToPilotDamageMultiplier: 0
     pilotWhitelist:
       components:
         - HumanoidAppearance
@@ -159,8 +170,8 @@
   - type: ContainerFill
     containers:
       mech-battery-slot:
-      - PowerCellHigh
+      - PowerCellHighTank
       mech-equipment-container:
-      - MechEquipmentGrabber
-      - MechEquipmentGrabber
-      - MechEquipmentGrabber
+      - MechWeaponScattershot
+      - MechWeaponFireDart
+      - MechWeaponUltra
