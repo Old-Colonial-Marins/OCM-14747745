@@ -1,0 +1,165 @@
+- type: entity
+  id: BaseVehicleTank
+#  save: false
+  abstract: true
+  components:
+  - type: MobMover
+  - type: Mech
+  - type: AmbientSound
+    sound: "/Audio/Effects/Vehicle/vehicleengineidle.ogg"
+    range: 20
+    volume: -5
+    enabled: true
+  - type: MechAir
+  - type: AirFilter
+    # everything except oxygen and nitrogen
+    gases:
+    - CarbonDioxide
+    - Plasma
+    - Tritium
+    - WaterVapor
+    - Ammonia
+    - NitrousOxide
+    - Frezon
+    #- Helium3 TODO: fusion
+    # remove everything except oxygen to maintain oxygen ratio
+    overflowGases:
+    - Nitrogen
+    - CarbonDioxide
+    - Plasma
+    - Tritium
+    - WaterVapor
+    - Ammonia
+    - NitrousOxide
+    - Frezon
+    #- Helium3 TODO: fusion
+  - type: AirIntake
+  # for intake and filter to work
+  - type: AtmosDevice
+    requireAnchored: false
+    joinSystem: true
+  - type: DoAfter
+  - type: Repairable
+    fuelCost: 35
+    doAfterDelay: 15
+  - type: UserInterface
+    interfaces:
+      enum.MechUiKey.Key:
+        type: MechBoundUserInterface
+  - type: Puller
+    needsHands: false
+  - type: InputMover
+  - type: InteractionOutline
+  - type: MovementSpeedModifier
+#    weightlessModifier: 0
+#    acceleration: 2
+#    friction: 2
+#    frictionNoInput: 6
+    baseWalkSpeed: 1
+    baseSprintSpeed: 2.5
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+  - type: Physics
+    bodyType: KinematicController
+  - type: Clickable
+  - type: WiresPanel
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-3.4,-3.4,5.0,5.0"
+        density: 100
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+#  - type: Vehicle
+#    southOver: true
+#    northOver: true
+#    northOverride: -0.1
+#    southOverride: 0.1
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 6.5
+    softness: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: ContainerContainer
+    containers:
+      mech-pilot-slot: !type:ContainerSlot
+      mech-equipment-container: !type:Container
+      mech-battery-slot: !type:ContainerSlot
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: GuideHelp
+    guides:
+    - Robotics
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+            - VehicleKey
+            - VehicleKeyCargoCrane
+        insertSound:
+          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+          params:
+            volume: 3
+
+- type: entity
+  id: VehicleTank
+  parent: BaseVehicleTank
+  name: T-65C "Победа" Heavy tank
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _CM/vehicle/tank/real_tank.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: base
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: Mech
+    baseState: base
+    openState: base
+    brokenState: broken
+    mechToPilotDamageMultiplier: 0.75
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    EquipmentWhitelist:
+      components:
+        - MechEquipmentGrabber
+#  - type: MovementSpeedModifier
+#    baseWalkSpeed: 2.25
+#    baseSprintSpeed: 3.6
+
+- type: entity
+  id: VehicleTankBattery
+  parent: VehicleTank
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+      mech-equipment-container:
+      - MechEquipmentGrabber
+      - MechEquipmentGrabber
+      - MechEquipmentGrabber
