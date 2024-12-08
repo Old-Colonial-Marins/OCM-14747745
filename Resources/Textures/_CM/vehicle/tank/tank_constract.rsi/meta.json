@@ -3,24 +3,81 @@
   "license": null,
   "copyright": null,
   "size": {
-    "x": 112,
-    "y": 144
+    "x": 64,
+    "y": 64
   },
   "states": [
     {
-      "name": "1"
+      "name": "truck",
+      "directions": 4
     },
     {
-      "name": "2"
+      "name": "truck_damaged",
+      "directions": 4
     },
     {
-      "name": "3"
+      "name": "truck_snow",
+      "directions": 4
     },
     {
-      "name": "4"
+      "name": "truck_cargo",
+      "directions": 4
     },
     {
-      "name": "5"
+      "name": "truck_cargo_snow",
+      "directions": 4
+    },
+    {
+      "name": "van",
+      "directions": 4
+    },
+    {
+      "name": "van_wrecked",
+      "directions": 4
+    },
+    {
+      "name": "crane",
+      "directions": 4
+    },
+    {
+      "name": "crane_snow",
+      "directions": 4
+    },
+    {
+      "name": "crane_cargo",
+      "directions": 4
+    },
+    {
+      "name": "crane_damaged",
+      "directions": 4
+    },
+    {
+      "name": "crane_wrecked",
+      "directions": 4
+    },
+    {
+      "name": "crawler",
+      "directions": 4
+    },
+    {
+      "name": "crawler_crate_b",
+      "directions": 4
+    },
+    {
+      "name": "crawler_crate_r",
+      "directions": 4
+    },
+    {
+      "name": "crawler_fuel",
+      "directions": 4
+    },
+    {
+      "name": "crawler_crate_g",
+      "directions": 4
+    },
+    {
+      "name": "crawler_cargo",
+      "directions": 4
     }
   ]
 }
