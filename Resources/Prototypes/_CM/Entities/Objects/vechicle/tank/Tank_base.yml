@@ -70,7 +70,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-3.4,-3.4,5.0,5.0"
+          bounds: "-2.0,-2.0,2.0,2.0"
         density: 100
         mask:
         - LargeMobMask
@@ -84,7 +84,7 @@
 #    southOverride: 0.1
   - type: UnpoweredFlashlight
   - type: PointLight
-    enabled: false
+    enabled: true
     radius: 6.5
     softness: 2
     mask: /Textures/Effects/LightMasks/cone.png
@@ -136,6 +136,7 @@
     footstepSoundCollection:
       path: /Audio/_CM/Vehicle/tank_driving.ogg
   - type: Mech
+    maxEquipmentAmount: 4
     baseState: base
     openState: base
     brokenState: broken
