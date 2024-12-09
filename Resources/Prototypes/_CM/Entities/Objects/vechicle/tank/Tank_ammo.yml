@@ -119,7 +119,7 @@
     startingCharge: 30
   - type: Appearance
   - type: MechEquipment
-    canbeused: True
+    canbeused: False
   - type: MechGun
   - type: Tag
     tags:

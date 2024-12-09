@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 80,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "tank_turret_main"
+    },
+    {
+      "name": "turret"
+    }
+  ]
+}
