@@ -100,6 +100,7 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: FriendlyFire
   - type: NpcFactionMember
     factions:
     - NanoTrasen
