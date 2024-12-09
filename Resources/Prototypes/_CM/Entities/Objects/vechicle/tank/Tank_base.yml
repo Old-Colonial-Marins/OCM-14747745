@@ -130,6 +130,10 @@
     - trigger:
         !type:DamageTrigger
         damage: 6000
+#      behaviors:
+#        - !type:SpawnEntitiesBehavior
+#          spawn:
+#          - 
 
 - type: entity
   id: VehicleTank
@@ -172,6 +176,7 @@
       mech-battery-slot:
       - PowerCellHighTank
       mech-equipment-container:
-      - MechWeaponScattershot
-      - MechWeaponFireDart
-      - MechWeaponUltra
+      - TankWeaponMainCannon
+      - TankWeaponMainCannonAP
+      - TankWeaponSupportMachineGun
+      - TankWeaponSupportGrenadeLau
