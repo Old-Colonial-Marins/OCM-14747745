@@ -130,10 +130,10 @@
     - trigger:
         !type:DamageTrigger
         damage: 6000
-      behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawn:
-          - WallSolid
+#      behaviors:
+#        - !type:SpawnEntitiesBehavior
+#          spawn:
+#          - WallSolid
 
 - type: entity
   id: VehicleTank
