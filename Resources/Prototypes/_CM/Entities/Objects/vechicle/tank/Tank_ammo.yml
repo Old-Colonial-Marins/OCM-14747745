@@ -81,6 +81,18 @@
   abstract: true
   components:
   - type: MechEquipment
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+        - !type:ExplodeBehavior
 
 - type: entity
   id: BaseTankWeaponBattery

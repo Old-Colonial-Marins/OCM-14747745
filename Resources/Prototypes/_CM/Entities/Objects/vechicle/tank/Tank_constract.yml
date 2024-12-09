@@ -1,0 +1,9 @@
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank
+  name: Гусеничная лента
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+      state: treads
