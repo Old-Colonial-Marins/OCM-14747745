@@ -34,8 +34,15 @@
         - !type:ExplodeBehavior
 
 - type: entity
+  parent: BaseItem
+  id: BaseMechEquipmentTank
+  abstract: true
+  components:
+  - type: MechEquipment
+
+- type: entity
   id: BaseTankWeaponBattery
-  parent: BaseMechEquipment
+  parent: BaseMechEquipmentTank
   abstract: true
   components:
 #  - type: Item
@@ -57,9 +64,9 @@
   - type: Tag
     tags:
     - WeaponMech
-#  - type: BatterySelfRecharger
-#    autoRecharge: true
-#    autoRechargeRate: 30
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 30
 
 - type: entity
   name: Основная боевая пушка(Фугас)
@@ -130,8 +137,11 @@
     zeroVisible: true
   - type: Appearance
   - type: Battery
-    maxCharge: 30
-    startingCharge: 30 
+    maxCharge: 700
+    startingCharge: 700
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 700
 
 - type: entity
   name: Гранатомет G45

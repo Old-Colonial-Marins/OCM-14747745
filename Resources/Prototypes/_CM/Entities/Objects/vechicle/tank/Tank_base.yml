@@ -42,10 +42,10 @@
   - type: Repairable
     fuelCost: 55
     doAfterDelay: 35
-  - type: UserInterface
-    interfaces:
-      enum.MechUiKey.Key:
-        type: MechBoundUserInterface
+#  - type: UserInterface
+#    interfaces:
+#      enum.MechUiKey.Key:
+#        type: MechBoundUserInterface
   - type: Puller
     needsHands: false
   - type: InputMover
@@ -100,25 +100,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/_CM/Vehicle/tank_driving.ogg
-  - type: GuideHelp
-    guides:
-    - Robotics
   - type: NpcFactionMember
     factions:
     - NanoTrasen
-  - type: ItemSlots
-    slots:
-      key_slot:
-        name: vehicle-slot-component-slot-name-keys
-        whitelist:
-          requireAll: true
-          tags:
-            - VehicleKey
-            - VehicleKeyCargoCrane
-        insertSound:
-          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
-          params:
-            volume: 3
   - type: DamageVisuals
     thresholds: [8, 16, 25]
     damageDivisor: 2
@@ -152,7 +136,7 @@
     footstepSoundCollection:
       path: /Audio/_CM/Vehicle/tank_driving.ogg
   - type: Mech
-    maxEquipmentAmount: 4
+    maxEquipmentAmount: 0
     maxintegrity: 1500
     baseState: base
     openState: base
@@ -163,7 +147,7 @@
         - HumanoidAppearance
     EquipmentWhitelist:
       components:
-        - MechEquipmentGrabber
+        - TankWeaponMainCannon
 #  - type: MovementSpeedModifier
 #    baseWalkSpeed: 2.25
 #    baseSprintSpeed: 3.6
