@@ -130,16 +130,17 @@
     - trigger:
         !type:DamageTrigger
         damage: 6000
-#      behaviors:
-#        - !type:SpawnEntitiesBehavior
-#          spawn:
-#          - 
+      behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+          - WallSolid
 
 - type: entity
   id: VehicleTank
   parent: BaseVehicleTank
   name: T-65C "Победа" Heavy tank
   components:
+  - type: MovementIgnoreGravity
   - type: Sprite
     drawdepth: Mobs
     noRot: true
@@ -152,6 +153,7 @@
       path: /Audio/_CM/Vehicle/tank_driving.ogg
   - type: Mech
     maxEquipmentAmount: 4
+    maxintegrity: 1500
     baseState: base
     openState: base
     brokenState: broken
