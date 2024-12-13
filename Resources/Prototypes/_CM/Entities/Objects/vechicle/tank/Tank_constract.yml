@@ -16,6 +16,8 @@
   - type: Tag
     tags:
     - Tanktreen
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -36,7 +38,8 @@
   - type: Tag
     tags:
     - TankASO
-
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -57,6 +60,8 @@
   - type: Tag
     tags:
     - Tankprotect
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -77,6 +82,8 @@
   - type: Tag
     tags:
     - Tankengine
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -97,6 +104,8 @@
   - type: Tag
     tags:
     - TankAmmoMain
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -117,6 +126,8 @@
   - type: Tag
     tags:
     - TankAmmoSupport
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -137,6 +148,8 @@
   - type: Tag
     tags:
     - TankMainGunCannon
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -157,6 +170,8 @@
   - type: Tag
     tags:
     - TankcableEnter
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -177,6 +192,8 @@
   - type: Tag
     tags:
     - TankTrans
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -197,6 +214,8 @@
   - type: Tag
     tags:
     - TankammoCon
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -217,6 +236,8 @@
   - type: Tag
     tags:
     - TankGrenadeLaun
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -237,6 +258,8 @@
   - type: Tag
     tags:
     - TankEKF
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -257,6 +280,8 @@
   - type: Tag
     tags:
     - TankSupportTurret
+  - type: Item
+    size: Ginormous
 
 - type: entity
   parent: BaseItem
@@ -272,6 +297,8 @@
   - type: Tag
     tags:
     - TankMainTurret
+  - type: Item
+    size: Ginormous
 
 - type: entity
   id: BaseMechTankPart
@@ -328,7 +355,7 @@
   - type: Sprite
     sprite: _CM/vehicle/tank/tank_constract.rsi
     noRot: true
-    state: 1
+    state: ripley0
   - type: Construction
     graph: Tank
     node: start
@@ -482,14 +509,14 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
-      - material: CapacitorStockPart
+      - material: Capacitor
         amount: 5
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
-      - material: CableHV
+      - material: Cable
         amount: 30
         completed:
         - !type:VisualizerDataInt
