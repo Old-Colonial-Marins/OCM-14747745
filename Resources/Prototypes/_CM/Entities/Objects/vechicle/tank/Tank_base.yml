@@ -65,7 +65,7 @@
     - FootstepSound
   - type: Physics
     bodyType: Static #KinematicController
-  - type: Clicable
+  - type: Clickable
   - type: WiresPanel
   - type: Fixtures
     fixtures:
