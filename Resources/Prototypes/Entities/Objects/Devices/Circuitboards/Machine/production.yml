@@ -122,7 +122,7 @@
     - type: Sprite
       state: security
     - type: MachineBoard
-      prototype: AmmoTechFab
+      prototype: AmmoTechFabTank
       requirements:
         MatterBin: 3
         Manipulator: 5
