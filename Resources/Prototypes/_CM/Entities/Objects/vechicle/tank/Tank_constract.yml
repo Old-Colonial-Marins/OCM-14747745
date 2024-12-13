@@ -398,35 +398,39 @@
     edges:
     - to: tank
       steps:
-      - tag: TankMainTurret
-        name: Башня Танка
-        icon:
-          sprite: "Objects/Misc/module.rsi"
-          state: "mainboard"
+      - material: Steel
+        amount: 30
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 1
+          data: 2
+
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
 
       - tool: Welding
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 1
+          data: 2
 
       - material: Cable
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 1
+          data: 2
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 1
+          data: 2
 
       - tag: Tanktreen
         name: Гусеницы танка
@@ -438,14 +442,15 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 2
 
-      - tool: Welding
+      - tool: Anchoring
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 2
 
-      - material: Cable
+      - tool: Welding
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -463,6 +468,13 @@
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -493,6 +505,13 @@
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -532,6 +551,13 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
         doAfter: 1
         completed:
@@ -546,11 +572,25 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tag: TankGrenadeLaun
         name: Гранатомет
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -573,6 +613,13 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
         doAfter: 1
         completed:
@@ -590,6 +637,13 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
         doAfter: 1
         completed:
@@ -602,6 +656,13 @@
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -637,6 +698,13 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
         doAfter: 1
         completed:
@@ -645,6 +713,13 @@
           data: 4
 
       - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -661,7 +736,21 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -673,6 +762,13 @@
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 3
+
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
 
       - tool: Welding
         doAfter: 1
@@ -691,6 +787,13 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tool: Screwing
         doAfter: 1
         completed:
@@ -711,11 +814,25 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
       - tag: TankEKF
         name: EKF контроллер
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -733,6 +850,41 @@
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Anchoring
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - material: Cable
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - material: Steel
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - material: Cable
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - material: Cable
+        amount: 30
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
