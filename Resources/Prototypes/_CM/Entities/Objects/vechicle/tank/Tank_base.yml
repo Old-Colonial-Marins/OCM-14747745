@@ -2,6 +2,8 @@
   id: BaseVehicleTank
 #  save: false
   abstract: true
+  placement:
+    mode: SnapgridCenter
   components:
   - type: MobMover
   - type: Mech
@@ -62,8 +64,8 @@
     - DoorBumpOpener
     - FootstepSound
   - type: Physics
-    bodyType: KinematicController
-  - type: Clickable
+    bodyType: Static #KinematicController
+  - type: Clicable
   - type: WiresPanel
   - type: Fixtures
     fixtures:

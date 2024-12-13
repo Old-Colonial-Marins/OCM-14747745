@@ -317,6 +317,7 @@
         restitution: 0.3  # fite me
         friction: 0.2
   - type: Puller
+  - type: Pullable
 
 - type: entity
   id: BaseMechTankPart
