@@ -379,7 +379,7 @@
   - type: Sprite
     sprite: _CM/vehicle/tank/tank_constract.rsi
     noRot: true
-    state: ripley0
+    state: ripley1
   - type: Construction
     graph: Tank
     node: start
@@ -403,34 +403,34 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - tool: Anchoring
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - tool: Welding
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - material: Cable
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - tag: Tanktreen
         name: Гусеницы танка

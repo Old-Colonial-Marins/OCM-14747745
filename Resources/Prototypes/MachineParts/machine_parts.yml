@@ -18,3 +18,7 @@
   name: machine-part-name-power-cell
   stockPartPrototype: PowerCellSmall
 
+- type: machinePart
+  id: TankSuperPower
+  name: machine-part-name-power-cell
+  stockPartPrototype: PowerCellHighTank
