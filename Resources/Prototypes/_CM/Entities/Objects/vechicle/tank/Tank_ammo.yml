@@ -32,6 +32,14 @@
         damage: 1000
       behaviors:
         - !type:ExplodeBehavior
+  - type: Tag
+    tags:
+    - TankSuperPower
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
 
 - type: entity
   name: "item"

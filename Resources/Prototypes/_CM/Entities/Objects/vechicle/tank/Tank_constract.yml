@@ -6,4 +6,692 @@
   - type: Sprite
     sprite: _CM/vehicle/tank/treads.rsi
     layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
       state: treads
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Tanktreen
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank2
+  suffix: Tank
+  name: Система управления огнём
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: artillery
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankASO
+
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank3
+  suffix: Tank
+  name: внутреннее защитное покрытие
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: ballistic_armor
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Tankprotect
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank4
+  suffix: Tank
+  name: Двигатель
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: drgn_flamer
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Tankengine
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank5
+  suffix: Tank
+  name: система подачи боеприпасов
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: flamer
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankAmmoMain
+
+- type: entity
+  parent: BaseItem
+  suffix: Tank
+  id: BaseMechDetaleTank6
+  name: система подачи боеприпасов пулемета
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: glauncher
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankAmmoSupport
+
+- type: entity
+  parent: BaseItem
+  suffix: Tank
+  id: BaseMechDetaleTank7
+  name: Главная пушка
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: ltb_cannon
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankMainGunCannon
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank8
+  suffix: Tank
+  name: Кабельный интерфейс
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: m56_cupola
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankcableEnter
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank9
+  suffix: Tank
+  name: Гидромеханическая коробка передач
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: odrive_enhancer
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankTrans
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank10
+  suffix: Tank
+  name: Контейнер боеприпасов повышенной живучести
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: paladin_armor
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankammoCon
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank11
+  suffix: Tank
+  name: Гранатомет G45
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: tow_launcher
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankGrenadeLaun
+
+- type: entity
+  parent: BaseItem
+  suffix: Tank
+  id: BaseMechDetaleTank12
+  name: EKF контроллер
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: warray
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankEKF
+
+- type: entity
+  parent: BaseItem
+  suffix: Tank
+  id: BaseMechDetaleTank13
+  name: Турель М240
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads2.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: turret
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - TankSupportTurret
+
+- type: entity
+  parent: BaseItem
+  id: BaseMechDetaleTank14
+  suffix: Tank
+  name: Башня танка
+  components:
+  - type: Sprite
+    sprite: _CM/vehicle/tank/treads2.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: tank_turret_main
+  - type: Tag
+    tags:
+    - TankMainTurret
+
+- type: entity
+  id: BaseMechTankPart
+  abstract: true
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: CollisionWake
+  - type: TileFrictionModifier
+    modifier: 0.5
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.2,-1.9,1.2,1.9"
+        density: 100
+        mask:
+        - ItemMask
+        restitution: 0.3  # fite me
+        friction: 0.2
+  - type: Pullable
+  - type: GuideHelp
+    guides:
+    - Robotics
+
+# Ripley APLU
+
+- type: entity
+  id: BaseRipleyTankPart
+  parent: BaseMechTankPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Objects/Specific/Mech/ripley_construction.rsi
+
+- type: entity
+  id: TankChassis
+  parent: BaseRipleyTankPart
+  name: Шасси танка
+  description: An in-progress construction.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: ripley
+  - type: Sprite
+    sprite: _CM/vehicle/tank/tank_constract.rsi
+    noRot: true
+    state: 1
+  - type: Construction
+    graph: Tank
+    node: start
+    defaultTarget: tank
+
+- type: constructionGraph
+  id: Tank
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: tank
+      steps:
+      - tag: TankMainTurret
+        name: Башня Танка
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tag: Tanktreen
+        name: Гусеницы танка
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tag: TankMainGunCannon
+        name: Главная пушка танка
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tag: TankSupportTurret
+        name: Турель М240
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+#i omitted the steps involving inserting machine parts because
+#currently mechs don't support upgrading. add them back in once that's squared away.
+
+      - tag: TankSuperPower
+        name: Микроядерный реактор
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - material: CapacitorStockPart
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 15
+
+      - material: CableHV
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 15
+
+      - tag: TankGrenadeLaun
+        name: Гранатомет
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tag: TankAmmoMain
+        name: Система подачи боеприпасов
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tag: TankAmmoSupport
+        name: Система подачи боеприпасов пулемета
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tag: TankammoCon
+        name: Контейнер боеприпасов 
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: Tankprotect
+        name: внутреннее защитное покрытие 
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: TankTrans
+        name: Гидромеханическая коробка передач
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: TankASO
+        name: Система управления огнём
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - material: Cable
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: TankEKF
+        name: EKF контроллер
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 14
+
+      - tag: TankcableEnter
+        name: Кабельный интерфейс
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tool: Welding
+        doAfter: 1
+
+  - node: tank
+    actions:
+    - !type:BuildMech
+      mechPrototype: VehicleTankBattery
