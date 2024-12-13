@@ -363,14 +363,14 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 1
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 1
 
       - tag: Tanktreen
         name: Гусеницы танка
@@ -393,14 +393,14 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 2
 
       - tool: Screwing
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 2
 
       - tag: TankMainGunCannon
         name: Главная пушка танка
@@ -430,7 +430,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 3
 
       - tag: TankSupportTurret
         name: Турель М240
@@ -446,7 +446,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 4
 
       - tool: Welding
         doAfter: 1
@@ -460,7 +460,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 4
 
 #i omitted the steps involving inserting machine parts because
 #currently mechs don't support upgrading. add them back in once that's squared away.
@@ -480,21 +480,21 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - material: CapacitorStockPart
         amount: 5
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 15
+          data: 4
 
       - material: CableHV
         amount: 30
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 15
+          data: 4
 
       - tag: TankGrenadeLaun
         name: Гранатомет
@@ -511,7 +511,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - tag: TankAmmoMain
         name: Система подачи боеприпасов
@@ -528,7 +528,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - tag: TankAmmoSupport
         name: Система подачи боеприпасов пулемета
@@ -545,7 +545,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - tag: TankammoCon
         name: Контейнер боеприпасов 
@@ -562,13 +562,13 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - material: Cable
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 4
 
       - tool: Welding
         doAfter: 1
@@ -592,7 +592,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - tool: Welding
         doAfter: 1
@@ -616,7 +616,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - material: Cable
         completed:
@@ -646,7 +646,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - material: Cable
         completed:
@@ -676,7 +676,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 14
+          data: 4
 
       - tag: TankcableEnter
         name: Кабельный интерфейс

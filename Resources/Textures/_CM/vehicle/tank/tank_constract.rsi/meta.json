@@ -8,76 +8,19 @@
   },
   "states": [
     {
-      "name": "truck",
-      "directions": 4
+      "name": "ripley0"
     },
     {
-      "name": "truck_damaged",
-      "directions": 4
+      "name": "ripley1"
     },
     {
-      "name": "truck_snow",
-      "directions": 4
+      "name": "ripley2"
     },
     {
-      "name": "truck_cargo",
-      "directions": 4
+      "name": "ripley3"
     },
     {
-      "name": "truck_cargo_snow",
-      "directions": 4
-    },
-    {
-      "name": "van",
-      "directions": 4
-    },
-    {
-      "name": "van_wrecked",
-      "directions": 4
-    },
-    {
-      "name": "crane",
-      "directions": 4
-    },
-    {
-      "name": "crane_snow",
-      "directions": 4
-    },
-    {
-      "name": "crane_cargo",
-      "directions": 4
-    },
-    {
-      "name": "crane_damaged",
-      "directions": 4
-    },
-    {
-      "name": "crane_wrecked",
-      "directions": 4
-    },
-    {
-      "name": "crawler",
-      "directions": 4
-    },
-    {
-      "name": "crawler_crate_b",
-      "directions": 4
-    },
-    {
-      "name": "crawler_crate_r",
-      "directions": 4
-    },
-    {
-      "name": "crawler_fuel",
-      "directions": 4
-    },
-    {
-      "name": "crawler_crate_g",
-      "directions": 4
-    },
-    {
-      "name": "crawler_cargo",
-      "directions": 4
+      "name": "ripley4"
     }
   ]
 }
