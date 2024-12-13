@@ -284,7 +284,7 @@
     size: Ginormous
 
 - type: entity
-  parent: BaseItem
+  parent: BaseStructure
   id: BaseMechDetaleTank14
   suffix: Tank
   name: Башня танка
@@ -297,8 +297,11 @@
   - type: Tag
     tags:
     - TankMainTurret
-  - type: Item
-    size: Ginormous
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
 
 - type: entity
   id: BaseMechTankPart
@@ -318,15 +321,18 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-1.2,-1.9,1.2,1.9"
-        density: 100
+        density: 1000
         mask:
-        - ItemMask
+        - LargeMobMask
+        layer:
+        - WallLayer
         restitution: 0.3  # fite me
         friction: 0.2
   - type: Pullable
   - type: GuideHelp
     guides:
     - Robotics
+  - type: Anchorable
 
 # Ripley APLU
 
@@ -360,6 +366,11 @@
     graph: Tank
     node: start
     defaultTarget: tank
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.001
+    sprintModifier: 0.001
+  - type: HeldSpeedModifier
 
 - type: constructionGraph
   id: Tank
@@ -492,11 +503,12 @@
 #i omitted the steps involving inserting machine parts because
 #currently mechs don't support upgrading. add them back in once that's squared away.
 
-      - tag: TankSuperPower
-        name: Микроядерный реактор
+      - component: TankSuperPower
+        name: Микроядерный источник энергии
+        store: battery-container
         icon:
-          sprite: "Objects/Misc/module.rsi"
-          state: "mainboard"
+          sprite: Objects/Power/power_cells.rsi
+          state: small
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -672,7 +684,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 4
 
       - tool: Welding
         doAfter: 1
@@ -714,4 +726,4 @@
   - node: tank
     actions:
     - !type:BuildMech
-      mechPrototype: VehicleTankBattery
+      mechPrototype: VehicleTank

@@ -155,6 +155,13 @@
 #  - type: MovementSpeedModifier
 #    baseWalkSpeed: 2.25
 #    baseSprintSpeed: 3.6
+  - type: ContainerFill
+    containers:
+      mech-equipment-container:
+      - TankWeaponMainCannon
+      - TankWeaponMainCannonAP
+      - TankWeaponSupportMachineGun
+      - TankWeaponSupportGrenadeLau
 
 - type: entity
   id: VehicleTankBattery
