@@ -303,6 +303,8 @@
     sprintModifier: 0.5
   - type: HeldSpeedModifier
   - type: Anchorable
+  - type: Physics
+    bodyType: Dynamic
   - type: Fixtures
     fixtures:
       fix1:
