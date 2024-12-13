@@ -18,6 +18,13 @@
     - Tanktreen
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank
+  result: BaseMechDetaleTank
+  completetime: 60
+  materials:
+    Steel: 100
+    Plastic: 100
 
 - type: entity
   parent: BaseItem
@@ -40,6 +47,15 @@
     - TankASO
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank2
+  result: BaseMechDetaleTank2
+  completetime: 60
+  materials:
+    Steel: 50
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
 
 - type: entity
   parent: BaseItem
@@ -62,6 +78,14 @@
     - Tankprotect
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank3
+  result: BaseMechDetaleTank3
+  completetime: 60
+  materials:
+    Steel: 200
+    Plastic: 200
+    Glass: 10
 
 - type: entity
   parent: BaseItem
@@ -106,6 +130,15 @@
     - TankAmmoMain
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank5
+  result: BaseMechDetaleTank5
+  completetime: 60
+  materials:
+    Steel: 30
+    Plastic: 30
+    Glass: 50
+    Plasma: 200
 
 - type: entity
   parent: BaseItem
@@ -128,6 +161,15 @@
     - TankAmmoSupport
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank6
+  result: BaseMechDetaleTank6
+  completetime: 60
+  materials:
+    Steel: 30
+    Plastic: 30
+    Glass: 50
+    Plasma: 200
 
 - type: entity
   parent: BaseItem
@@ -150,6 +192,13 @@
     - TankMainGunCannon
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank7
+  result: BaseMechDetaleTank7
+  completetime: 60
+  materials:
+    Steel: 300
+    Plastic: 100
 
 - type: entity
   parent: BaseItem
@@ -172,6 +221,14 @@
     - TankcableEnter
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank8
+  result: BaseMechDetaleTank8
+  completetime: 60
+  materials:
+    Steel: 10
+    Plastic: 150
+    Plasma: 200
 
 - type: entity
   parent: BaseItem
@@ -194,6 +251,13 @@
     - TankTrans
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank9
+  result: BaseMechDetaleTank9
+  completetime: 60
+  materials:
+    Steel: 150
+    Plasma: 10
 
 - type: entity
   parent: BaseItem
@@ -216,6 +280,14 @@
     - TankammoCon
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank10
+  result: BaseMechDetaleTank10
+  completetime: 60
+  materials:
+    Steel: 200
+    Plastic: 250
+    Plasma: 100
 
 - type: entity
   parent: BaseItem
@@ -238,6 +310,15 @@
     - TankGrenadeLaun
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank11
+  result: BaseMechDetaleTank11
+  completetime: 60
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
 
 - type: entity
   parent: BaseItem
@@ -260,6 +341,15 @@
     - TankEKF
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank12
+  result: BaseMechDetaleTank12
+  completetime: 60
+  materials:
+    Steel: 100
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
 
 - type: entity
   parent: BaseItem
@@ -282,6 +372,15 @@
     - TankSupportTurret
   - type: Item
     size: Ginormous
+- type: latheRecipe 
+  id: BaseMechDetaleTank13
+  result: BaseMechDetaleTank13
+  completetime: 60
+  materials:
+    Steel: 150
+    Plastic: 100
+    Glass: 100
+    Plasma: 100
 
 - type: entity
   parent: BaseStructureDynamic
@@ -761,7 +860,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 4
 
       - tool: Anchoring
         doAfter: 1
@@ -874,7 +973,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 4
 
       - material: Cable
         amount: 30
@@ -897,3 +996,47 @@
     actions:
     - !type:BuildMech
       mechPrototype: VehicleTank
+
+- type: entity
+  id: AmmoTechFabTank
+  parent: BaseLatheLube
+  name: Parts Fabricator
+  description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
+  components:
+    - type: Sprite
+      sprite: _CM/vehicle/fabricator.rsi
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: ammo
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: AmmoTechFabCircuitboardTank
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+      dynamicRecipes:
+        - BaseMechDetaleTank
+        - BaseMechDetaleTank2
+        - BaseMechDetaleTank3
+        - BaseMechDetaleTank5
+        - BaseMechDetaleTank6
+        - BaseMechDetaleTank7
+        - BaseMechDetaleTank8
+        - BaseMechDetaleTank9
+        - BaseMechDetaleTank10
+        - BaseMechDetaleTank11
+        - BaseMechDetaleTank12
+        - BaseMechDetaleTank13
+    - type: MaterialStorage
+      whitelist:
+        tags:
+          - Sheet
+          - RawMaterial
+          - Ingot
