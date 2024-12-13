@@ -23,8 +23,8 @@
   result: BaseMechDetaleTank
   completetime: 60
   materials:
-    Steel: 100
-    Plastic: 100
+    Steel: 6000
+    Plastic: 3000
 
 - type: entity
   parent: BaseItem
@@ -52,10 +52,10 @@
   result: BaseMechDetaleTank2
   completetime: 60
   materials:
-    Steel: 50
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 1000
+    Plastic: 2000
+    Glass: 1000
+    Plasma: 2000
 
 - type: entity
   parent: BaseItem
@@ -83,9 +83,9 @@
   result: BaseMechDetaleTank3
   completetime: 60
   materials:
-    Steel: 200
-    Plastic: 200
-    Glass: 10
+    Steel: 8000
+    Plastic: 6000
+    Glass: 1000
 
 - type: entity
   parent: BaseItem
@@ -135,10 +135,10 @@
   result: BaseMechDetaleTank5
   completetime: 60
   materials:
-    Steel: 30
-    Plastic: 30
-    Glass: 50
-    Plasma: 200
+    Steel: 2000
+    Plastic: 3000
+    Glass: 3000
+    Plasma: 2000
 
 - type: entity
   parent: BaseItem
@@ -166,10 +166,10 @@
   result: BaseMechDetaleTank6
   completetime: 60
   materials:
-    Steel: 30
-    Plastic: 30
-    Glass: 50
-    Plasma: 200
+    Steel: 3000
+    Plastic: 3000
+    Glass: 2000
+    Plasma: 2000
 
 - type: entity
   parent: BaseItem
@@ -197,8 +197,8 @@
   result: BaseMechDetaleTank7
   completetime: 60
   materials:
-    Steel: 300
-    Plastic: 100
+    Steel: 30000
+    Plastic: 6000
 
 - type: entity
   parent: BaseItem
@@ -226,9 +226,9 @@
   result: BaseMechDetaleTank8
   completetime: 60
   materials:
-    Steel: 10
-    Plastic: 150
-    Plasma: 200
+    Steel: 1000
+    Plastic: 2500
+    Plasma: 2500
 
 - type: entity
   parent: BaseItem
@@ -256,8 +256,8 @@
   result: BaseMechDetaleTank9
   completetime: 60
   materials:
-    Steel: 150
-    Plasma: 10
+    Steel: 3500
+    Plasma: 1000
 
 - type: entity
   parent: BaseItem
@@ -285,9 +285,9 @@
   result: BaseMechDetaleTank10
   completetime: 60
   materials:
-    Steel: 200
-    Plastic: 250
-    Plasma: 100
+    Steel: 4000
+    Plastic: 2500
+    Plasma: 1000
 
 - type: entity
   parent: BaseItem
@@ -315,10 +315,10 @@
   result: BaseMechDetaleTank11
   completetime: 60
   materials:
-    Steel: 100
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 3000
+    Plastic: 1000
+    Glass: 1000
+    Plasma: 1000
 
 - type: entity
   parent: BaseItem
@@ -346,10 +346,10 @@
   result: BaseMechDetaleTank12
   completetime: 60
   materials:
-    Steel: 100
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 1000
+    Plastic: 1000
+    Glass: 1000
+    Plasma: 3000
 
 - type: entity
   parent: BaseItem
@@ -377,10 +377,10 @@
   result: BaseMechDetaleTank13
   completetime: 60
   materials:
-    Steel: 150
-    Plastic: 100
-    Glass: 100
-    Plasma: 100
+    Steel: 3500
+    Plastic: 1000
+    Glass: 1000
+    Plasma: 1000
 
 - type: entity
   parent: BaseStructureDynamic
