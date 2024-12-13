@@ -540,7 +540,7 @@
 #i omitted the steps involving inserting machine parts because
 #currently mechs don't support upgrading. add them back in once that's squared away.
 
-      - component: TankSuperPower
+      - component: PowerCell
         name: Микроядерный источник энергии
         store: battery-container
         icon:

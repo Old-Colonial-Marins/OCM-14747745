@@ -34,7 +34,7 @@
         - !type:ExplodeBehavior
   - type: Tag
     tags:
-    - TankSuperPower
+    - PowerCell
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
     walkModifier: 0.5
