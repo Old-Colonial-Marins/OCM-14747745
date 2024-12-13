@@ -509,13 +509,6 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 4
 
-      - material: Capacitor
-        amount: 5
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 4
-
       - material: Cable
         amount: 30
         completed:
