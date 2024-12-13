@@ -284,7 +284,7 @@
     size: Ginormous
 
 - type: entity
-  parent: BaseStructure
+  parent: BaseStructureDynamic
   id: BaseMechDetaleTank14
   suffix: Tank
   name: Башня танка
