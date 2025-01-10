@@ -51,6 +51,7 @@ namespace Content.IntegrationTests.Tests
             "valkyrie",
             "Dev",
             "MeteorArena",
+            "TGCM_Nova",
         };
 
         /// <summary>

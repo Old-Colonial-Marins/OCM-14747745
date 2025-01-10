@@ -2013,5 +2013,11 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> DebugOptionVisualizerTest =
             CVarDef.Create("debug.option_visualizer_test", false, CVar.CLIENTONLY);
+            
+         /// <summary>
+         /// Enables autovote for map and preset in lobby
+         /// </summary>
+        public static readonly CVarDef<bool>
+        VoteAutoStartInLobby = CVarDef.Create("vote.autostartinlobby", true, CVar.SERVERONLY);
     }
 }

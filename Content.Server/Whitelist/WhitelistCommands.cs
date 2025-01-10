@@ -108,6 +108,48 @@ public sealed class RemoveWhitelistCommand : LocalizedCommands
 }
 
 [AdminCommand(AdminFlags.Ban)]
+public sealed class WhitelistedEnable : LocalizedCommands
+{
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+
+    public override string Command => "Whitelisted";
+
+    public override void Execute(IConsoleShell shell, string argStr, string[] args)
+    {
+        var toggle = Toggle(CCVars.WhitelistEnabled, shell, args, _cfg);
+        if (toggle == null)
+            return;
+
+        shell.WriteLine(Loc.GetString(toggle.Value ? "Whitelist-enabled" : "Whitelist-disabled"));
+    }
+
+    public static bool? Toggle(CVarDef<bool> cvar, IConsoleShell shell, string[] args, IConfigurationManager config)
+    {
+        if (args.Length > 1)
+        {
+            shell.WriteError(Loc.GetString("shell-need-between-arguments",("lower", 0), ("upper", 1)));
+            return null;
+        }
+
+        var enabled = config.GetCVar(cvar);
+
+        if (args.Length == 0)
+        {
+            enabled = !enabled;
+        }
+
+        if (args.Length == 1 && !bool.TryParse(args[0], out enabled))
+        {
+            shell.WriteError(Loc.GetString("shell-argument-must-be-boolean"));
+            return null;
+        }
+
+        config.SetCVar(cvar, enabled);
+        return enabled;
+    }
+}
+
+[AdminCommand(AdminFlags.Ban)]
 public sealed class KickNonWhitelistedCommand : LocalizedCommands
 {
     public override string Command => "kicknonwhitelisted";
