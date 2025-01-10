@@ -4,7 +4,7 @@
   mapPath: /Maps/TGMS/NovaOutpost.yml
   minPlayers: 0
   stations:
-    TGCM_Desert:
+    TGCM_Nova:
       stationProto: StandardTGMSXeno
       components:
         - type: StationSpawning
