@@ -200,3 +200,62 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepMedium
+
+- type: entity
+  parent:
+  - MobXenoBaseT4
+  - MobXenoPassiveEvades
+  id: MobKingXeno
+  suffix: CM
+  name: King
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoCrushDash
+        - ActionXenoEndure
+        - ActionXenoRage
+        - ActionXenoStun
+        - ActionXenoRest
+    - type: XenoCrushDash
+    - type: XenoEndure
+      walkSpeedModifier: 0.5
+      sprintSpeedModifier: 0.5
+    - type: XenoRage
+      rageDuration: 20
+    - type: XenoStun
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 60
+        types:
+          Structural: 45
+    - type: ShowXenoAgeIcons
+      jobId: JobKing
+    - type: Sprite
+      sprite: _CM/Mobs/Xenos/king.rsi
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        1900: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 1400
+        behaviors:
+        - !type:GibBehavior { }
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: XenoRavager
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        600: 0.9
+        720: 0.85
+        840: 0.80
+        960: 0.75
+        1080: 0.70
+    - type: XenoEvades
+      missChance: 0.2
