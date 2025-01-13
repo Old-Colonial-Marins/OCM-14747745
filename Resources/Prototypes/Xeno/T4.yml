@@ -56,12 +56,11 @@
             - !type:GibBehavior { }
     - type: SlowOnDamage
       speedModifierThresholds:
-        500: 0.9
-        600: 0.85
-        700: 0.80
-        800: 0.75
-        900: 0.70
-    - type: MotionDetectorTracked
+        800: 0.9
+        960: 0.85
+        1120: 0.80
+        1280: 0.75
+        1440: 0.70
 
 - type: entity
   parent: MobXenoBaseT4
@@ -140,12 +139,11 @@
         - !type:GibBehavior { }
     - type: SlowOnDamage
       speedModifierThresholds:
-        750: 0.9
-        900: 0.85
-        1050: 0.80
-        1200: 0.75
-        1350: 0.70
-    - type: MotionDetectorTracked
+        900: 0.9
+        1080: 0.85
+        1260: 0.80
+        1440: 0.75
+        1620: 0.70
 
 - type: entity
   name: rouny
@@ -203,7 +201,6 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepMedium
-    - type: MotionDetectorTracked
 
 - type: entity
   parent:
@@ -263,4 +260,3 @@
         1080: 0.70
     - type: XenoEvades
       missChance: 0.2
-    - type: MotionDetectorTracked

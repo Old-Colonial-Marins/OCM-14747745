@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: BaseItem
   id: RMCMotionDetector
-  name: детектор движения
-  description: Устройство, которое обнаруживает движение, но игнорирует своих. # Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes. TODO RMC14
+  name: motion detector
+  description: A device that detects movement, but ignores marines. # Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes. TODO RMC14
   components:
   - type: Sprite
     sprite: _CM/Objects/Tools/motion_detector.rsi

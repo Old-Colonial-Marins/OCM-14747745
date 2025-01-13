@@ -47,7 +47,6 @@
         420: 0.80
         480: 0.75
         540: 0.70
-    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT3
@@ -104,7 +103,6 @@
         350: 0.80
         400: 0.75
         450: 0.70
-    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT3
@@ -168,7 +166,6 @@
         420: 0.80
         480: 0.75
         540: 0.70
-    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT3
@@ -239,7 +236,6 @@
         420: 0.80
         480: 0.75
         540: 0.70
-    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT3
@@ -286,9 +282,6 @@
         840: 0.80
         960: 0.75
         1080: 0.70
-    - type: XenoEvades
-      missChance: 0.15
-    - type: MotionDetectorTracked
 
 - type: entity
   parent: MobXenoBaseT3
@@ -335,14 +328,11 @@
       timeUsage: 60
     - type: SlowOnDamage
       speedModifierThresholds:
-        750: 0.9
-        900: 0.85
-        1050: 0.80
-        1200: 0.75
-        1350: 0.70
-    - type: XenoEvades
-      missChance: 0.15
-    - type: MotionDetectorTracked
+        1000: 0.9
+        1200: 0.85
+        1400: 0.80
+        1600: 0.75
+        1800: 0.70
 
 - type: damageModifierSet
   id: XenoRavager

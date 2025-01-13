@@ -85,7 +85,7 @@ public sealed class MotionDetectorSystem : EntitySystem
         var user = args.User;
         args.Verbs.Add(new AlternativeVerb
         {
-            Text = ent.Comp.Short ? "Переход в режим дальнего действия" : "Переход в режим малой дальности",
+            Text = ent.Comp.Short ? "Change to long range mode" : "Change to short range mode",
             Act = () =>
             {
                 ent.Comp.Short = !ent.Comp.Short;
@@ -108,7 +108,7 @@ public sealed class MotionDetectorSystem : EntitySystem
         using (args.PushGroup(nameof(MotionDetectorComponent)))
         {
             var mode = ent.Comp.Short ? "short" : "long";
-            args.PushMarkup($"Детектор движения находится в [color=cyan]{mode}[/color] режим сканирования.");
+            args.PushMarkup($"The motion detector is in [color=cyan]{mode}[/color] scanning mode.");
         }
     }
 
