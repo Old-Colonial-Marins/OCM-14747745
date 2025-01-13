@@ -259,9 +259,7 @@
       - id: FireExtinguisher
         amount: 5
       - id: FlareMarine
-        amount: 60
-      - id: RMCMotionDetector
-        amount: 5 
+        amount: 20
     - name: Подсумки
       entries:
       - id: CMPouchMagazine
