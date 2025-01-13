@@ -41,6 +41,8 @@ public sealed class MotionDetectorSystem : EntitySystem
 
         SubscribeLocalEvent<MotionDetectorComponent, UseInHandEvent>(OnMotionDetectorUseInHand);
         SubscribeLocalEvent<MotionDetectorComponent, GetVerbsEvent<AlternativeVerb>>(OnMotionDetectorGetVerbs);
+        SubscribeLocalEvent<MotionDetectorComponent, DroppedEvent>(OnMotionDetectorDisable);
+        SubscribeLocalEvent<MotionDetectorComponent, RMCDroppedEvent>(OnMotionDetectorDisable);
         SubscribeLocalEvent<MotionDetectorComponent, ExaminedEvent>(OnMotionDetectorExamined);
 
         SubscribeLocalEvent<MotionDetectorTrackedComponent, MoveEvent>(OnMotionDetectorTracked);
