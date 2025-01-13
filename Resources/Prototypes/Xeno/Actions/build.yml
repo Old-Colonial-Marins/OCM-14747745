@@ -17,22 +17,3 @@
     itemIconStyle: NoItem
     event: !type:XenoBuildWallActionEvent
     checkCanAccess: false
-
-- type: entity
-  id: ActionXenoBuildTurret
-  name: Постройка турели
-  noSpawn: true
-  components:
-  - type: WorldTargetAction
-    range: 1.4
-    useDelay: 0
-    sound: !type:SoundCollectionSpecifier
-      collection: XenoBreath
-      params:
-        volume: 0.5
-    icon:
-      sprite: Actions/xeno.rsi
-      state: turret
-    itemIconStyle: NoItem
-    event: !type:XenoBuildTurretActionEvent
-    checkCanAccess: false

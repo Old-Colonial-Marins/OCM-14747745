@@ -339,13 +339,7 @@
   - type: OnUseTimerTrigger
     delay: 0.2
   # TODO upsteam кусок говна, не работает EmitSoundOnTrigger закостылил с помощью CMRaptorEmitSoundOnUse. Но когда EmitSoundOnTrigger начнёт работать - раскоментировать
-  - type: CMRaptorEmitSoundOnUse
-    sound:
-      path: /Audio/_CM/CAS/whistle_A10_brrrt.ogg
-    handle: false
-  # - type: EmitSoundOnTrigger
-  #   sound:
-  #     path: /Audio/_CM/CAS/whistle_A10_brrrt.ogg
+  # Убрано CMRaptorEmitSoundOnUse, вернуть с пендосов
   - type: Tag
     tags:
     - InteractionCAS
@@ -402,13 +396,7 @@
   - type: OnUseTimerTrigger
     delay: 0.2
   # TODO upsteam кусок говна, не работает EmitSoundOnTrigger закостылил с помощью CMRaptorEmitSoundOnUse. Но когда EmitSoundOnTrigger начнёт работать - раскоментировать
-  - type: CMRaptorEmitSoundOnUse
-    sound:
-      path: /Audio/_CM/CAS/whistle_A10_brrrt.ogg
-    handle: false
-  # - type: EmitSoundOnTrigger
-  #   sound:
-  #     path: /Audio/_CM/CAS/whistle_A10_brrrt.ogg
+  # Убрано CMRaptorEmitSoundOnUse, вернуть с пендосов
   - type: Tag
     tags:
     - InteractionCAS

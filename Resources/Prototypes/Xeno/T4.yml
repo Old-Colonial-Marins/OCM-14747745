@@ -74,7 +74,6 @@
         - ActionXenoLayEgg
         - ActionXenoScreech
         - ActionXenoBuildWall
-        - ActionXenoBuildTurret
         - ActionXenoVines
         - ActionXenoRejuvenate
         - ActionXenoAcid

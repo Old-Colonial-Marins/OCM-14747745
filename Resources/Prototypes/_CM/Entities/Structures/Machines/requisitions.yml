@@ -323,12 +323,6 @@
         crate: CrateGenericSteel
         entities:
         - SheetPlasteel
-      - name: Ящик ткани (x60 древесина)
-        cost: 350
-        crate: CrateGenericSteel
-        entities:
-        - MaterialCloth
-        - MaterialCloth
       - name: Ящик древесины (x60 древесина)
         cost: 500
         crate: CrateGenericSteel
