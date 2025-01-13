@@ -88,6 +88,8 @@
         amount: 5
       - id: ToolboxTurretMarine
         amount: 5
+      - id: ToolboxMinaCM
+        amount: 3 
     - name: Ресурсы
       entries:
       - id: SheetSteel

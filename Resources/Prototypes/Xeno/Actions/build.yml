@@ -15,5 +15,5 @@
       sprite: Actions/xeno.rsi
       state: build_wall
     itemIconStyle: NoItem
-    event: !type:XenoBuildWallEvent
+    event: !type:XenoBuildWallActionEvent
     checkCanAccess: false

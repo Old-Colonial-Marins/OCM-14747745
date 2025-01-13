@@ -1,0 +1,41 @@
+- type: entity
+  name: WeaponTerraSniperCM
+  parent: BaseWeaponPowerCellCM
+  id: WeaponTerraSniperCM
+  description: An experimental weapon that uses concentrated x-ray energy against its target.
+  components:
+  - type: MagazineAmmoProvider
+    changeHitscan: true
+    proto: TerraLaserSniper
+    FireCost: 125
+  - type: Item
+    size: Huge
+    sprite: _CM/Objects/Weapons/Guns/Battery/terra_sniper/x32.rsi
+  - type: Sprite
+    scale: 0.75, 0.75
+    sprite: _CM/Objects/Weapons/Guns/Battery/terra_sniper/x64.rsi
+  - type: Clothing
+    sprite: _CM/Objects/Weapons/Guns/Battery/terra_sniper/x32.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    fireRate: 0.5
+  - type: ItemSlots
+  - type: MagazineVisuals
+    steps: 4
+
+- type: entity
+  name: WeaponTerraSniperCMEmpty
+  parent: WeaponTerraSniperCM
+  id: WeaponTerraSniperCMEmpty
+  suffix: Empty
+  description: An experimental weapon that uses concentrated x-ray energy against its target.
+  components:
+  - type: ItemSlots
+  slots:
+    gun_magazine:
+      startingItem: null

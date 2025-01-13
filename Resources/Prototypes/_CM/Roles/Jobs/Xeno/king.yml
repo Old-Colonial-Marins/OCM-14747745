@@ -1,0 +1,13 @@
+- type: job
+  id: King
+  name: job-name-king
+  description: job-description-king
+  playTimeTracker: JobKing
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobKseno
+      time: 36000 # 10 hrs
+  canBeAntag: false
+  icon: "JobIconKing"
+  supervisors: job-supervisors-quinn
+  jobEntity: MobKingXeno

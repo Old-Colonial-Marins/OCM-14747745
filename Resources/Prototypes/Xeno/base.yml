@@ -243,7 +243,28 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 3
       baseSprintSpeed: 6
-
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
+    - type: XenoPullerRules
+      enabled: true
+      isCheckXeno: true
+      blacklist:
+      - C4 # grenades
+      - SeismicCharge
+      - ExGrenade
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeDummy
+      - GrenadeStinger
+      - GrenadeIncendiary
+      - GrenadeShrapnel
+      - ClusterGrenade
+      - EmpGranade
+      - ArtyGrenade # CM14 CAS crenade
+      - MobRavagerXeno # XENOS Ravager and king are not pullable
+      - MobKingXeno # XENOS Ravager and king are not pullable
 - type: entity
   abstract: true
   parent: MobXenoBase
@@ -261,6 +282,28 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
+    - type: XenoPullerRules
+      enabled: true
+      isCheckXeno: true
+      blacklist:
+      - C4 # grenades
+      - SeismicCharge
+      - ExGrenade
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeDummy
+      - GrenadeStinger
+      - GrenadeIncendiary
+      - GrenadeShrapnel
+      - ClusterGrenade
+      - EmpGranade
+      - ArtyGrenade # CM14 CAS crenade
+      - MobRavagerXeno # XENOS Ravager and king are not pullable
+      - MobKingXeno # XENOS Ravager and king are not pullable
 
 
 - type: entity
@@ -280,8 +323,28 @@
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
       baseSprintSpeed: 5
-
-
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
+    - type: XenoPullerRules
+      enabled: true
+      isCheckXeno: true
+      blacklist:
+      - C4 # grenades
+      - SeismicCharge
+      - ExGrenade
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeDummy
+      - GrenadeStinger
+      - GrenadeIncendiary
+      - GrenadeShrapnel
+      - ClusterGrenade
+      - EmpGranade
+      - ArtyGrenade # CM14 CAS crenade
+      - MobRavagerXeno # XENOS Ravager and king are not pullable
+      - MobKingXeno # XENOS Ravager and king are not pullable
 
 - type: entity
   abstract: true
@@ -303,6 +366,28 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepLarge
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
+    - type: XenoPullerRules
+      enabled: true
+      isCheckXeno: true
+      blacklist:
+      - C4 # grenades
+      - SeismicCharge
+      - ExGrenade
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeDummy
+      - GrenadeStinger
+      - GrenadeIncendiary
+      - GrenadeShrapnel
+      - ClusterGrenade
+      - EmpGranade
+      - ArtyGrenade # CM14 CAS crenade
+      - MobRavagerXeno # XENOS Ravager and king are not pullable
+      - MobKingXeno # XENOS Ravager and king are not pullable
 
 - type: entity
   abstract: true
@@ -324,3 +409,33 @@
     - type: FootstepModifier
       footstepSoundCollection:
         collection: XenoFootstepLarge
+    - type: Puller
+      needsHands: false
+      sprintModifier: 0.75 # Default 0.95
+      walkModifier: 0.75
+    - type: XenoPullerRules
+      enabled: true
+      isCheckXeno: true
+      blacklist:
+      - C4 # grenades
+      - SeismicCharge
+      - ExGrenade
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeDummy
+      - GrenadeStinger
+      - GrenadeIncendiary
+      - GrenadeShrapnel
+      - ClusterGrenade
+      - EmpGranade
+      - ArtyGrenade # CM14 CAS crenade
+      - MobRavagerXeno # XENOS Ravager and king are not pullable
+      - MobKingXeno # XENOS Ravager and king are not pullable
+
+- type: entity
+  id: MobXenoPassiveEvades
+  abstract: true
+  components:
+  - type: XenoEvades
+    missChance: 0.10
+    popupIfHit: false

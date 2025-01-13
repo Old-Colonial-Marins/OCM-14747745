@@ -107,8 +107,7 @@
       - id: Box12560RmmCM
         amount: 3
       - id: Box1024mmCM
-        amount: 3
-
+        amount: 9
     - name: Пистолеты-Пулемёты
       entries:
       - id: WeaponSubMachineGunM39
@@ -122,8 +121,7 @@
       - id: Box450_BrushmasterCM
         amount: 3
       - id: Box458_SocomCM
-        amount: 3
-
+        amount: 9
     - name: Дробовики
       entries:
       - id: WeaponShotgunLiberator
@@ -135,8 +133,7 @@
       - id: BoxShellPunisher
         amount: 3
       - id: BoxShellLiberator
-        amount: 3
-
+        amount: 9
     - name: Пистолеты
       entries:
       - id: WeaponPistol88M4
@@ -152,8 +149,25 @@
       - id: MacheteMarine
         amount: 4
       - id: SmokeGrenade
-        amount: 8
-
+        amount: 16
+    - name: Лазеры
+      entries:
+      - id: WeaponTerraMachinegunCM
+        amount: 1
+      - id: WeaponTerraSniperCM
+        amount: 1
+      - id: WeaponTerraShotgunCM
+        amount: 1
+      - id: MagazineBatteryCM
+        amount: 6
+    - name: Взрывчатка
+      entries:
+      - id: ExGrenade
+        amount: 2
+      - id: GrenadeIncendiaryCM
+        amount: 2
+      - id: GrenadeShrapnelCM
+        amount: 2       
 
 - type: entity
   parent: ColMarTechBase

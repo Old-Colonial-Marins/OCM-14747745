@@ -1,0 +1,54 @@
+- type: entity
+  name: terra x-ray cannon
+  parent: BaseWeaponPowerCell
+  abstract: true
+  id: BaseWeaponPowerCellCM
+  suffix: CM
+  description: An experimental weapon that uses concentrated x-ray energy against its target.
+  components:
+  - type: MagazineAmmoProvider
+  - type: Item
+    size: Huge
+    #sprite: _CM/Objects/Weapons/Guns/Battery/terra_xray_x32.rsi
+  - type: Sprite
+    scale: 0.5, 0.5
+    #sprite: _CM/Objects/Weapons/Guns/Battery/terra_xray_x64.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    #sprite: _CM/Objects/Weapons/Guns/Battery/terra_xray_x32.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineBatteryCM
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+          - EnergyMagazineCM
+  - type: MagazineVisuals
+    magState: mag
+    #steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: Wieldable
+

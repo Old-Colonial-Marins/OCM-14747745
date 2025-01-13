@@ -72,13 +72,15 @@
     - state: red
   - type: Appearance
   - type: ClusterGrenade
-    fillPrototype: ArtyGrenade
-    maxGrenadesCount: 5
-    delay: 6
+    fillPrototype: ArtyGrenadebombard
+    baseTriggerDelay: 4
+    maxGrenadesCount: 3
     distance: 5
   - type: ContainerContainer
     containers:
-      cluster-flash: !type:Container
+      cluster-payload: !type:Container
+  - type: OnUseTimerTrigger
+    delay: 6.0
   - type: PointLight
     color: Red
     castShadows: false
@@ -96,6 +98,33 @@
         enabled: true
   - type: EmitSoundOnUse
     sound: /Audio/Announcements/bloblarm.ogg
+
+- type: entity
+  id: ArtyGrenadebombard
+  name: разрывная Кассета
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: OnUseTimerTrigger
+    delay: 0.019
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: CASBombExplosion
+    maxIntensity: 15
+    intensitySlope: 2
+    totalIntensity: 700 # about a ~6 tile radius
+    canCreateVacuum: false
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 20
 
 - type: entity
   id: ArtyGrenade
@@ -218,7 +247,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 10
+          damage: 30
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
@@ -252,6 +281,122 @@
   - type: EmitSoundOnTrigger
     sound:
       path: /Audio/Effects/Weather/snowstorm.ogg
+  - type: Tag
+    tags:
+    - InteractionCAS
+
+#ManNapalm
+
+- type: entity
+  id: ArtyGrenadeNapalm
+  name: Да осветит путь их.
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: OnUseTimerTrigger
+    delay: 0.1
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: CASBombExplosionNapalm
+    maxIntensity: 15
+    intensitySlope: 2
+    totalIntensity: 200 # about a ~6 tile radius
+    canCreateVacuum: false
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 4
+  - type: GasMiner
+    spawnGas: Plasma
+
+- type: entity
+  parent: BaseItem
+  id: MarineCASNapalm
+  name: Напалмовая бомба
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+    scale: 2, 2
+  - type: ClusterGrenade
+    fillPrototype: ArtyGrenadeNapalm
+    baseTriggerDelay: 4
+    maxGrenadesCount: 5
+    distance: 5
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: OnUseTimerTrigger
+    delay: 0.2
+  # TODO upsteam кусок говна, не работает EmitSoundOnTrigger закостылил с помощью CMRaptorEmitSoundOnUse. Но когда EmitSoundOnTrigger начнёт работать - раскоментировать
+  # Убрано CMRaptorEmitSoundOnUse, вернуть с пендосов
+  - type: Tag
+    tags:
+    - InteractionCAS
+
+#Mansuperbimba
+
+- type: entity
+  id: ArtyGrenadeSuper
+  name: Да осветит путь их.
+  suffix: MarinesGear
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: OnUseTimerTrigger
+    delay: 0.1
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: CASBombExplosion
+    maxIntensity: 17
+    intensitySlope: 4
+    totalIntensity: 300 # about a ~6 tile radius
+    canCreateVacuum: false
+  - type: PointLight
+    color: Red
+    castShadows: false
+    radius: 4
+
+- type: entity
+  parent: BaseItem
+  id: MarineCASSuper
+  name: Боеприпас с высокоточным наведением.
+  suffix: MarinesGear
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/nukenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.AmmoVisualLayers.Base"]
+    scale: 2, 2
+  - type: ClusterGrenade
+    fillPrototype: ArtyGrenadeSuper
+    baseTriggerDelay: 4
+    maxGrenadesCount: 1
+    distance: 1
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: OnUseTimerTrigger
+    delay: 0.2
+  # TODO upsteam кусок говна, не работает EmitSoundOnTrigger закостылил с помощью CMRaptorEmitSoundOnUse. Но когда EmitSoundOnTrigger начнёт работать - раскоментировать
+  # Убрано CMRaptorEmitSoundOnUse, вернуть с пендосов
   - type: Tag
     tags:
     - InteractionCAS

@@ -4,6 +4,134 @@
 - type: Tag
   id: FlameTurret
 
+- type: Tag
+  id: MinaCM
+
+- type: Tag
+  id: TurretGren
+
+- type: Tag
+  id: TurretLaz
+
+- type: entity
+  parent: BaseStructure
+  id: WeaponTurretBaseLaser
+  name: Лазерная турель
+  description: Automatic turret of laser destruction, with a self-charging battery inside.
+  abstract: true
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Actions
+    - type: Construction
+      graph: MarineTurretGraph
+      node: MarineTurret
+    - type: Repairable
+      fuelcost: 20
+      doAfterDelay: 5
+    - type: FriendlyFire
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: Sprite
+      sprite: _CM/TGMSArsenal/Textures/laser.rsi
+      drawdepth: Mobs
+      noRot: true
+      layers:
+        - state: stand
+        - state: onestar
+    - type: InteractionPopup
+      interactDelay: 0.2
+      successChance: 0.8
+      interactSuccessString: petting-success-generic
+      interactFailureString: petting-failure-generic
+      interactSuccessSound:
+        path: /Audio/Effects/double_beep.ogg
+    - type: CombatMode
+      toggleMouseRotator: false
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          # TODO: Construction graph
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel1:
+                  min: 3
+                  max: 5
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/laser.ogg
+    - type: HitscanBatteryAmmoProvider
+      proto: RedHeavyLaser
+      fireCost: 100
+    - type: Battery
+      maxCharge: 3000
+      startingCharge: 3000
+    - type: HTN
+      rootTask:
+        task: TurretCompound
+      blackboard:
+        RotateSpeed: !type:Single
+          3.141
+        SoundTargetInLOS: !type:SoundPathSpecifier
+          path: /Audio/Effects/double_beep.ogg
+    - type: MouseRotator
+      angleTolerance: 6
+      rotationSpeed: 300
+      simple4DirMode: false
+    - type: NoRotateOnInteract
+    - type: NoRotateOnMove
+    - type: Input
+      context: "human"
+    - type: StaticPrice
+      price: 750
+    - type: NpcFactionMember
+      factions:
+      - NanoTrasen
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 50
+
+- type: entity
+  parent: WeaponTurretBaseLaser
+  id: weaponTurretMarinezalerCM
+  name: Лазерная турель
+  description: Automatic turret of laser destruction, with a self-charging battery inside.
+  components:
+  - type: FriendlyFire
+  - type: Gun
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+
 - type: entity
   parent: WeaponTurretNanoTrasen
   name: turret
@@ -45,7 +173,26 @@
         - Opaque
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifle
-    capacity: 350
+    capacity: 500
+
+- type: entity
+  parent: WeaponTurretMarine
+  name: гранатометная турель
+  id: WeaponGrenadeTurretMarine
+  components:
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      maxAngle: 50
+      minAngle: 5
+    - type: BallisticAmmoProvider
+      proto: GrenadeFragCMTurret
+      capacity: 100
+    - type: Sprite
+      sprite: _CM/TGMSArsenal/Textures/turrets.rsi
 
 - type: entity
   parent: WeaponTurretMarine
@@ -53,7 +200,7 @@
   id: WeaponFlameTurretMarine
   components:
     - type: Gun
-      fireRate: 2
+      fireRate: 4
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -63,6 +210,8 @@
     - type: BallisticAmmoProvider
       proto: FlamethrowerProjectile
       capacity: 500
+    - type: Sprite
+      sprite: _CM/TGMSArsenal/Textures/turrets2.rsi
 
 - type: constructionGraph
   id: MarineTurretGraph
@@ -95,8 +244,8 @@
             - tag: FlameTurret
               name: folding flame turret
               icon:
-                sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-                state: syndie_lethal
+                sprite: _CM/TGMSArsenal/Textures/turrets.rsi
+                state: syndie_off
               doAfter: 10
           completed:
             - !type:SnapToGrid
@@ -131,8 +280,8 @@
   category: construction-category-cm-structures
   description: The engineer's best friend.
   icon:
-    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: syndie_lethal
+    sprite: _CM/TGMSArsenal/Textures/turrets.rsi
+    state: syndie_off
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
@@ -165,3 +314,157 @@
   - type: Tag
     tags:
     - FlameTurret
+
+#oldcolonialmarinsstart
+
+- type: constructionGraph
+  id: MarineGrenadeGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponGrenadeTurretMarine
+          steps:
+            - tag: TurretGren
+              name: folding grenade turret
+              icon:
+                sprite: _CM/TGMSArsenal/Textures/turrets2.rsi
+                state: syndie_stun
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponGrenadeTurretMarine
+      entity: WeaponGrenadeTurretMarine
+
+- type: construction
+  name: "- folding turret Grenade"
+  id: MarineGrenadeTurretConstruction
+  graph: MarineGrenadeGraph
+  startNode: start
+  targetNode: weaponGrenadeTurretMarine
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: _CM/TGMSArsenal/Textures/turrets2.rsi
+    state: syndie_stun
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MarineMineGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponMineMarine
+          steps:
+            - tag: MinaCM
+              name: folding mine
+              icon:
+                sprite: Objects/Misc/landmine.rsi
+                state: landmine
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponMineMarine
+      entity: LandMineExplosiveCM
+
+- type: construction
+  name: "- folding mine"
+  id: MarineMineConstruction
+  graph: MarineMineGraph
+  startNode: start
+  targetNode: weaponMineMarine
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: Objects/Misc/landmine.rsi
+    state: landmine
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: entity
+  name: ящик с лазерной турелью
+  suffix: Marine, Turret
+  id: ToolboxTurretMarineLaser
+  description: A toolbox with turret.
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - TurretLaz
+
+- type: constructionGraph
+  id: MarineTurretGraphLaz
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: weaponTurretMarinezaler
+          steps:
+            - tag: TurretLaz
+              name: folding laz turret
+              icon:
+                sprite: _CM/TGMSArsenal/Textures/laser.rsi
+                state: onestar
+              doAfter: 10
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+    - node: weaponTurretMarinezaler
+      entity: weaponTurretMarinezalerCM
+
+- type: construction
+  name: "- folding turret"
+  id: MarineTurretConstructionLaz
+  graph: MarineTurretGraphLaz
+  startNode: start
+  targetNode: weaponTurretMarinezaler
+  category: construction-category-cm-structures
+  description: The engineer's best friend.
+  icon:
+    sprite: _CM/TGMSArsenal/Textures/laser.rsi
+    state: onestar
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: entity
+  name: ящик с гранатометной турелью
+  suffix: Marine, Turret
+  id: ToolboxTurretMarineGrenade
+  description: A toolbox with turret.
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - TurretGren
+
+- type: entity
+  name: набор для создания мины
+  suffix: Marine, мина
+  id: ToolboxMinaCM
+  parent: ToolboxElectrical
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - MinaCM

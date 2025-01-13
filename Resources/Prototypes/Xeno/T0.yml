@@ -70,7 +70,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Dead
+        150: Dead
     - type: MovementSpeedModifier
       baseWalkSpeed: 5
       baseSprintSpeed: 9
@@ -148,7 +148,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Dead
+        120: Dead
     - type: MeleeWeapon
       hidden: true
       damage:

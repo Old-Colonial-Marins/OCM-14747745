@@ -29,7 +29,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        700: Dead
     - type: Destructible
       thresholds:
         - trigger:
@@ -84,7 +84,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        550: Dead
     - type: Destructible
       thresholds:
       - trigger:
@@ -165,7 +165,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        570: Dead
     - type: Destructible
       thresholds:
       - trigger:
@@ -216,7 +216,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        800: Dead
+        900: Dead
     - type: Destructible
       thresholds:
         - trigger:
