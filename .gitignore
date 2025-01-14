@@ -315,3 +315,5 @@ Resources/MapImages
 Resources/ConfigPresets/Build/develompnet.toml
 Resources/ConfigPresets/Build/development.toml
 Resources/ConfigPresets/Build/development.toml
+Resources/ConfigPresets/Build/development.toml
+Resources/ConfigPresets/Build/debug.toml

@@ -19,7 +19,8 @@
     id: SurvivalIDCard
     ears: ClothingHeadsetFreelance
     pocket1: FlareMarine
-    pocket2: RMCMotionDetector
+# Вернуть после добавления детектора!!
+#    pocket2: RMCMotionDetector
 
 # Per job spawns can be found within their roles/jobs/department/role.yml
 - type: entity

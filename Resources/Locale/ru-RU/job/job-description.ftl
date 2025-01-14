@@ -86,6 +86,7 @@ job-description-pilotraptor = Взаимодействуйте с командо
 job-description-staffofficer = Вы должны информировать капитана о потерях и успехах отрядов.
 job-description-crusher = Ломайте, крушите, уничтожайте!
 job-description-pretor = Защищайте свою королеву ценой жизни!
+job-description-king = Уничтожайте морпехов своей силой!
 job-description-kseno = Просто выполняйте приказы королевы.
 job-description-quinn = Руководите своими детёнышами ради победы улья!
 job-description-runi = Вы просто милейшее создание на земле.

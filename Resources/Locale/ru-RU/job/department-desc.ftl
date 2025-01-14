@@ -25,3 +25,4 @@ department-LogisticsSupport-description = Отдел, который долже�
 department-MedicalUnit-description = Поднимайте бойцов на ноги ради общей победы!
 department-ConstructionBattalion-description = Заделывайте дыры в обшивке *Смех*
 department-Xeno-description = Вы должны убить этих жалких людишек!
+

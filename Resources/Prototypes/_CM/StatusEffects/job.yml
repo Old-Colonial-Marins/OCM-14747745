@@ -277,3 +277,10 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Pretor
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconKing
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: King

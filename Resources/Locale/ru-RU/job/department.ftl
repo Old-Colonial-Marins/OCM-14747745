@@ -24,3 +24,4 @@ department-LogisticsSupport = Отдел снабжения
 department-MedicalUnit = Медсанчасть
 department-ConstructionBattalion = Стройбат
 department-Xeno = Ксеноморфы
+department-Planetallow = Планета
