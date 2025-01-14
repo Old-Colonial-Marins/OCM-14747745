@@ -109,6 +109,8 @@
       - !type:TriggerBehavior
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Item
+    size: normal
 
 - type: entity
   name: seismic charge
