@@ -674,7 +674,7 @@
 
 - type: entity
   parent: ClothingBeltMilitaryWebbingBoom
-  id: ClothingBeltMilitaryWebbingBoom
+  id: ClothingBeltMilitaryWebbingBoom2
   name: Пояс шахида
   description: Буум...
   components:
