@@ -77,6 +77,40 @@
       festive: Objects/Weapons/Bombs/c4gift.rsi
 
 - type: entity
+  name: Блок c4
+  parent: BasePlasticExplosive
+  id: C4Plastic
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Bombs/c4.rsi
+    state: icon
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: Tag
+    tags:
+    - C4Plastic
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: Explosive # Powerful explosion in a very small radius. Doesn't break underplating.
+    explosionType: DemolitionC4
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 160 # about a ~4 tile radius
+    canCreateVacuum: false
+  - type: ExplodeOnTrigger
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
   name: seismic charge
   description: Concussion based explosive designed to destroy large amounts of rock.
   parent: BasePlasticExplosive

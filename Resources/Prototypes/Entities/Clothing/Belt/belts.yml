@@ -662,6 +662,57 @@
     damageCoefficient: 0.1
 
 - type: entity
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
+  id: ClothingBeltMilitaryWebbingBoom
+  name: chest rig
+  description: ...
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/militarywebbing.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/militarywebbing.rsi
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingBoom
+  id: ClothingBeltMilitaryWebbingBoom
+  name: Пояс шахида
+  description: Буум...
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/militarywebbingboom.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/militarywebbingboom.rsi
+  - type: Item
+    size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 1.10 
+    sprintModifier: 1.10
+  - type: OnUseTimerTrigger
+    delay: 10
+    delayOptions: [3, 5, 10, 30, 60, 120, 300]
+    initialBeepDelay: 0
+    beepSound: /Audio/Machines/Nuke/angry_beep.ogg
+    startOnStick: true
+    canToggleStartOnStick: true
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: Explosive # Powerful explosion in a very small radius. Doesn't break underplating.
+    explosionType: BoomPois
+    totalIntensity: 60
+    intensitySlope: 5
+    maxIntensity: 20
+    canCreateVacuum: false
+  - type: ExplodeOnTrigger
+  - type: Storage
+    grid:
+    - 0,0,7,1 #7 slots
+    whitelist:
+      tags:
+      - C4Plastic
+
+- type: entity
   parent: ClothingBeltBase
   id: ClothingBeltSuspenders
   name: suspenders
