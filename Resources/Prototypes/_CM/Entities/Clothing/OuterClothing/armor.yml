@@ -1,5 +1,18 @@
+  # In-armor flashlight
 - type: entity
-  parent: ClothingOuterBase
+  id: ClothingOuterArmorUnpoweredFlashlight
+  abstract: true
+  components:
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 6
+    energy: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+
+- type: entity
+  parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
   id: ClothingOuterArmorMarineLight
   name: M3-L pattern light armor
   description: A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed.
@@ -23,7 +36,7 @@
     sprintModifier: 1
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
   id: ClothingOuterArmorMarineMedium
   name: M3 pattern marine armor
   description: A standard Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage.
@@ -92,7 +105,7 @@
     damageCoefficient: 0.6
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
   id: ClothingOuterPrototypeC
   name: Exoskeleton Prototype-C
   description: Allows you to move unusually quickly, self-charging due to built-in mini-generators!

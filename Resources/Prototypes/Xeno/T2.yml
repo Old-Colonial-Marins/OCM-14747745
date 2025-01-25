@@ -23,19 +23,19 @@
     - type: MeleeWeapon
       damage:
         groups:
-          Brute: 18
+          Brute: 20
         types:
           Structural: 30
     - type: MobThresholds
       thresholds:
         0: Alive
-        700: Dead
+        800: Dead
     - type: Destructible
       thresholds:
         - trigger:
             !type:DamageTypeTrigger
             damageType: Blunt
-            damage: 700
+            damage: 800
           behaviors:
           - !type:GibBehavior { }
     - type: Sprite
@@ -45,7 +45,6 @@
       timeUsage: 30
     - type: SlowOnDamage
       speedModifierThresholds:
-        250: 0.9
         300: 0.85
         350: 0.80
         400: 0.75
@@ -205,7 +204,7 @@
           evolution: 1200
         - !type:XenoEvolution
           prototype: MobRavagerXeno
-          evolution: 2300
+          evolution: 2000
     # Attack
     - type: MeleeWeapon
       damage:
@@ -216,7 +215,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        900: Dead
+        930: Dead
     - type: Destructible
       thresholds:
         - trigger:
