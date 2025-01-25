@@ -97,17 +97,17 @@
       evolutions:
         - !type:XenoEvolution
           prototype: MobRoyalQueenXeno
-          evolution: 6500
+          evolution: 5600
     # Attack
     - type: MeleeWeapon
       damage:
         groups:
-          Brute: 20
+          Brute: 40
         types:
-          Structural: 60
+          Structural: 50
     # Shoot
     - type: Gun
-      fireRate: 0.6
+      fireRate: 1
       selectedMode: FullAuto
       useKey: false
       stopMeleeOnShoot: false
