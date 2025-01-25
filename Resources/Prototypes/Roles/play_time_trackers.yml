@@ -29,6 +29,9 @@
   id: JobAlfaMarine
 
 - type: playTimeTracker
+  id: JobSurvivalMarine
+
+- type: playTimeTracker
   id: JobDeltaMarine
 
 - type: playTimeTracker

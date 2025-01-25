@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 112,
+    "y": 144
+  },
+  "states": [
+    {
+      "name": "ripley0"
+    },
+    {
+      "name": "ripley1"
+    },
+    {
+      "name": "ripley2"
+    },
+    {
+      "name": "ripley3"
+    },
+    {
+      "name": "ripley4"
+    }
+  ]
+}

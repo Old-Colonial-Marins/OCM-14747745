@@ -1,0 +1,51 @@
+- type: job
+  id: SurvivalMarine
+  name: Выживший
+  description: Небольшие остатки выживших на планете
+  playTimeTracker: JobSurvivalMarine
+  startingGear: RMCGearSurvivor
+  icon: "JobIconSurvivalMarine"
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  accessGroups:
+    - Survival
+
+- type: startingGear
+  id: RMCGearSurvivor
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
+    back: ClothingBackpackMilitarySatchel
+    shoes: ClothingShoesBootsMarine
+    id: SurvivalIDCard
+    ears: ClothingHeadsetFreelance
+    pocket1: FlareMarine
+# Вернуть после добавления детектора!!
+#    pocket2: RMCMotionDetector
+
+# Per job spawns can be found within their roles/jobs/department/role.yml
+- type: entity
+  id: CMSpawnPointJobBase
+  parent: MarkerBase
+  abstract: true
+  suffix: Job Spawn
+  description: A RMC14 job spawner. Used for roundstart and late joins.
+  components:
+  - type: SurvivalSpawn
+  - type: SpawnPoint
+    spawn_type: Job
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+
+- type: entity
+  parent: CMSpawnPointJobBase
+  id: CMSpawnPointSurvivor
+  name: survivor spawn point
+  components:
+  - type: SurvivalSpawn
+  - type: SpawnPoint
+    job_id: SurvivalMarine
+  - type: Sprite
+    layers:
+    - sprite: Markers/jobs.rsi
+      state: green
+    - state: zookeeper

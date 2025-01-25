@@ -88,6 +88,7 @@ job-name-crusher = Крушитель
 job-name-kseno = Низший ксеноморф
 job-name-pretor = Преторианец
 job-name-quinn = Королева
+job-name-king = Король
 job-name-runi = Руни
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = атмосферный техник
@@ -172,5 +173,6 @@ JobCrusher = Крушитель
 JobKseno = Низший ксеноморф
 JobPretor = Преторианец
 JobQuinn = Королева
+JobKing = Король
 JobRuni = Руни
 job-name-pilotmech = Пилот меха

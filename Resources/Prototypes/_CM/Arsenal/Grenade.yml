@@ -42,6 +42,30 @@
   fireStates: 3
 
 - type: entity
+  id: BulletGrenadeBlastMarineTankAP
+  parent: BulletGrenadeBlast
+  suffix: "Marines Gear"
+  components:
+  - type: Explosive
+    explosionType: DefaultCMMine
+    maxIntensity: 12
+    intensitySlope: 5
+    totalIntensity: 60 # about a ~4 tile radius
+    canCreateVacuum: false
+
+- type: entity
+  id: BulletGrenadeBlastMarineTank
+  parent: BulletGrenadeBlast
+  suffix: "Marines Gear"
+  components:
+  - type: Explosive
+    explosionType: DefaultCMBlast
+    maxIntensity: 12
+    intensitySlope: 5
+    totalIntensity: 200 # about a ~4 tile radius
+    canCreateVacuum: false
+
+- type: entity
   id: BulletGrenadeBlastMarine
   parent: BulletGrenadeBlast
   suffix: "Marines Gear"
@@ -52,6 +76,43 @@
     intensitySlope: 4
     totalIntensity: 130 # about a ~4 tile radius
     canCreateVacuum: false
+
+- type: entity
+  id: GrenadeBlastTank
+  name: blast grenade
+  parent: BaseGrenade
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeBlast
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+    - state: m5_84mm_he
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: blast
+    suffix: false
+
+- type: entity
+  id: TankcartageFugas
+  parent: GrenadeBlastTank
+  name: Снаряд танка
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeBlastMarineTank
+    deleteOnSpawn: true
+
+- type: entity
+  id: TankcartageAP
+  parent: GrenadeBlastTank
+  name: Снаряд танка
+  suffix: MarinesGear
+  components:
+  - type: CartridgeAmmo
+    proto: BulletGrenadeBlastMarineTankAP
+    deleteOnSpawn: true
 
 - type: entity
   id: GrenadeBlastMarine

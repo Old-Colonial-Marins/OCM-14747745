@@ -50,11 +50,46 @@
   - type: ResearchClient
   - type: TechnologyDatabase
 
+# a lathe that can be sped up with space lube / slowed down with glue
+- type: entity
+  abstract: true
+  parent: BaseLathe
+  id: BaseLatheLube
+  components:
+  - type: ReagentSpeed
+    solution: lube
+    modifiers:
+      SpaceLube: 0.25
+      SpaceGlue: 5
+  - type: SolutionContainerManager
+    solutions:
+      lube:
+        maxVol: 250
+  - type: Spillable
+    solution: lube
+  - type: RefillableSolution
+    solution: lube
+  - type: ExaminableSolution
+    solution: lube
+
+- type: entity
+  abstract: true
+  id: BaseHyperlathe
+  components:
+  - type: Lathe
+    materialUseMultiplier: 0.5
+    timeMultiplier: 1.5
+  - type: LatheHeatProducing
+  - type: ReagentSpeed
+    modifiers:
+      SpaceLube: 0.8 # being faster means less heat so lube needs to be nerfed
+      SpaceGlue: 5 # no change from normal lathe, overheat!!!
+
 - type: entity
   id: Autolathe
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: autolathe
-  description: It produces items using metal and glass.
+  description: It produces basic items using metal and glass.
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe.rsi
@@ -164,65 +199,46 @@
       - ClothingHeadHatWelding
   - type: EmagLatheRecipes
     emagStaticRecipes:
-       - CartridgePistol
-       - CartridgeMagnum
-       - ShellShotgun
-       - ShellShotgunFlare
-       - ShellTranquilizer
-       - CartridgeLightRifle
-       - CartridgeRifle
-       - MagazineBoxPistol
-       - MagazineBoxMagnum
-       - MagazineBoxRifle
-       - MagazineBoxLightRifle
-       - GrenadeBlast
-    emagDynamicRecipes:
-      - ShellShotgunBeanbag
-      - ShellShotgunIncendiary
-      - CartridgePistolIncendiary
-      - CartridgeMagnumIncendiary
-      - CartridgeLightRifleIncendiary
-      - CartridgeRifleIncendiary
-      - MagazineBoxPistolIncendiary
-      - MagazineBoxMagnumIncendiary
-      - MagazineBoxLightRifleIncendiary
-      - MagazineBoxRifleIncendiary
-      - ShellShotgunUranium
-      - CartridgePistolUranium
-      - CartridgeMagnumUranium
-      - CartridgeLightRifleUranium
-      - CartridgeRifleUranium
-      - MagazineBoxPistolUranium
-      - MagazineBoxMagnumUranium
-      - MagazineBoxLightRifleUranium
-      - MagazineBoxRifleUranium
-      - PowerCageSmall
-      - PowerCageMedium
-      - PowerCageHigh
-      - MagazineGrenadeEmpty
-      - GrenadeEMP
-      - GrenadeFlash
+      - BoxLethalshot
+      - BoxShotgunFlare
+      - BoxShotgunSlug
+      - MagazineBoxLightRifle
+      - MagazineBoxMagnum
+      - MagazineBoxPistol
+      - MagazineBoxRifle
+      - MagazineLightRifle
+      - MagazineLightRifleEmpty
+      - MagazinePistol
+      - MagazinePistolEmpty
+      - MagazinePistolSubMachineGun
+      - MagazinePistolSubMachineGunEmpty
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMountedEmpty
+      - MagazineRifle
+      - MagazineRifleEmpty
+      - MagazineShotgun
+      - MagazineShotgunEmpty
+      - MagazineShotgunSlug
+      - RiotShield
+      - SpeedLoaderMagnum
+      - SpeedLoaderMagnumEmpty
 
 - type: entity
   id: AutolatheHyperConvection
-  parent: Autolathe
+  parent: [Autolathe, BaseHyperlathe]
   name: hyper convection autolathe
   description: A highly-experimental autolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
   - type: Sprite
     sprite: Structures/Machines/autolathe_hypercon.rsi
-  - type: Lathe
-    materialUseMultiplier: 0.5
-    timeMultiplier: 1.5
-  - type: LatheHeatProducing
   - type: Machine
     board: AutolatheHyperConvectionMachineCircuitboard
 
 - type: entity
   id: Protolathe
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: protolathe
-  description: Converts raw materials into useful objects.
+  description: Converts raw materials into advanced items.
   components:
   - type: Sprite
     sprite: Structures/Machines/protolathe.rsi
@@ -259,14 +275,14 @@
       - AnomalyScanner
       - AnomalyLocator
       - AnomalyLocatorWide
-      - Scalpel
-      - Retractor
-      - Cautery
-      - Drill
+      - CMScalpel
+      - CMRetractor
+      - CMCautery
+      - CMDrill
       - WeaponParticleDecelerator
       - HoloprojectorField
-      - Saw
-      - Hemostat
+      - CMSaw
+      - CMHemostat
       - CryostasisBeaker
       - SyringeCryostasis
       - Syringe
@@ -319,32 +335,60 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - BorgModuleSurgery
   - type: EmagLatheRecipes
     emagDynamicRecipes:
+      - BoxBeanbag
+      - BoxShotgunIncendiary
+      - BoxShotgunUranium
       - ExplosivePayload
+      - GrenadeBlast
+      - GrenadeEMP
+      - GrenadeFlash
+      - HoloprojectorSecurity
+      - MagazineBoxLightRifleIncendiary
+      - MagazineBoxLightRifleUranium
+      - MagazineBoxMagnumIncendiary
+      - MagazineBoxMagnumUranium
+      - MagazineBoxPistolIncendiary
+      - MagazineBoxPistolUranium
+      - MagazineBoxRifleIncendiary
+      - MagazineBoxRifleUranium
+      - MagazineGrenadeEmpty
+      - MagazineLightRifleIncendiary
+      - MagazineLightRifleUranium
+      - MagazinePistolIncendiary
+      - MagazinePistolUranium
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - MagazineShotgunBeanbag
+      - MagazineShotgunIncendiary
+      - MagazineShotgunIncendiary
+      - PortableRecharger
+      - PowerCageHigh
+      - PowerCageMedium
+      - PowerCageSmall
+      - ShellTranquilizer
+      - SpeedLoaderMagnumIncendiary
+      - SpeedLoaderMagnumUranium
+      - TelescopicShield
+      - Truncheon
       - WeaponLaserCarbine
-      - WeaponAdvancedLaser
-      - WeaponLaserCannon
-      - WeaponXrayCannon
 
 - type: entity
   id: ProtolatheHyperConvection
-  parent: Protolathe
+  parent: [Protolathe, BaseHyperlathe]
   name: hyper convection protolathe
   description: A highly-experimental protolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
   components:
   - type: Sprite
     sprite: Structures/Machines/protolathe_hypercon.rsi
-  - type: Lathe
-    materialUseMultiplier: 0.5
-    timeMultiplier: 1.5
-  - type: LatheHeatProducing
   - type: Machine
     board: ProtolatheHyperConvectionMachineCircuitboard
 
 - type: entity
   id: CircuitImprinter
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: circuit imprinter
   description: Prints circuit boards for machines.
   components:
@@ -412,6 +456,7 @@
       - PowerComputerCircuitboard
       - AutolatheHyperConvectionMachineCircuitboard
       - ProtolatheHyperConvectionMachineCircuitboard
+      - CircuitImprinterHyperConvectionMachineCircuitboard
       - ReagentGrinderMachineCircuitboard
       - HotplateMachineCircuitboard
       - ElectricGrillMachineCircuitboard
@@ -459,6 +504,12 @@
       - MassMediaCircuitboard
       - ReagentGrinderIndustrialMachineCircuitboard
       - JukeboxCircuitBoard
+  - type: EmagLatheRecipes
+    emagDynamicRecipes:
+      - ShuttleGunDusterCircuitboard
+      - ShuttleGunFriendshipCircuitboard
+      - ShuttleGunPerforatorCircuitboard
+      - ShuttleGunSvalinnMachineGunCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -467,8 +518,19 @@
         - Ingot
 
 - type: entity
+  id: CircuitImprinterHyperConvection
+  parent: [CircuitImprinter, BaseHyperlathe]
+  name: hyper convection circuit imprinter
+  description: A highly-experimental circuit imprinter that harnesses the power of extreme heat to slowly create objects more cost-effectively.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/circuit_imprinter_hypercon.rsi
+  - type: Machine
+    board: CircuitImprinterHyperConvectionMachineCircuitboard
+
+- type: entity
   id: ExosuitFabricator
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: exosuit fabricator
   description: Creates parts for robotics and other mechanical needs
   components:
@@ -637,7 +699,7 @@
 
 - type: entity
   id: SecurityTechFab
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
@@ -659,115 +721,37 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      #- ClothingEyesHudSecurity
-      - Flash
-      - Handcuffs
-      - Zipties
-      - Stunbaton
-      #- ForensicPad
-      - RiotShield
-      #- ShellShotgun
-      #- ShellShotgunSlug
-      #- ShellShotgunFlare
-      #- ShellTranquilizer
-      #- MagazinePistol
-      #- MagazinePistolSubMachineGun
-      #- MagazinePistolSubMachineGunTopMounted
-      #- MagazineRifle
-      #- MagazineLightRifle
-      #- MagazineBoxPistol
-      #- MagazineBoxMagnum
-      #- MagazineBoxRifle
-      #- MagazineBoxLightRifle
-      #- SpeedLoaderMagnum
-      #- TargetHuman
-      #- TargetSyndicate
-      #- TargetClown
-      #- MagazineBoxLightRiflePractice
-      #- MagazineBoxMagnumPractice
-      #- MagazineBoxPistolPractice
-      #- MagazineBoxRiflePractice
-      #- ShellShotgunPractice
-      - WeaponLaserCarbinePractice
-      - WeaponDisablerPractice
-      - BoxShotgunPractice 
     dynamicRecipes:
-      #- MagazineRifleM41A
-      #- MagazineRifleM4RA
-      #- MagazinePistolAramatM5Y3
-      #- MagazinePistol88M4
-      #- MagazineRifleM39
-      #- Magazine10x24mm
-      #- SpeedLoaderMagnum
-      #- SpeedLoaderMagnumVP-60x2
-      #- SpeedLoaderLightRifle
-      #- SpeedLoaderMosin
-      #- SpeedLoader9mm
-      #- SpeedLoaderMagnum357
-      #- Magazine9mm
-      #- MagazinePP
-      #- Box1024mmCM
-      #- Magazine10x26mm
-      #- MagazineBoxMagnum
-      #- Box9mm
-      #- MagazineBox357
       - ExGrenade
       - C4
       - MarineCASFlareBomb
       - MarineCASClusterBomb
-      #- MagazineShotgunPatriot
-      #- FuelTankFlamethrower
-      #- BoxAntimaterialCM
-      #- MagazineLightRifleBox
-      - WeaponLaserCarbine
-      - WeaponLaserCannon
-      #- CartridgeLightRifleIncendiary
-      #- CartridgeMagnumIncendiary
-      #- CartridgePistolIncendiary
-      #- CartridgeRifleIncendiary
-      #- CartridgeLightRifleUranium
-      #- CartridgeMagnumUranium
-      #- CartridgePistolUranium
-      #- CartridgeRifleUranium
-      #- CartridgeLightRifleRubber
-      #- CartridgeMagnumRubber
-      #- CartridgePistolRubber
-      #- CartridgeRifleRubber
-      #- ClothingEyesGlassesSecurity
-      - ExplosivePayload
-      - FlashPayload
-      - HoloprojectorSecurity
-      #- MagazineBoxLightRifleIncendiary
-      #- MagazineBoxMagnumIncendiary
-      #- MagazineBoxPistolIncendiary
-      #- MagazineBoxRifleIncendiary
-      #- MagazineBoxLightRifleUranium
-      #- MagazineBoxMagnumUranium
-      #- MagazineBoxPistolUranium
-      #- MagazineBoxRifleUranium
-      #- MagazineBoxLightRifleRubber
-      #- MagazineBoxMagnumRubber
-      #- MagazineBoxPistolRubber
-      #- MagazineBoxRifleRubber
-      #- MagazineGrenadeEmpty
+      - GrenadeBlast
       - GrenadeEMP
       - GrenadeFlash
-      #- ShellShotgunBeanbag
-      #- ShellShotgunIncendiary
-      #- ShellShotgunUranium
+      - HoloprojectorSecurity
+      - PortableRecharger
+      - PowerCageHigh
+      - PowerCageMedium
+      - PowerCageSmall
+      - ShellTranquilizer
+      - ShuttleGunDusterCircuitboard
+      - ShuttleGunFriendshipCircuitboard
+      - ShuttleGunPerforatorCircuitboard
+      - ShuttleGunSvalinnMachineGunCircuitboard
+      - GrenadeEMP
+      - GrenadeFlash
       - Signaller
       - SignalTrigger
+      - SpeedLoaderMagnumIncendiary
+      - SpeedLoaderMagnumUranium
       - TelescopicShield
       - TimerTrigger
       - Truncheon
       - VoiceTrigger
-      - WeaponAdvancedLaser
       - WeaponDisabler
       - WeaponDisablerSMG
-      - WeaponLaserCannon
       - WeaponLaserCarbine
-      - WeaponXrayCannon
       - PowerCageSmall
       - PowerCageMedium
       - PowerCageHigh
@@ -775,6 +759,10 @@
       - ShuttleGunPerforatorCircuitboard
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
+      # СМ лазеры
+      - WeaponTerraShotgunCM
+      - WeaponTerraMachinegunCM
+      - WeaponTerraSniperCM
   - type: MaterialStorage
     whitelist:
       tags:
@@ -784,7 +772,7 @@
 
 - type: entity
   id: AmmoTechFab
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
@@ -807,15 +795,6 @@
       idleState: icon
       runningState: icon
       dynamicRecipes:
-        - SpeedLoaderMagnum
-        - SpeedLoaderMagnumVP-60x2
-        - SpeedLoaderLightRifle
-        - SpeedLoaderMosin
-        - SpeedLoader9mm
-        - SpeedLoaderMagnum357
-        #- Magazine9mm #Магазин от VP-70. Оно есть но пока не используется
-        #- MagazinePP
-        #- Magazine10x26mm
         # Штатная аммуниция морпехов
         - MagazineShotgunLiberator
         - MagazineRifleM41A
@@ -830,8 +809,8 @@
         - Box458_SocomCM
         - BoxShellPunisher
         - BoxShellLiberator
-        #- ExGrenade Теперь только в охранфабе
-        #- C4
+        - MagazineBatteryCM # Энергетический магазин
+        - MagazineBatteryCMRecharger
         # Аммуниция специалистов
         - GrenadeFragMarine
         - GrenadeBlastMarine
@@ -849,7 +828,7 @@
 
 - type: entity
   id: MedicalTechFab
-  parent: BaseLathe
+  parent: BaseLatheLube
   name: medical techfab
   description: Prints equipment for use by the medbay.
   components:
@@ -967,6 +946,8 @@
       - ClothingHeadHatBeretCmo
       - ClothingUniformJumpsuitCMO
       - ClothingUniformJumpskirtCMO
+      - ClothingUniformJumpsuitCMOTurtle
+      - ClothingUniformJumpskirtCMOTurtle
       - ClothingUniformJumpsuitDetective
       - ClothingUniformJumpskirtDetective
       - ClothingUniformJumpsuitEngineering

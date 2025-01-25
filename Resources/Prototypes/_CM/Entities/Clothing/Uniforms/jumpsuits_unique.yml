@@ -1,0 +1,127 @@
+##------Desert
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitDesert_eng
+  name: Engineer Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/desert/engi.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/desert/engi.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitDesert_mar
+  name: Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/desert/marine.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/desert/marine.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitDesert_med
+  name: Medical Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/desert/med.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/desert/med.rsi
+
+##------Forest
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitForest_eng
+  name: Engineer Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/forest/engi.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/forest/engi.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitForest_mar
+  name: Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/forest/marine.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/forest/marine.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitForest_med
+  name: Medical Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/forest/med.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/forest/med.rsi
+
+##------Snow
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitSnow_eng
+  name: Engineer Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/snow/engi.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/snow/engi.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitSnow_mar
+  name: Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/snow/marine.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/snow/marine.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitSnow_med
+  name: Medical Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/snow/med.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/snow/med.rsi
+
+##------Urban
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitUrban_eng
+  name: Engineer Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/urban/engi.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/urban/engi.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitUrban_mar
+  name: Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/urban/marine.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/urban/marine.rsi
+- type: entity
+  parent: ClothingUniformBaseMarine
+  id: ClothingUniformJumpsuitUrban_med
+  name: Medical Jumpsuit
+  description: Jumpsuit for soldiers
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/urban/med.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/urban/med.rsi

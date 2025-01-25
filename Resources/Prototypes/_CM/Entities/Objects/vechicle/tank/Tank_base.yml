@@ -1,0 +1,181 @@
+- type: entity
+  id: BaseVehicleTank
+#  save: false
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: MobMover
+  - type: Mech
+  - type: AmbientSound
+    sound: "/Audio/Effects/Vehicle/vehicleengineidle.ogg"
+    range: 20
+    volume: -5
+    enabled: true
+  - type: MechAir
+  - type: AirFilter
+    # everything except oxygen and nitrogen
+    gases:
+    - CarbonDioxide
+    - Plasma
+    - Tritium
+    - WaterVapor
+    - Ammonia
+    - NitrousOxide
+    - Frezon
+    #- Helium3 TODO: fusion
+    # remove everything except oxygen to maintain oxygen ratio
+    overflowGases:
+    - Nitrogen
+    - CarbonDioxide
+    - Plasma
+    - Tritium
+    - WaterVapor
+    - Ammonia
+    - NitrousOxide
+    - Frezon
+    #- Helium3 TODO: fusion
+  - type: AirIntake
+  # for intake and filter to work
+  - type: AtmosDevice
+    requireAnchored: false
+    joinSystem: true
+  - type: DoAfter
+  - type: Repairable
+    fuelCost: 55
+    doAfterDelay: 35
+#  - type: UserInterface
+#    interfaces:
+#      enum.MechUiKey.Key:
+#        type: MechBoundUserInterface
+  - type: Puller
+    needsHands: false
+  - type: InputMover
+  - type: InteractionOutline
+  - type: MovementSpeedModifier
+#    weightlessModifier: 0
+#    acceleration: 2
+#    friction: 2
+#    frictionNoInput: 6
+    baseWalkSpeed: 1
+    baseSprintSpeed: 2.5
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+  - type: Physics
+    bodyType: KinematicController
+  - type: Clickable
+  - type: WiresPanel
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.2,-1.9,1.2,1.9"
+        density: 1000
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+#  - type: Vehicle
+#    southOver: true
+#    northOver: true
+#    northOverride: -0.1
+#    southOverride: 0.1
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: true
+    radius: 6.5
+    softness: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: ContainerContainer
+    containers:
+      mech-pilot-slot: !type:ContainerSlot
+      mech-equipment-container: !type:Container
+      mech-battery-slot: !type:ContainerSlot
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: FriendlyFire
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 20
+    trackAllDamage: true
+    damageOverlay:
+      sprite: _CM/vehicle/tank/tank_damage_overlay.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3500
+      behaviors:
+        - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: DefaultCMMine
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 300
+
+- type: entity
+  id: VehicleTank
+  parent: BaseVehicleTank
+  name: T-65C "Победа" Heavy tank
+  components:
+  - type: MovementIgnoreGravity
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _CM/vehicle/tank/real_tank.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: base
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: Mech
+    maxEquipmentAmount: 0
+    maxintegrity: 3500
+    baseState: base
+    openState: base
+    brokenState: broken
+    mechToPilotDamageMultiplier: 0
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    EquipmentWhitelist:
+      components:
+        - TankWeaponMainCannon
+#  - type: MovementSpeedModifier
+#    baseWalkSpeed: 2.25
+#    baseSprintSpeed: 3.6
+  - type: ContainerFill
+    containers:
+      mech-equipment-container:
+      - TankWeaponMainCannon
+      - TankWeaponMainCannonAP
+      - TankWeaponSupportMachineGun
+      - TankWeaponSupportGrenadeLau
+
+- type: entity
+  id: VehicleTankBattery
+  parent: VehicleTank
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHighTank
+      mech-equipment-container:
+      - TankWeaponMainCannon
+      - TankWeaponMainCannonAP
+      - TankWeaponSupportMachineGun
+      - TankWeaponSupportGrenadeLau
