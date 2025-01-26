@@ -4,6 +4,7 @@ using Content.Shared.FixedPoint;
 using Content.Shared._CM14.Xeno.Components;
 using Content.Shared._CM14.Xenos;
 using Robust.Server.GameObjects;
+using Content.Server._CM14.Xeno;
 
 namespace Content.Server._CM14.Xeno;
 
@@ -18,6 +19,20 @@ public sealed partial class XenoSystem : EntitySystem
 
         SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
+
+    //<OCM
+    public bool CanAbilityAttackTarget(EntityUid xeno, EntityUid target)
+    {
+        if (xeno == target)
+            return false;
+
+        if (HasComp<XenoComponent>(target))
+            return false;
+
+        if (HasComp<MarineComponent>(target))
+            return true;
+    }
+    //OCM>
 
     private void OnStartup(Entity<XenoComponent> xeno, ref ComponentStartup args)
     {
