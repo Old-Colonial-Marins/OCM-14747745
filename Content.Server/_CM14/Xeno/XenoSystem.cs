@@ -4,7 +4,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared._CM14.Xeno.Components;
 using Content.Shared._CM14.Xenos;
 using Robust.Server.GameObjects;
-using Content.Server._CM14.Xeno;
 
 namespace Content.Server._CM14.Xeno;
 
