@@ -79,6 +79,7 @@
       sprite: Objects/Xeno/face_hugger.rsi
       slots:
         - MASK
+    - type: SelfUnremovableClothing
     - type: Blindfold
     - type: SlowOnDamage
       speedModifierThresholds:
