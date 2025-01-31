@@ -173,7 +173,7 @@
         - Opaque
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessRifle
-    capacity: 500
+    capacity: 600
 
 - type: entity
   parent: WeaponTurretMarine
