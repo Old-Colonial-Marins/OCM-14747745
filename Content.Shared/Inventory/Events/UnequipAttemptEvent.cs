@@ -43,6 +43,8 @@ public sealed class BeingUnequippedAttemptEvent : UnequipAttemptEventBase
         SlotDefinition slotDefinition) : base(unequipee, unEquipTarget, equipment, slotDefinition)
     {
     }
+
+    public SlotFlags SlotFlags { get; internal set; }
 }
 
 public sealed class IsUnequippingAttemptEvent : UnequipAttemptEventBase
