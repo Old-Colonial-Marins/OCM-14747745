@@ -66,9 +66,9 @@
   description: A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
+    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
   - type: Clothing
-    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
+    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
   - type: Armor
     modifiers:
       coefficients:
