@@ -66,14 +66,14 @@
   description: A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
   components:
   - type: Sprite
-    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
   - type: Clothing
-    sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.4
+        Blunt: 0.45
+        Slash: 0.45
         Piercing: 0.5
         Heat: 0.5
         Caustic: 0.7
@@ -151,3 +151,75 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.35
     sprintModifier: 1.35
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineLightCaustic
+  name: M4-B pattern armor
+  description: ...
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/light_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/light_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.3
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineMediumCaustic
+  name: B12-B pattern armor
+  description: ...
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/medium_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/medium_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.25
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorMarineHeavyCaustic
+  name: M4-BOD pattern armor
+  description: ...
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Armor/caostic/heavy_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.5
+        Heat: 0.4
+        Caustic: 0.15
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
