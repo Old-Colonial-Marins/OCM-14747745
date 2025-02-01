@@ -38,7 +38,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 20
 
 - type: entity
   id: BulletPunisher
@@ -52,7 +52,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 20
 
 - type: entity
   id: BulletEnforcer
@@ -66,7 +66,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23
+        Piercing: 15
 
 
 - type: entity
@@ -110,8 +110,8 @@
     impactEffect: BulletImpactEffect
     damage:
       types:
-        Piercing: 30
-        Blunt: 30
+        Piercing: 20
+        Blunt: 20
   - type: TimedDespawn
     lifetime: 10
   - type: PointLight

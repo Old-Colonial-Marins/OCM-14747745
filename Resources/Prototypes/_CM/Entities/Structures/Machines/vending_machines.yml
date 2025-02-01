@@ -200,6 +200,12 @@
         amount: 4
       - id: ClothingOuterPrototypeC
         amount: 1
+      - id: ClothingOuterArmorMarineLightCaustic
+        amount: 1
+      - id: ClothingOuterArmorMarineMediumCaustic
+        amount: 1
+      - id: ClothingOuterArmorMarineHeavyCaustic
+        amount: 1
     - name: Одежда
       entries:
       - id: ClothingUniformJumpsuitMarine
@@ -210,6 +216,8 @@
         amount: 10
       - id: ClothingHeadHelmetMarine
         amount: 5
+      - id: ClothingHeadHelmetMarineCaustic
+        amount: 2
       - id: ClothingHeadHatBeretWhite
         amount: 6
       - id: ClothingUniformJumpsuitWhiteDress

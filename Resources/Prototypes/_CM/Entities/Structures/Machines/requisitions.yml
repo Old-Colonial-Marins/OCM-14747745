@@ -190,6 +190,31 @@
         - BoxMRE
     - name: Броня
       entries:
+      - name: Ящик лёгкой брони(M4-B pattern light armor x2, M15 pattern marine helmet x2)
+        cost: 5500
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingHeadHelmetMarineCaustic
+        - ClothingHeadHelmetMarineCaustic
+      - name: Ящик средней брони(B12-B pattern light armor x2, M15 pattern marine helmet x2)
+        cost: 6800
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingHeadHelmetMarineCaustic
+        - ClothingHeadHelmetMarineCaustic
+      - name: Ящик тяжелой брони(M4-BOD pattern light armor x2, M15 pattern marine helmet x2)
+        cost: 8500
+        crate: CrateSecgear
+        entities:
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingOuterArmorMarineLightCaustic
+        - ClothingHeadHelmetMarineCaustic
+        - ClothingHeadHelmetMarineCaustic
+      ###
       - name: Ящик лёгкой брони(M3-L pattern light armor x3, M10 pattern marine helmet x3)
         cost: 4000
         crate: CrateSecgear
