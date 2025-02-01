@@ -241,19 +241,6 @@
     jobIcon: JobIconAlfaMarine
   - type: PresetIdCard
     job: AlfaMarine
-    
-- type: entity
-  parent: IDCardMarine
-  id: SurvivalIDCard
-  name: Карта выжившего
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-  - type: IdCard
-    jobIcon: JobIconSurvivalMarine
-  - type: PresetIdCard
-    job: SurvivalMarine
 
 - type: entity
   parent: IDCardMarine
