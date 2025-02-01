@@ -19987,16 +19987,18 @@ entities:
             0: 119
             1: 61440
           9,8:
-            0: 61152
+            3: 32
+            0: 61120
           9,9:
             0: 61166
           9,12:
             1: 255
           10,8:
-            0: 65520
+            0: 65392
+            3: 128
           10,9:
             0: 32767
-            3: 32768
+            4: 32768
           10,10:
             0: 4080
           10,11:
@@ -20396,7 +20398,7 @@ entities:
             0: 65535
           21,10:
             0: 4880
-            4: 52416
+            5: 52416
           21,7:
             0: 65528
           21,11:
@@ -20406,7 +20408,7 @@ entities:
           22,9:
             0: 56797
           22,10:
-            4: 4368
+            5: 4368
             0: 52940
           22,7:
             0: 65523
@@ -20836,9 +20838,9 @@ entities:
             1: 4383
           35,8:
             0: 255
-            5: 28672
+            6: 28672
           35,9:
-            5: 119
+            6: 119
           35,10:
             1: 256
           35,11:
@@ -20849,9 +20851,9 @@ entities:
             1: 15
           36,8:
             0: 255
-            6: 28672
+            7: 28672
           36,9:
-            6: 119
+            7: 119
             1: 16384
           36,10:
             1: 18
@@ -20881,7 +20883,7 @@ entities:
             0: 30583
           34,5:
             0: 30515
-            7: 4
+            3: 4
           34,6:
             0: 311
           34,7:
@@ -20934,7 +20936,7 @@ entities:
             0: 65535
           36,2:
             0: 65279
-            7: 256
+            3: 256
           36,3:
             0: 30559
           32,-5:
@@ -21103,12 +21105,12 @@ entities:
             0: 65535
           38,5:
             0: 63487
-            7: 2048
+            3: 2048
           38,6:
             0: 65520
           38,3:
             0: 65527
-            7: 8
+            3: 8
           39,4:
             0: 65535
           39,5:
@@ -21117,7 +21119,7 @@ entities:
             0: 30576
           39,3:
             0: 65279
-            7: 256
+            3: 256
           40,4:
             0: 30583
           40,5:
@@ -21276,6 +21278,21 @@ entities:
           - 0
           - 0
         - volume: 2500
+          temperature: 293.14975
+          moles:
+          - 20.078888
+          - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
           temperature: 293.15
           moles:
           - 20.078888
@@ -21325,21 +21342,6 @@ entities:
           moles:
           - 6666.982
           - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.14975
-          moles:
-          - 20.078888
-          - 75.53487
           - 0
           - 0
           - 0
@@ -23904,7 +23906,7 @@ entities:
       pos: 84.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -2742.6208
+      secondsUntilStateChange: -3178.447
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -24326,7 +24328,7 @@ entities:
       pos: 13.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -39303.41
+      secondsUntilStateChange: -39739.234
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -27951,26 +27953,6 @@ entities:
     components:
     - type: Transform
       pos: 14.744674,35.088863
-      parent: 2
-  - uid: 953
-    components:
-    - type: Transform
-      pos: 25.5,31.5
-      parent: 2
-  - uid: 954
-    components:
-    - type: Transform
-      pos: 25.422462,2.60309
-      parent: 2
-  - uid: 955
-    components:
-    - type: Transform
-      pos: 25.20648,13.507934
-      parent: 2
-  - uid: 956
-    components:
-    - type: Transform
-      pos: 25.350918,21.607271
       parent: 2
   - uid: 957
     components:
@@ -59203,6 +59185,24 @@ entities:
     - type: Transform
       pos: 43.5,33.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetRadiationSuitFilled
   entities:
   - uid: 19475
@@ -59232,6 +59232,24 @@ entities:
     - type: Transform
       pos: 37.5,33.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetWall
   entities:
   - uid: 6716
@@ -76121,7 +76139,7 @@ entities:
   - uid: 14112
     components:
     - type: Transform
-      pos: 42.236755,36.42089
+      pos: 42.325035,36.33589
       parent: 2
 - proto: Cobweb1
   entities:
@@ -77383,6 +77401,8 @@ entities:
     - type: Transform
       pos: 43.5,39.5
       parent: 2
+    - type: Lock
+      locked: False
     - type: EntityStorage
       air:
         volume: 200
@@ -91912,6 +91932,12 @@ entities:
       parent: 2
 - proto: DisposalPipe
   entities:
+  - uid: 953
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 13.5,15.5
+      parent: 2
   - uid: 5327
     components:
     - type: Transform
@@ -96260,12 +96286,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,15.5
-      parent: 2
-  - uid: 10731
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 13.5,15.5
       parent: 2
   - uid: 10732
     components:
@@ -144656,306 +144676,6 @@ entities:
     - type: Transform
       pos: 90.5,45.5
       parent: 2
-- proto: SpawnPointAlfaCommander
-  entities:
-  - uid: 16154
-    components:
-    - type: Transform
-      pos: 115.5,12.5
-      parent: 2
-- proto: SpawnPointAlfaEngineer
-  entities:
-  - uid: 16155
-    components:
-    - type: Transform
-      pos: 119.5,12.5
-      parent: 2
-- proto: SpawnPointAlfaMarine
-  entities:
-  - uid: 16156
-    components:
-    - type: Transform
-      pos: 119.5,22.5
-      parent: 2
-- proto: SpawnPointAlfaMedic
-  entities:
-  - uid: 16157
-    components:
-    - type: Transform
-      pos: 121.5,17.5
-      parent: 2
-- proto: SpawnPointAlfaSpecialist
-  entities:
-  - uid: 16158
-    components:
-    - type: Transform
-      pos: 117.5,17.5
-      parent: 2
-- proto: SpawnPointBravoCommander
-  entities:
-  - uid: 16159
-    components:
-    - type: Transform
-      pos: 115.5,11.5
-      parent: 2
-- proto: SpawnPointBravoEngineer
-  entities:
-  - uid: 16160
-    components:
-    - type: Transform
-      pos: 119.5,11.5
-      parent: 2
-- proto: SpawnPointBravoMarine
-  entities:
-  - uid: 16161
-    components:
-    - type: Transform
-      pos: 119.5,21.5
-      parent: 2
-- proto: SpawnPointBravoMedic
-  entities:
-  - uid: 16162
-    components:
-    - type: Transform
-      pos: 121.5,16.5
-      parent: 2
-- proto: SpawnPointBravoSpecialist
-  entities:
-  - uid: 16163
-    components:
-    - type: Transform
-      pos: 117.5,16.5
-      parent: 2
-- proto: SpawnPointCharlieCommander
-  entities:
-  - uid: 16164
-    components:
-    - type: Transform
-      pos: 115.5,10.5
-      parent: 2
-- proto: SpawnPointCharlieEngineer
-  entities:
-  - uid: 16165
-    components:
-    - type: Transform
-      pos: 119.5,10.5
-      parent: 2
-- proto: SpawnPointCharlieMarine
-  entities:
-  - uid: 16166
-    components:
-    - type: Transform
-      pos: 119.5,20.5
-      parent: 2
-- proto: SpawnPointCharlieMedic
-  entities:
-  - uid: 16167
-    components:
-    - type: Transform
-      pos: 121.5,15.5
-      parent: 2
-- proto: SpawnPointCharlieSpecialist
-  entities:
-  - uid: 16168
-    components:
-    - type: Transform
-      pos: 117.5,15.5
-      parent: 2
-- proto: SpawnPointChiefShipsEngineer
-  entities:
-  - uid: 16169
-    components:
-    - type: Transform
-      pos: 121.5,16.5
-      parent: 2
-- proto: SpawnPointDeltaCommander
-  entities:
-  - uid: 16170
-    components:
-    - type: Transform
-      pos: 115.5,9.5
-      parent: 2
-- proto: SpawnPointDeltaEngineer
-  entities:
-  - uid: 16171
-    components:
-    - type: Transform
-      pos: 119.5,9.5
-      parent: 2
-- proto: SpawnPointDeltaMarine
-  entities:
-  - uid: 16172
-    components:
-    - type: Transform
-      pos: 119.5,19.5
-      parent: 2
-- proto: SpawnPointDeltaMedic
-  entities:
-  - uid: 16173
-    components:
-    - type: Transform
-      pos: 121.5,14.5
-      parent: 2
-- proto: SpawnPointDeltaSpecialist
-  entities:
-  - uid: 16174
-    components:
-    - type: Transform
-      pos: 117.5,14.5
-      parent: 2
-- proto: SpawnPointFieldCommander
-  entities:
-  - uid: 16175
-    components:
-    - type: Transform
-      pos: -17.5,11.5
-      parent: 2
-- proto: SpawnPointHeadOperations
-  entities:
-  - uid: 16176
-    components:
-    - type: Transform
-      pos: -25.5,11.5
-      parent: 2
-- proto: SpawnPointMarineLate
-  entities:
-  - uid: 16177
-    components:
-    - type: Transform
-      pos: 117.5,17.5
-      parent: 2
-  - uid: 16178
-    components:
-    - type: Transform
-      pos: 117.5,16.5
-      parent: 2
-  - uid: 16179
-    components:
-    - type: Transform
-      pos: 117.5,15.5
-      parent: 2
-  - uid: 16180
-    components:
-    - type: Transform
-      pos: 117.5,14.5
-      parent: 2
-  - uid: 16181
-    components:
-    - type: Transform
-      pos: 121.5,17.5
-      parent: 2
-  - uid: 16182
-    components:
-    - type: Transform
-      pos: 121.5,16.5
-      parent: 2
-  - uid: 16183
-    components:
-    - type: Transform
-      pos: 121.5,15.5
-      parent: 2
-  - uid: 16184
-    components:
-    - type: Transform
-      pos: 121.5,14.5
-      parent: 2
-- proto: SpawnPointMilitaryMainMedic
-  entities:
-  - uid: 16185
-    components:
-    - type: Transform
-      pos: 62.5,11.5
-      parent: 2
-- proto: SpawnPointMilitaryPoliceman
-  entities:
-  - uid: 16186
-    components:
-    - type: Transform
-      pos: -9.5,5.5
-      parent: 2
-  - uid: 16187
-    components:
-    - type: Transform
-      pos: -9.5,4.5
-      parent: 2
-  - uid: 16188
-    components:
-    - type: Transform
-      pos: -9.5,3.5
-      parent: 2
-- proto: SpawnPointMilitaryPoliceOfficer
-  entities:
-  - uid: 16189
-    components:
-    - type: Transform
-      pos: -15.5,11.5
-      parent: 2
-- proto: SpawnPointMilitaryScientist
-  entities:
-  - uid: 16190
-    components:
-    - type: Transform
-      pos: 115.5,19.5
-      parent: 2
-- proto: SpawnPointPilotMech
-  entities:
-  - uid: 16191
-    components:
-    - type: Transform
-      pos: 115.5,22.5
-      parent: 2
-- proto: SpawnPointPilotOfficer
-  entities:
-  - uid: 16192
-    components:
-    - type: Transform
-      pos: 115.5,20.5
-      parent: 2
-- proto: SpawnPointPilotOfficerRaptor
-  entities:
-  - uid: 16193
-    components:
-    - type: Transform
-      pos: 115.5,21.5
-      parent: 2
-- proto: SpawnPointRigger
-  entities:
-  - uid: 16194
-    components:
-    - type: Transform
-      pos: 78.5,14.5
-      parent: 2
-  - uid: 16195
-    components:
-    - type: Transform
-      pos: 78.5,15.5
-      parent: 2
-- proto: SpawnPointShipsEngineer
-  entities:
-  - uid: 16196
-    components:
-    - type: Transform
-      pos: 121.5,17.5
-      parent: 2
-  - uid: 16197
-    components:
-    - type: Transform
-      pos: 121.5,14.5
-      parent: 2
-- proto: SpawnPointStaffOfficer
-  entities:
-  - uid: 16198
-    components:
-    - type: Transform
-      pos: -21.5,11.5
-      parent: 2
-- proto: SpawnPointSupplyOfficer
-  entities:
-  - uid: 13088
-    components:
-    - type: Transform
-      pos: 84.5,24.5
-      parent: 2
 - proto: SpeedLoaderLightRifle
   entities:
   - uid: 16200
@@ -145636,11 +145356,6 @@ entities:
     - type: Transform
       pos: 62.5,9.5
       parent: 2
-  - uid: 16300
-    components:
-    - type: Transform
-      pos: 12.929919,15.823037
-      parent: 2
   - uid: 16301
     components:
     - type: Transform
@@ -145695,11 +145410,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,12.5
-      parent: 2
-  - uid: 16312
-    components:
-    - type: Transform
-      pos: 30.5,31.5
       parent: 2
   - uid: 16313
     components:
@@ -145837,11 +145547,6 @@ entities:
     components:
     - type: Transform
       pos: 122.5,-16.5
-      parent: 2
-  - uid: 16341
-    components:
-    - type: Transform
-      pos: 25.377054,3.7441554
       parent: 2
   - uid: 16342
     components:
@@ -148154,6 +147859,7 @@ entities:
   - uid: 14099
     components:
     - type: Transform
+      anchored: True
       rot: 3.141592653589793 rad
       pos: 40.5,36.5
       parent: 2
