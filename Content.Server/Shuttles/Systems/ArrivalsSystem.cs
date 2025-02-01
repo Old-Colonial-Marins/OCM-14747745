@@ -327,26 +327,6 @@ public sealed class ArrivalsSystem : EntitySystem
                         ev.Station);
                 }
             }
-                if (ev.Job.Prototype == "SurvivalMarine")
-            {
-                var points = EntityQueryEnumerator<SurvivalSpawnComponent, TransformComponent>();
-                var possiblePositions = new List<EntityCoordinates>();
-
-                while (points.MoveNext(out var uid, out _, out var xform))
-                {
-                    possiblePositions.Add(xform.Coordinates);
-                }
-
-                if (possiblePositions.Count > 0)
-                {
-                    var spawnLoc = _random.Pick(possiblePositions);
-                    ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-                        spawnLoc,
-                        ev.Job,
-                        ev.HumanoidCharacterProfile,
-                        ev.Station);
-                }
-            }
             else
             {
                 var points = EntityQueryEnumerator<MarineSpawnComponent, TransformComponent>();
