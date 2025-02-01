@@ -204,7 +204,6 @@
 - type: entity
   parent:
   - MobXenoBaseT4
-  - MobXenoPassiveEvades
   id: MobKingXeno
   suffix: CM
   name: King
@@ -257,5 +256,5 @@
         840: 0.80
         960: 0.75
         1080: 0.70
-    - type: XenoEvades
-      missChance: 0.2
+    - type: Reflect
+      reflectProb: 0.15
