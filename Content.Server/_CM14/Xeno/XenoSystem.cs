@@ -30,6 +30,8 @@ public sealed partial class XenoSystem : EntitySystem
 
         if (HasComp<MarineComponent>(target))
             return true;
+
+        return false;
     }
     //OCM>
 
