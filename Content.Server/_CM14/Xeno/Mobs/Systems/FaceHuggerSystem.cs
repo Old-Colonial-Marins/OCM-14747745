@@ -22,6 +22,7 @@ using Robust.Server.GameObjects;
 using Content.Shared._CM14.Xeno.Components;
 using Content.Shared.Mind;
 using Robust.Shared.Containers;
+using Robust.Shared.Timing;
 
 namespace Content.Server._CM14.Xeno.Mobs.Systems;
 
@@ -39,6 +40,10 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+
+    private readonly Dictionary<EntityUid, TimeSpan> _lastGaspTimes = new();
+    private readonly Dictionary<EntityUid, TimeSpan> _startSuffocationTimes = new();
 
     public override void Initialize()
     {
@@ -62,7 +67,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
     private void OnShutdown(EntityUid uid, FaceHuggingComponent component, ComponentShutdown args)
     {
         _actionsSystem.RemoveAction(component.JumpAction);
-
     }
 
     private void OnFaceHuggerDoHit(EntityUid uid, FaceHuggerComponent component, ThrowDoHitEvent args)
@@ -91,7 +95,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         if (!TryComp(args.Target, out InventoryComponent? inventory))
             return;
 
-
         _entityManager.AddComponent<HuggerOnFaceComponent>(args.Target);
         _inventory.TryUnequip(args.Target, "mask", true, true, false, inventory);
         var equipped = _inventory.TryEquip(args.Target, uid, "mask", true, true, false, inventory);
@@ -103,8 +106,6 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
         RemComp<CombatModeComponent>(uid);
 
         _stunSystem.TryParalyze(args.Target, TimeSpan.FromSeconds(component.ParalyzeTime), true);
-
-        component.Equipped = args.Target;
 
         _popup.PopupEntity(Loc.GetString("Something jumped on you!"), args.Target, args.Target, PopupType.LargeCaution);
         component.RemainingEggs -= 1;
@@ -171,6 +172,7 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
 
         EnsureComp<NPCMeleeCombatComponent>(uid);
     }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -196,45 +198,28 @@ public sealed class FaceHuggerSystem : SharedFaceHuggingSystem
             if (!HasComp<HuggerOnFaceComponent>(targetId))
                 return;
 
+            var currentTime = _gameTiming.CurTime;
+            if (!_startSuffocationTimes.ContainsKey(targetId))
+            {
+                _startSuffocationTimes[targetId] = currentTime;
+            }
+
+            if ((currentTime - _startSuffocationTimes[targetId]).TotalSeconds <= 10)
+            {
+                _damageableSystem.TryChangeDamage(targetId,
+                    new DamageSpecifier(_proto.Index<DamageTypePrototype>("Asphyxiation"), 2 * frameTime));
+            }
+
+            if (!_lastGaspTimes.TryGetValue(targetId, out var lastGaspTime) || 
+                (currentTime - lastGaspTime).TotalSeconds >= 6)
+            {
+                _lastGaspTimes[targetId] = currentTime;
+                _popup.PopupEntity(Loc.GetString("Вам сложно дышать"), targetId);
+            }
+
             if (TryComp(targetId, out HuggerOnFaceComponent? huggerOnFaceComponent))
             {
                 huggerOnFaceComponent.CurrentTime += frameTime*2;
-            }
-        }
-
-        var query = EntityQueryEnumerator<HuggerOnFaceComponent>();
-        while (query.MoveNext(out var uid, out var comp))
-        {
-            if (TryComp(uid, out MobStateComponent? mobState))
-            {
-                if (mobState.CurrentState is MobState.Dead)
-                {
-                    RemComp<HuggerOnFaceComponent>(uid);
-                    return;
-                }
-            }
-            if (comp.RootsCut)
-            {
-                comp.CurrentTime += frameTime / 2;
-            }
-            else
-            {
-                comp.CurrentTime += frameTime;
-            }
-            if (comp.CurrentTime >= comp.LayEggTime)
-            {
-                _inventory.TryUnequip(uid, "mask", true, true);
-                RemComp<HuggerOnFaceComponent>(uid);
-                var larva = Spawn(comp.InfectionEgg, Transform(uid).Coordinates);
-                MakeSentientCommand.MakeSentient(larva, EntityManager);
-                if (_container.TryGetContainingContainer(uid, out var cont))
-                    _container.Insert(larva, cont);
-
-                if (_mind.TryGetMind(uid, out var mindId, out var mind))
-                    _mind.TransferTo(mindId, larva, mind: mind);
-                _damageableSystem.TryChangeDamage(uid,
-                    new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Toxin"), 200));
-                EnsureComp<UnrevivableComponent>(uid);
             }
         }
     }
