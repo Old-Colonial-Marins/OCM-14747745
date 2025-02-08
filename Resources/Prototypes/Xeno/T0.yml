@@ -80,6 +80,7 @@
       slots:
         - MASK
     - type: SelfUnremovableClothing
+    - type: NoPickupInContainer # Удаляет кнопку "Взять в руку" если лицик в инвентаре
     - type: Blindfold
     - type: SlowOnDamage
       speedModifierThresholds:
