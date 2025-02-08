@@ -103,6 +103,11 @@ public abstract class SharedItemSystem : EntitySystem
             !_handsSystem.CanPickupAnyHand(args.User, args.Target, handsComp: args.Hands, item: component))
             return;
 
+        // OCM-start Если есть в прототипе компонент "NoPickupInContainer" то кнопка "Взять в руку" не добавляется если предмет в инвентаре. (Нужен чтобы марин не мог снять лицика с самого себя)
+        if (HasComp<ItemComponent.NoPickupInContainerComponent>(uid) && Container.TryGetContainingContainer(uid, out _))
+            return;
+        // OCM-end
+
         InteractionVerb verb = new();
         verb.Act = () => _handsSystem.TryPickupAnyHand(args.User, args.Target, checkActionBlocker: false,
             handsComp: args.Hands, item: component);

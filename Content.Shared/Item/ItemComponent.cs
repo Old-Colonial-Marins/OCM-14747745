@@ -24,6 +24,10 @@ public sealed partial class ItemComponent : Component
     public Dictionary<HandLocation, List<PrototypeLayerData>> InhandVisuals = new();
 
     [Access(typeof(SharedItemSystem))]
+    [RegisterComponent]
+    public sealed partial class NoPickupInContainerComponent : Component;
+
+    [Access(typeof(SharedItemSystem))]
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public string? HeldPrefix;
