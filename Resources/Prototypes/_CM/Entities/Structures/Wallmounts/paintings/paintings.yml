@@ -1,0 +1,30 @@
+- type: entity
+  parent: BaseSign
+  id: BaseUEGPainting
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _CM/Structures/Wallmounts/paintings.rsi
+    snapCardinals: true
+
+- type: entity
+  parent: BaseUEGPainting
+  id: paintingUEG_legit
+  name: "Президент ОПЗ"
+  description: "На этой картине изображен великий президент ОПЗ!"
+  components:
+  - type: Sprite
+    state: paintingUEG_legit
+
+
+- type: entity
+  parent: BaseUEGPainting
+  id: paintingUEG_marshal
+  name: "Важная шишка"
+  description: "На этой картине изображена очень важная шишка."
+  components:
+  - type: Sprite
+    state: paintingUEG_marshal
