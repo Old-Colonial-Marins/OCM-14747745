@@ -222,6 +222,14 @@
         amount: 6
       - id: ClothingUniformJumpsuitWhiteDress
         amount: 6
+      - id: ClothingUniformJumpsuitDesert_mar
+        amount: 4
+      - id: ClothingUniformJumpsuitForest_mar
+        amount: 4
+      - id: ClothingUniformJumpsuitSnow_mar
+        amount: 4
+      - id: ClothingUniformJumpsuitUrban_mar
+        amount: 4
     - name: Очки
       entries:
       - id: ClothingEyesGlassesBallistic
