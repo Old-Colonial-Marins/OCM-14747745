@@ -30,6 +30,36 @@
   fireStates: 3
 
 - type: explosion
+  id: DemolitionC4
+  damagePerIntensity:
+    types:
+      Heat: 20
+      Blunt: 30
+      Piercing: 30
+      Structural: 100
+  tileBreakChance: [ 0, 0.5, 1 ]
+  tileBreakIntensity: [ 0, 10, 30 ]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+
+- type: explosion
+  id: BoomPois
+  damagePerIntensity:
+    types:
+      Heat: 10
+      Blunt: 10
+      Piercing: 10
+      Structural: 100
+  tileBreakChance: [ 0, 0.5, 1 ]
+  tileBreakIntensity: [ 0, 10, 30 ]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+
+- type: explosion
   id: MicroBomb
   damagePerIntensity:
     types:
