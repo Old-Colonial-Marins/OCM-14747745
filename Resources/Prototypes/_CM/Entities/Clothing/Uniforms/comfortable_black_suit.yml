@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingComfortableBlackUniformMarine
+  name: чёрная униформа
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Uniforms/Jumpsuit/comfortable_black_suit.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Uniforms/Jumpsuit/comfortable_black_suit.rsi
