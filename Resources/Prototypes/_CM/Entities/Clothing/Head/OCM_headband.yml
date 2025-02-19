@@ -1,0 +1,76 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandAlpha
+  name: повязка отряда альфа
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/alpha.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/alpha.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandBravo
+  name: повязка отряда браво
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/bravo.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/bravo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandDelta
+  name: повязка отряда дельта
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/delta.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/delta.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandCharlie
+  name: повязка отряда чарли
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/charlie.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/charlie.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandGray
+  name: серая повязка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/gray.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/gray.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandGreen
+  name: зелёная повязка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/green.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/green.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadbandTan
+  name: бежевая повязка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Headband/tan.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Headband/tan.rsi
