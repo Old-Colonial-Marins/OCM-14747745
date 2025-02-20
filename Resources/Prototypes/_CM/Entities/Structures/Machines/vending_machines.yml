@@ -556,6 +556,24 @@
         amount: 6
       - id: ClothingEyesGlassesMercenary
         amount: 2
+    - name: Шлемы
+      entries:
+      - id: OCM_ClothingHeadMarineHelmet
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetTan
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmet2
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetD16
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetD18
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetScout
+        amount: 2
+      - id: OCM_ClothingHeadMarineHelmetScout2
+        amount: 2
+      - id: OCM_ClothingHeadMarineHelmetTactic
+        amount: 1
     - name: Береты
       entries:
       - id: OCM_ClothingHeadBeretAlpha
@@ -595,4 +613,20 @@
       - id: OCM_ClothingHeadCap
         amount: 2
       - id: OCM_ClothingHeadCapScout
+        amount: 2
+    - name: Шапки
+      entries:
+      - id: OCM_ClothingHeadBeanieBlack
+        amount: 2
+      - id: OCM_ClothingHeadBeanieBlue
+        amount: 2
+      - id: OCM_ClothingHeadBeanieGreen
+        amount: 2
+      - id: OCM_ClothingHeadBeanieTan
+        amount: 2
+    - name: Панамки
+      entries:
+      - id: OCM_ClothingHeadBoonieGreen
+        amount: 2
+      - id: OCM_ClothingHeadBoonieTan
         amount: 2
