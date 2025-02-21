@@ -546,16 +546,6 @@
         amount: 6
       - id: ClothingUniformJumpsuitUrban_mar
         amount: 6
-    - name: Очки
-      entries:
-      - id: ClothingEyesGlassesBallistic
-        amount: 4
-      - id: ClothingEyesGlassesPrescriptionBallistic
-        amount: 4
-      - id: ClothingEyesGlassesRPG
-        amount: 6
-      - id: ClothingEyesGlassesMercenary
-        amount: 2
     - name: Шлемы
       entries:
       - id: OCM_ClothingHeadMarineHelmet
@@ -574,6 +564,22 @@
         amount: 2
       - id: OCM_ClothingHeadMarineHelmetTactic
         amount: 1
+    - name: Очки
+      entries:
+      - id: ClothingEyesGlassesBallistic
+        amount: 4
+      - id: ClothingEyesGlassesPrescriptionBallistic
+        amount: 4
+      - id: ClothingEyesGlassesRPG
+        amount: 6
+      - id: ClothingEyesGlassesMercenary
+        amount: 2
+    - name: Противогазы
+      entries:
+      - id: ClothingSovietMaskGasMarine
+        amount: 4
+      - id: ClothingSpecialMaskGasMarine
+        amount: 2
     - name: Береты
       entries:
       - id: OCM_ClothingHeadBeretAlpha

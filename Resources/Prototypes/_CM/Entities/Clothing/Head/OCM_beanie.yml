@@ -29,7 +29,7 @@
   description:
   components:
   - type: Sprite
-    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_grenn.rsi
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_green.rsi
   - type: Clothing
     sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_green.rsi
 
