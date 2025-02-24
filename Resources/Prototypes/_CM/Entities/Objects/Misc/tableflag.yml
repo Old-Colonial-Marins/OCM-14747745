@@ -1,0 +1,9 @@
+- type: entity
+  parent: BaseItem
+  id: tableflag
+  name: настольный флажок
+  description: Маленький, симпатичненький настольный флажок ОПЗ.
+  components:
+  - type: Sprite
+    sprite: _CM/Objects/Misc/tableflag.rsi
+    state: flajok
