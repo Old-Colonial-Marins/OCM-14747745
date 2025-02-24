@@ -19,6 +19,22 @@ public sealed partial class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoComponent, ComponentStartup>(OnStartup);
     }
 
+    //<OCM
+    public bool CanAbilityAttackTarget(EntityUid xeno, EntityUid target)
+    {
+        if (xeno == target)
+            return false;
+
+        if (HasComp<XenoComponent>(target))
+            return false;
+
+        if (HasComp<MarineComponent>(target))
+            return true;
+
+        return false;
+    }
+    //OCM>
+
     private void OnStartup(Entity<XenoComponent> xeno, ref ComponentStartup args)
     {
         OnActionsStartup(xeno, ref args);
