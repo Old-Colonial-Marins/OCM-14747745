@@ -1,0 +1,60 @@
+[log]
+path = "logs"
+format = "log_%(date)s-%(time)s.txt"
+level = 1
+enabled = false
+
+[net]
+tickrate = 30
+port = 1212
+bindto = "::,0.0.0.0"
+max_connections = 256
+upnp = true
+
+[status]
+enabled = true
+
+[game]
+hostname = "[RU]Old Colonial Marins - TGMC🌍"
+desc = "Сервер с уникальным билдом колониальных морпехов."
+maxplayers = 120 
+role_timers = false 
+soft_max_players = 70
+panic_bunker.enabled = false
+
+[console]
+loginlocal = false
+
+[hub]
+advertise = true 
+tags = "lang:ru,rp:low,region:eu_e"
+server_url = ""
+hub_urls = "https://hub.spacestation14.com/"
+
+[auth]
+mode = 1
+
+[whitelist]
+enabled = false
+
+[rules]
+time = 15.0
+
+[infolinks]
+discord = "https://discord.gg/UZ6WvWjQtW"
+wiki = "https://station14.ru/wiki/Колониальные_Морпехи"
+
+[discord]
+round_update_webhook = ""
+ahelp_webhook = ""
+round_end_role = ""
+
+[sponsor]
+# api_url = ""
+
+[physics]
+maxlinvelocity = 42.0
+
+[netres]
+limit = 10.0
+
