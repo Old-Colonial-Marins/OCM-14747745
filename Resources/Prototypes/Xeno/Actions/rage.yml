@@ -1,7 +1,7 @@
 - type: entity
   id: ActionXenoRage
-  name: Explosive name
-  description: Explosive desc
+  name: Неуязвимость
+  description: Делает вас неуязвимым на короткий срок.
   noSpawn: true
   components:
     - type: InstantAction
