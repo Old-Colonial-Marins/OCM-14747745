@@ -218,10 +218,6 @@
         amount: 5
       - id: ClothingHeadHelmetMarineCaustic
         amount: 2
-      - id: ClothingHeadHatBeretWhite
-        amount: 6
-      - id: ClothingUniformJumpsuitWhiteDress
-        amount: 6
     - name: Очки
       entries:
       - id: ClothingEyesGlassesBallistic
@@ -508,3 +504,135 @@
       entries:
       - id: MechWeaponFireDart
         amount: 1
+
+- type: entity
+  parent: ColMarTechBase
+  id: VendingMachineMarineClothing
+  name: ColMarTech "Одежда"
+  description:
+  components:
+  - type: VendingMachine
+    pack: UniformVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal
+    ejectDelay: 0.5
+  - type: Sprite
+    sprite: _CM/Structures/Machines/VendingMachines/ColMarTech/OCMclothing.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "base"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+  - type: CMAutomatedVendor
+    sections:
+    - name: Основное
+      entries:
+      - id: ClothingUniformJumpsuitMarine
+        amount: 10
+      - id: ClothingHandsGlovesMarine
+        amount: 10
+      - id: ClothingShoesBootsMarine
+        amount: 10
+      - id: ClothingHeadHatBeretWhite
+        amount: 6
+      - id: ClothingUniformJumpsuitWhiteDress
+        amount: 6
+      - id: ClothingUniformJumpsuitDesert_mar
+        amount: 6
+      - id: ClothingUniformJumpsuitForest_mar
+        amount: 6
+      - id: ClothingUniformJumpsuitSnow_mar
+        amount: 6
+      - id: ClothingUniformJumpsuitUrban_mar
+        amount: 6
+    - name: Шлемы
+      entries:
+      - id: OCM_ClothingHeadMarineHelmet
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetTan
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmet2
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetD16
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetD18
+        amount: 4
+      - id: OCM_ClothingHeadMarineHelmetScout
+        amount: 2
+      - id: OCM_ClothingHeadMarineHelmetScout2
+        amount: 2
+      - id: OCM_ClothingHeadMarineHelmetTactic
+        amount: 1
+    - name: Очки
+      entries:
+      - id: ClothingEyesGlassesBallistic
+        amount: 4
+      - id: ClothingEyesGlassesPrescriptionBallistic
+        amount: 4
+      - id: ClothingEyesGlassesRPG
+        amount: 6
+      - id: ClothingEyesGlassesMercenary
+        amount: 2
+    - name: Противогазы
+      entries:
+      - id: ClothingSovietMaskGasMarine
+        amount: 4
+      - id: ClothingSpecialMaskGasMarine
+        amount: 2
+    - name: Береты
+      entries:
+      - id: OCM_ClothingHeadBeretAlpha
+        amount: 2
+      - id: OCM_ClothingHeadBeretBravo
+        amount: 2
+      - id: OCM_ClothingHeadBeretDelta
+        amount: 2
+      - id: OCM_ClothingHeadBeretCharlie
+        amount: 2
+      - id: OCM_ClothingHeadBeretBlack
+        amount: 2
+      - id: OCM_ClothingHeadBeretBlue
+        amount: 2
+      - id: OCM_ClothingHeadBeretSnow
+        amount: 2
+      - id: OCM_ClothingHeadBeretTan
+        amount: 2
+    - name: Повязки
+      entries:
+      - id: OCM_ClothingHeadbandAlpha
+        amount: 2
+      - id: OCM_ClothingHeadbandBravo
+        amount: 2
+      - id: OCM_ClothingHeadbandDelta
+        amount: 2
+      - id: OCM_ClothingHeadbandCharlie
+        amount: 2
+      - id: OCM_ClothingHeadbandGray
+        amount: 2
+      - id: OCM_ClothingHeadbandGreen
+        amount: 2
+      - id: OCM_ClothingHeadbandTan
+        amount: 2
+    - name: Фуражки
+      entries:
+      - id: OCM_ClothingHeadCap
+        amount: 2
+      - id: OCM_ClothingHeadCapScout
+        amount: 2
+    - name: Шапки
+      entries:
+      - id: OCM_ClothingHeadBeanieBlack
+        amount: 2
+      - id: OCM_ClothingHeadBeanieBlue
+        amount: 2
+      - id: OCM_ClothingHeadBeanieGreen
+        amount: 2
+      - id: OCM_ClothingHeadBeanieTan
+        amount: 2
+    - name: Панамки
+      entries:
+      - id: OCM_ClothingHeadBoonieGreen
+        amount: 2
+      - id: OCM_ClothingHeadBoonieTan
+        amount: 2

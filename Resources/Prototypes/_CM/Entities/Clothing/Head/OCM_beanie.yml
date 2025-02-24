@@ -1,0 +1,69 @@
+## Шапки
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeanieBlack
+  name: чёрная шапка
+  description: Эй! Патроны есть? А если ща найду?
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_black.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_black.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeanieBlue
+  name: синяя шапка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_blue.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_blue.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeanieGreen
+  name: зелёная шапка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_green.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_green.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeanieTan
+  name: бежевая шапка
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_tan.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/beanie_tan.rsi
+
+## Панамки
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBoonieGreen
+  name: зелёная панамка
+  description: Хей! Какой хороший день...
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/boonie_panamka_green.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/boonie_panamka_green.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBoonieTan
+  name: бежевая панамка
+  description: Отличное средство защиты от солнца в пустыне...
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/boonie_panamka_tan.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/OCMbeanie/boonie_panamka_tan.rsi

@@ -1,0 +1,128 @@
+# Береты отрядов ----------
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretAlpha
+  name: берет отряда альфа
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_alpha.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_alpha.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretDelta
+  name: берет отряда дельта
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_delta.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_delta.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretBravo
+  name: берет отряда браво
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_bravo.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_bravo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretCharlie
+  name: берет отряда чарли
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_charlie.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_charlie.rsi
+
+# Береты ВП ----------
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretPolice
+  name: берет военной полиции
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_police.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_police.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretChiefPolice
+  name: берет офицера ВП
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_chief_police.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_chief_police.rsi
+
+# Берет инженера ----------
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretEngi
+  name: берет инженера
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_engi.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_engi.rsi
+
+# Цветные береты ----------
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretBlack
+  name: чёрный берет
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_black.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_black.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretBlue
+  name: синий берет
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_blue.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_blue.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretSnow
+  name: зимний берет
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_snow.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_snow.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: OCM_ClothingHeadBeretTan
+  name: бежевый берет
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_tan.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/OCM/beret_tan.rsi

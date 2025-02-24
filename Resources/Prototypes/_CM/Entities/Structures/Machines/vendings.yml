@@ -245,7 +245,6 @@
       - id: BoxShellPunisher
         amount: 1
 
-
 - type: entity
   parent: ColMarTechBase
   id: VendingMachineMarineSpecialist
@@ -610,6 +609,16 @@
     access: [["Security"]]
   - type: CMAutomatedVendor
     sections:
+    - name: Одежда
+      entries:
+      - id: OCM_ClothingHeadMarineHelmetMP
+        amount: 13
+      - id: OCM_ClothingHeadMarineHelmetMPTan
+        amount: 13
+      - id: OCM_ClothingHeadBeretPolice
+        amount: 13
+      - id: OCM_ClothingHeadBeretBlack
+        amount: 13
     - name: Рюкзаки
       entries:
       - id: ClothingBackpackMarine
