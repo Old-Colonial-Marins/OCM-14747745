@@ -37,12 +37,28 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: [[Quinn], [King]]
+      job_id: Quinn
     - type: Sprite
       layers:
         - state: green
         - state: crawling
           sprite: Mobs/Animals/gorilla.rsi
+          
+- type: entity
+  name: Marine Xeno King
+  id: SpawnMobMarineXenoKing
+  parent: MarkerBase
+  suffix: SpawnXenoTGCM
+  components:
+    - type: XenoSpawn
+    - type: SpawnPoint
+      job_id: King
+    - type: Sprite
+      layers:
+        - state: green
+        - state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+
 - type: entity
   name: Marine Xeno Runner
   id: SpawnMobMarineXenoRunner
