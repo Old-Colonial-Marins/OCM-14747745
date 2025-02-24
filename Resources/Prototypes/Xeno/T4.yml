@@ -216,6 +216,7 @@
         - ActionXenoRage
         - ActionXenoStun
         - ActionXenoRest
+        - ActionXenoStealth
     - type: XenoCrushDash
     - type: XenoEndure
       walkSpeedModifier: 0.5
