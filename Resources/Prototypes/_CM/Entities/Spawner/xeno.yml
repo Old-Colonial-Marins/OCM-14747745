@@ -37,7 +37,7 @@
   components:
     - type: XenoSpawn
     - type: SpawnPoint
-      job_id: Quinn
+      job_id: [[Quinn], [King]]
     - type: Sprite
       layers:
         - state: green
