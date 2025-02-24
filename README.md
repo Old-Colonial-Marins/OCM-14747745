@@ -1,4 +1,5 @@
-<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
+<p align="center"> <img alt="Space Station 14" width="880" height="300"![1](https://github.com/user-attachments/assets/4edafd79-c7a2-4114-a8bf-cbbbeb4eb87f)
+  /></p>
 
 Space Station 14 это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
@@ -6,7 +7,7 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Ссылки
 
-[Наш Discord](https://discord.gg/VWJZFUWgRc) | [Наша Вики](https://station14.ru/wiki/Колониальные_Морпехи) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
+[Наш Discord](https://discord.gg/VWJZFUWgRc](https://discord.gg/UZ6WvWjQtW) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
 
 ## Документация
 
@@ -14,14 +15,8 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Контрибьют
 
-Мы рады принять вклад от любого человека. Заходите в Discord, если хотите помочь. У нас есть [список проблем](https://github.com/space-syndicate/space-station-14-content/issues), которые нужно решить, и любой может за них взяться. Не бойтесь просить о помощи!
+Мы рады принять вклад от любого человека. Заходите в Discord, если хотите помочь. У нас есть [список проблем](https://github.com/Old-Colonial-Marins/OCM-14747745/issues), которые нужно решить, и любой может за них взяться. Не бойтесь просить о помощи!
 Только убедитесь, что ваши изменения и PRы соответствуют [руководству по контрибьюту](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-
-## Сборка
-
-1. Склонируйте этот репозиторий локально
-2. Запустите `RUN_THIS.py` для инициализации подмодулей и скачивания движка.
-3. Скомпилируйте проект.
 
 [Более подробная инструкция по запуску проекта.](https://docs.spacestation14.com/en/general-development/setup.html)
 
