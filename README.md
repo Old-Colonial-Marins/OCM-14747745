@@ -1,5 +1,6 @@
 
-![1](https://github.com/user-attachments/assets/b9f2b405-be28-401a-a348-f7f82697963f)
+![Uploading earth22_00000.gif…]()
+
 
 Space Station 14 это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
