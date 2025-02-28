@@ -1,40 +1,4 @@
 - type: entity
-  id: BaseWeaponBattery
-  parent: BaseItem
-  abstract: true
-  components:
-  - type: Sprite
-  - type: Item
-    size: Huge
-  - type: Clothing
-    sprite: _Waha/Weapon/pulse_rifle.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: AmmoCounter
-  - type: Gun
-    fireRate: 2
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
-  - type: MagazineVisuals
-    magState: mag
-    steps: 5
-    zeroVisible: false
-  - type: Appearance
-  - type: StaticPrice
-    price: 500
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 40
-
-- type: entity
   name: Agripinaa Mk I Infantry Autogun
   parent: BaseWeaponBattery
   id: WeaponPulseRifleArgipininaa
@@ -127,7 +91,7 @@
 - type: entity
   name: Warhammer
   parent: BaseKnife
-  id: Warhammer
+  id: WarhammerUltramar
   components:
   - type: Tag
     tags:

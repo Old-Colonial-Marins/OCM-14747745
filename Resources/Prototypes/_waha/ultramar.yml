@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitUltramar #im kinda lazy to make another file specially for helmets
+  id: ClothingHeadHelmetHardsuitUltramarBase #im kinda lazy to make another file specially for helmets
   noSpawn: true
   name: squad leader helmet
   description: A helmet made specially for squad leaders of USCM corps. This one has no signs. 
@@ -27,7 +27,7 @@
 
 - type: entity
   parent: ClothingOuterHardsuitBase
-  id: ClothingOuterHardsuitUltramar
+  id: ClothingOuterHardsuitUltramarBase
   name: squad leader hardsuit
   description: Heavily armored squad leader hardsuit without any signs.
   components:
@@ -57,7 +57,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitCMSLBase
 
 - type: entity
-  parent: ClothingOuterHardsuitUltramar
+  parent: ClothingOuterHardsuitUltramarBase
   id: ClothingOuterHardsuitUltramar
   name: Ultramar Armor
   description: Heavily armored hardsuit, made for the alpha squad leader.
@@ -82,7 +82,7 @@
   - type: Unremoveable
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitUltramar
+  parent: ClothingHeadHelmetHardsuitUltramarBase
   id: ClothingHeadHelmetHardsuitUltramar
   noSpawn: true
   name: Ultramar helmet
