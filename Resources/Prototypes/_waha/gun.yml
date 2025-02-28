@@ -111,11 +111,10 @@
     sound: Audio/Weapons/Guns/Gunshots/bang.ogg
   - type: Item
     sprite: _Waha/Weapon/crusher.rsi
+    size: Ginormous
   - type: DisarmMalus
     malus: 0.225
   - type: MultiHandedItem
-  - type: Item
-    size: Ginormous
 
 - type: entity
   name: Ultrabolter
