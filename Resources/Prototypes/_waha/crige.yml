@@ -2,6 +2,7 @@
   parent: ClothingOuterBaseMedium
   id: ClothingOuterArmorCrig
   name: Crige Unifrom
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Clothing/Crige/crige.rsi
@@ -22,7 +23,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHelmetCrige
   name: Crige Helmet
-  description: A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side.
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Clothing/Crige/crigehelm.rsi
@@ -44,6 +45,7 @@
   parent: ClothingOuterBaseMedium
   id: ClothingOuterArmorCrigeOfficer
   name: Crige Officer Unifrom
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Clothing/Crige/crigeofficer.rsi
@@ -64,6 +66,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHelmetCrigeOfficer
   name: Crige Officer Cap
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Clothing/Crige/crigehelmcap.rsi

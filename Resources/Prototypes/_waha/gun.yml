@@ -1,6 +1,7 @@
 - type: entity
   name: Agripinaa Mk I Infantry Autogun
   parent: BaseWeaponBattery
+  suffix: Warhammer
   id: WeaponPulseRifleArgipininaa
   components:
   - type: Sprite
@@ -44,6 +45,7 @@
   name: LaspistoI-2-80
   parent: BaseWeaponBatterySmall
   id: WeaponLaspistoI
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Weapon/pulse_pistol.rsi
@@ -92,6 +94,7 @@
   name: Warhammer
   parent: BaseKnife
   id: WarhammerUltramar
+  suffix: Warhammer
   components:
   - type: Tag
     tags:
@@ -120,6 +123,7 @@
   name: Ultrabolter
   parent: BaseWeaponSubMachineGun
   id: WeaponUltrabolter
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Weapon/bolter.rsi
@@ -164,6 +168,7 @@
   id: MagazineBolter
   name: Magazine Bolter
   parent: BaseMagazineLightRifle
+  suffix: Warhammer
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeHades
@@ -181,6 +186,7 @@
   parent: ClothingMaskPullableBase
   id: ClothingMaskGasCrieg
   name: Crieg gas mask
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: _Waha/Clothing/Crige/gas.rsi
@@ -202,6 +208,7 @@
   name: Пехотная лопата
   parent: BaseItem
   id: ShovelCrieg
+  suffix: Warhammer
   components:
   - type: Sprite
     sprite: Objects/Tools/shovel.rsi
