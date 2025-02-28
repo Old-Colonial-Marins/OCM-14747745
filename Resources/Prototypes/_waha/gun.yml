@@ -39,7 +39,9 @@
     autoRecharge: true
     autoRechargeRate: 50
   - type: AmmoCounter
-  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20
 
 - type: entity
   name: LaspistoI-2-80
@@ -145,7 +147,7 @@
     autoEject: true
   - type: MagazineVisuals
     magState: mag
-    steps: 0
+    steps: 1
     zeroVisible: true
   - type: Appearance
   - type: ItemSlots
@@ -153,6 +155,7 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineBolter
+        priority: 2
         whitelist:
           tags:
             - MagazineBolter
@@ -211,7 +214,7 @@
   suffix: Warhammer
   components:
   - type: Sprite
-    sprite: Objects/Tools/shovel.rsi
+    sprite: _Waha/Weapon/shovel.rsi
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: 45
@@ -222,7 +225,7 @@
       collection: MetalThud
   - type: Item
     size: Normal
-    sprite: Objects/Tools/shovel.rsi
+    sprite: _Waha/Weapon/shovel.rsi
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
