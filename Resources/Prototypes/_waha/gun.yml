@@ -142,7 +142,7 @@
     availableModes:
       - FullAuto
     soundGunshot:
-      path: Audio/_CM/Weapons/bolter.ogg
+      path: Audio/bolter.ogg
   - type: ChamberMagazineAmmoProvider
     autoEject: true
   - type: MagazineVisuals
