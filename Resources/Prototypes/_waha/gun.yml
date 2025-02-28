@@ -142,7 +142,7 @@
     availableModes:
       - FullAuto
     soundGunshot:
-      path: Audio/bolter.ogg
+      path: /Audio/bolter.ogg
   - type: ChamberMagazineAmmoProvider
     autoEject: true
   - type: MagazineVisuals
@@ -158,7 +158,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineBolter
+            - BolterMag
       gun_chamber:
         name: Chamber
         startingItem: CartridgeHades
@@ -184,6 +184,12 @@
     steps: 1
     zeroVisible: false
   - type: Appearance
+  - type: Tag
+    tags:
+    - BolterMag
+
+- type: Tag
+  id: BolterMag
 
 - type: entity
   parent: ClothingMaskPullableBase
