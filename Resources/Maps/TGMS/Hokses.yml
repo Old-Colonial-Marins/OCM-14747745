@@ -56,6 +56,14 @@ entities:
     - type: OccluderTree
     - type: LoadedMap
     - type: MapLight
+    - type: BarrMusic
+      musicPool:
+      - !type:SoundPathSpecifier
+        path: /Audio/_CM/Songs/Vendetta_bolgarich.ogg
+      - !type:SoundPathSpecifier
+        path: /Audio/_CM/Songs/1-2MarchToWar.ogg
+      - !type:SoundPathSpecifier
+        path: /Audio/_CM/Songs/Burn_The_HiveV2.ogg
     - type: Parallax
       parallax: Sky
     - type: MapAtmosphere

@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Spawners\" />
+    <Folder Include="_CM14\Songs\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="_CM14\Surgery\CMSurgeryStepButton.cs">
