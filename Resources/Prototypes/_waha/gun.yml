@@ -1,0 +1,241 @@
+- type: entity
+  name: Agripinaa Mk I Infantry Autogun
+  parent: BaseWeaponBattery
+  suffix: Warhammer
+  id: WeaponPulseRifleArgipininaa
+  components:
+  - type: Sprite
+    sprite: _Waha/Weapon/pulse_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Waha/Weapon/pulse_rifle.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 7.69
+    minAngle: 4
+    maxAngle: 25
+    angleIncrease: 4
+    angleDecay: 16
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: ContainerContainer
+    containers:
+        ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: CartridgeLightRifle
+    fireCost: 100
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: AmmoCounter
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20
+
+- type: entity
+  name: LaspistoI-2-80
+  parent: BaseWeaponBatterySmall
+  id: WeaponLaspistoI
+  suffix: Warhammer
+  components:
+  - type: Sprite
+    sprite: _Waha/Weapon/pulse_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Waha/Weapon/pulse_pistol.rsi
+  - type: Gun
+    fireRate: 7.69
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaserWah
+    fireCost: 200
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
+
+- type: hitscan
+  id: RedLaserWah
+  damage:
+    types:
+      Heat: 20
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_laser
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_laser
+
+- type: entity
+  name: Warhammer
+  parent: BaseKnife
+  id: WarhammerUltramar
+  suffix: Warhammer
+  components:
+  - type: Tag
+    tags:
+    - CombatKnife
+    - Knife
+  - type: Sprite
+    sprite: _Waha/Weapon/crusher.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 0.5
+    damage:
+      types:
+        Slash: 100
+        Structural: 150
+  - type: EmbeddableProjectile
+    sound: Audio/Weapons/Guns/Gunshots/bang.ogg
+  - type: Item
+    sprite: _Waha/Weapon/crusher.rsi
+    size: Ginormous
+  - type: DisarmMalus
+    malus: 0.225
+  - type: MultiHandedItem
+
+- type: entity
+  name: Ultrabolter
+  parent: BaseWeaponSubMachineGun
+  id: WeaponUltrabolter
+  suffix: Warhammer
+  components:
+  - type: Sprite
+    sprite: _Waha/Weapon/bolter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Waha/Weapon/bolter.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/bolter.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineBolter
+        priority: 2
+        whitelist:
+          tags:
+            - BolterMag
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHades
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHades
+
+- type: entity
+  id: MagazineBolter
+  name: Magazine Bolter
+  parent: BaseMagazineLightRifle
+  suffix: Warhammer
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeHades
+    capacity: 15
+  - type: Item
+  - type: Sprite
+    sprite: _Waha/Weapon/light_rifle_box.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - BolterMag
+
+- type: Tag
+  id: BolterMag
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskGasCrieg
+  name: Crieg gas mask
+  suffix: Warhammer
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/Crige/gas.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/Crige/gas.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+    hideOnToggle: true
+
+- type: entity
+  name: Пехотная лопата
+  parent: BaseItem
+  id: ShovelCrieg
+  suffix: Warhammer
+  components:
+  - type: Sprite
+    sprite: _Waha/Weapon/shovel.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    damage:
+      types:
+        Blunt: 25
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    size: Normal
+    sprite: _Waha/Weapon/shovel.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Wood: 50
+  - type: StaticPrice
+    price: 25
+  - type: Shovel

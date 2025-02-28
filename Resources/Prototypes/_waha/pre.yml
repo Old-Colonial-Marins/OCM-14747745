@@ -1,0 +1,134 @@
+- type: startingGear
+  id: CrigeBase
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
+    head: ClothingHeadHelmetCrige
+    mask: ClothingMaskGasCrieg
+    outerClothing: ClothingOuterArmorCrig
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpackSatchelSalvage
+    shoes: ClothingShoesBootsMarine
+    Belt: ClothingBeltFieldCommander
+    suitstorage: WeaponPulseRifleArgipininaa
+#  innerClothingSkirt: ClothingUniformJumpsuitOperative
+#  satchel: ClothingBackpackSatchelFilled
+#  duffelbag: ClothingBackpackDuffelSyndicateOperative
+
+- type: startingGear
+  id: CrigeBasePistole
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
+    head: ClothingHeadHelmetCrige
+    mask: ClothingMaskGasCrieg
+    outerClothing: ClothingOuterArmorCrig
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpackSatchelSalvage
+    shoes: ClothingShoesBootsMarine
+    Belt: ClothingBeltFieldCommander
+    suitstorage: WeaponLaspistoI
+#  innerClothingSkirt: ClothingUniformJumpsuitOperative
+#  satchel: ClothingBackpackSatchelFilled
+#  duffelbag: ClothingBackpackDuffelSyndicateOperative
+
+- type: startingGear
+  id: CrigeOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
+    head: ClothingHeadHelmetCrigeOfficer
+    mask: ClothingMaskGasCrieg
+    outerClothing: ClothingOuterArmorCrigeOfficer
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpackSatchelSalvage
+    shoes: ClothingShoesBootsMarine
+    pocket1: WeaponLaspistoI
+    pocket2: SyndicateWhistle
+#  innerClothingSkirt: ClothingUniformJumpsuitOperative
+#  satchel: ClothingBackpackSatchelFilled
+#  duffelbag: ClothingBackpackDuffelSyndicateOperative
+
+- type: startingGear
+  id: UltramarineGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitUrban_mar
+    mask: ClothingMaskBreathMedicalSecurity
+    outerClothing: ClothingOuterHardsuitUltramar
+    gloves: ClothingHandsGlovesCombat
+    back: WarhammerUltramar
+    shoes: ClothingShoesBootsMarine
+    pocket1: MagazineBolter
+    pocket2: MagazineBolter
+    suitstorage: WeaponUltrabolter
+    Belt: CombatMedipen
+#  innerClothingSkirt: ClothingUniformJumpsuitOperative
+#  satchel: ClothingBackpackSatchelFilled
+#  duffelbag: ClothingBackpackDuffelSyndicateOperative
+
+- type: entity
+  name: Crige base
+  parent: BaseMarine
+  id: MobBaseCrige
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Loadout
+      prototypes:
+        - CrigeBase
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: Криговец
+  parent: MobBaseCrige
+  id: MobCrige
+
+
+
+- type: entity
+  name: Crige officer
+  parent: BaseMarine
+  id: MobCrigeofficerbase
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Loadout
+      prototypes:
+        - CrigeOfficer
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: Офицер крига
+  parent: MobCrigeofficerbase
+  id: MobCrigeofficer
+
+
+
+- type: entity
+  name: Ultramar
+  parent: BaseMarine
+  id: MobUltramarbase
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Loadout
+      prototypes:
+        - UltramarineGear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: Ультрамарин
+  parent: MobUltramarbase
+  id: MobUltramarineBase
