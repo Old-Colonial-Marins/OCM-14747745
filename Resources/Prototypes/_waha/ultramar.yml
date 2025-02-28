@@ -1,24 +1,105 @@
 - type: entity
-  parent: ClothingOuterHardsuitCMSLBase
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitUltramar #im kinda lazy to make another file specially for helmets
+  noSpawn: true
+  name: squad leader helmet
+  description: A helmet made specially for squad leaders of USCM corps. This one has no signs. 
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Hardsuits/helmets/slhardsuithelmetbase.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Hardsuits/helmets/slhardsuithelmetbase.rsi
+  - type: PointLight
+    radius: 15
+    energy: 5
+    color: Red
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.85
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitUltramar
+  name: squad leader hardsuit
+  description: Heavily armored squad leader hardsuit without any signs.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/OuterClothing/Hardsuits/slhardsuitbase.rsi
+  - type: Item
+    size: 100 # size: Huge
+  - type: Clothing
+    sprite: _CM/Clothing/OuterClothing/Hardsuits/slhardsuitbase.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.3
+        Caustic: 0.3
+  - type: ClothingSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCMSLBase
+
+- type: entity
+  parent: ClothingOuterHardsuitUltramar
   id: ClothingOuterHardsuitUltramar
   name: Ultramar Armor
   description: Heavily armored hardsuit, made for the alpha squad leader.
   components:
   - type: Sprite
-    sprite: _Waha/Clothing/ultramar.rsi
+    sprite: _Waha/Clothing/Ultramarine/ultramar.rsi
   - type: Clothing
-    sprite: _Waha/Clothing/ultramar.rsi
+    sprite: _Waha/Clothing/Ultramarine/ultramar.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitUltramar
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.25
+        Slash: 0.25
+        Piercing: 0.25
+        Heat: 0.25
+        Caustic: 0.25
+  - type: ClothingSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
+  - type: Unremoveable
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitCMSLBase
+  parent: ClothingHeadHelmetHardsuitUltramar
   id: ClothingHeadHelmetHardsuitUltramar
   noSpawn: true
   name: Ultramar helmet
-  description: Alpha squad leader's helmet.
   components:
   - type: Sprite
-    sprite: _Waha/Clothing/ultramarhelm.rsi
+    sprite: _Waha/Clothing/Ultramarine/ultramarhelm.rsi
   - type: Clothing
-    sprite: _Waha/Clothing/ultramarhelm.rsi
+    sprite: _Waha/Clothing/Ultramarine/ultramarhelm.rsi
+  - type: PointLight
+    radius: 15
+    energy: 5
+    color: Red
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
+        Caustic: 0.75

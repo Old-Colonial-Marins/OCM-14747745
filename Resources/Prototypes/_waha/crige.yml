@@ -1,0 +1,82 @@
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: ClothingOuterArmorCrig
+  name: Crige Unifrom
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/Crige/crige.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/Crige/crige.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.40
+        Slash: 0.40
+        Piercing: 0.40
+        Heat: 0.40
+        Caustic: 0.40
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetCrige
+  name: Crige Helmet
+  description: A standard M10 Pattern Helmet. The inside label, along with washing information, reads, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'. There is a built-in camera on the right side.
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/Crige/crigehelm.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/Crige/crigehelm.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
+        Caustic: 0.75
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: ClothingOuterArmorCrigeOfficer
+  name: Crige Officer Unifrom
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/Crige/crigeofficer.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/Crige/crigeofficer.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.40
+        Slash: 0.40
+        Piercing: 0.40
+        Heat: 0.40
+        Caustic: 0.40
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetCrigeOfficer
+  name: Crige Officer Cap
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/Crige/crigehelmcap.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/Crige/crigehelmcap.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
+        Caustic: 0.70
+  - type: Tag
+    tags:
+    - WhitelistChameleon
