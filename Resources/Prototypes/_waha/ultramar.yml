@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingOuterHardsuitCMSLBase
+  id: ClothingOuterHardsuitUltramar
+  name: Ultramar Armor
+  description: Heavily armored hardsuit, made for the alpha squad leader.
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/ultramar.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/ultramar.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitUltramar
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitCMSLBase
+  id: ClothingHeadHelmetHardsuitUltramar
+  noSpawn: true
+  name: Ultramar helmet
+  description: Alpha squad leader's helmet.
+  components:
+  - type: Sprite
+    sprite: _Waha/Clothing/ultramarhelm.rsi
+  - type: Clothing
+    sprite: _Waha/Clothing/ultramarhelm.rsi
