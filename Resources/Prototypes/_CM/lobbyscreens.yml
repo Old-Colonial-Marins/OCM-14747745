@@ -1,47 +1,59 @@
 - type: lobbyBackground
   id: CMlobbyScreen1
-  background: /Textures/_CM/LobbyScreens/lobby1.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt1.png
 
 - type: lobbyBackground
   id: CMlobbyScreen2
-  background: /Textures/_CM/LobbyScreens/lobby2.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt2.png
 
 - type: lobbyBackground
   id: CMlobbyScreen3
-  background: /Textures/_CM/LobbyScreens/lobby3.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt3.png
 
 - type: lobbyBackground
   id: CMlobbyScreen4
-  background: /Textures/_CM/LobbyScreens/lobby4.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt4.png
 
 - type: lobbyBackground
   id: CMlobbyScreen5
-  background: /Textures/_CM/LobbyScreens/lobby5.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt5.png
 
 - type: lobbyBackground
   id: CMlobbyScreen6
-  background: /Textures/_CM/LobbyScreens/lobby6.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt6.png
 
 - type: lobbyBackground
   id: CMlobbyScreen7
-  background: /Textures/_CM/LobbyScreens/lobby7.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt7.png
 
 - type: lobbyBackground
   id: CMlobbyScreen8
-  background: /Textures/_CM/LobbyScreens/lobby8.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt8.png
 
 - type: lobbyBackground
   id: CMlobbyScreen9
-  background: /Textures/_CM/LobbyScreens/lobby9.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt9.png
 
 - type: lobbyBackground
   id: CMlobbyScreen10
-  background: /Textures/_CM/LobbyScreens/lobby10.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt10.png
 
 - type: lobbyBackground
   id: CMlobbyScreen11
-  background: /Textures/_CM/LobbyScreens/lobby11.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt11.png
 
 - type: lobbyBackground
   id: CMlobbyScreen12
-  background: /Textures/_CM/LobbyScreens/lobby12.png
+  background: /Textures/_CM/LobbyScreens/LobbyArt12.png
+
+- type: lobbyBackground
+  id: CMlobbyScreen13
+  background: /Textures/_CM/LobbyScreens/LobbyArt13.png
+
+- type: lobbyBackground
+  id: CMlobbyScreen14
+  background: /Textures/_CM/LobbyScreens/LobbyArt14.png
+
+- type: lobbyBackground
+  id: CMlobbyScreen15
+  background: /Textures/Corvax/LobbyScreens/xeno.png

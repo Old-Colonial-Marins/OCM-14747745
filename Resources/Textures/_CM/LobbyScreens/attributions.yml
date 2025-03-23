@@ -1,0 +1,109 @@
+- files: ["LobbyArt1.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "NicBoone"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt2.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "NicBoone"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt3.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "NicBoone"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt4.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Redsting"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt5.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Substance20"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt6.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Substance20"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt7.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Triiodine"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt8.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "NicBoone"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt9.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Sennen"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt10.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Triiodine"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt11.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Triiodine"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt12.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Unknown"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt13.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "LightCrabPress"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+- files: ["LobbyArt13.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "NicBoone"
+  source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
+
+# IF YOU ARE AN AUTHOR AND ARE DISSATISFIED WITH THE USE OF IMAGES, CONTACT US ON THE DISCORD SERVER.
+
+# cmss13-devs config for arts
+## LOBBY ART IMAGES
+## LOBBY_ART_IMAGES <icon_state>
+## LOBBY_ART_AUTHORS <author>
+#LOBBY_ART_IMAGES lobbyart1
+#LOBBY_ART_AUTHORS NicBoone
+#LOBBY_ART_IMAGES lobbyart2
+#LOBBY_ART_AUTHORS NicBoone
+#LOBBY_ART_IMAGES lobbyart3
+#LOBBY_ART_AUTHORS NicBoone
+#LOBBY_ART_IMAGES lobbyart4
+#LOBBY_ART_AUTHORS NicBoone
+#LOBBY_ART_IMAGES lobbyart5
+#LOBBY_ART_AUTHORS NicBoone
+#LOBBY_ART_IMAGES lobbyart6
+#LOBBY_ART_AUTHORS Triiodine
+#LOBBY_ART_IMAGES lobbyart7
+#LOBBY_ART_AUTHORS Triiodine
+#LOBBY_ART_IMAGES lobbyart8
+#LOBBY_ART_AUTHORS Triiodine
+#LOBBY_ART_IMAGES lobbyart9
+#LOBBY_ART_AUTHORS Unknown
+# originally for TGMC, asked author if we could use it too
+#LOBBY_ART_IMAGES lobbyart10
+#LOBBY_ART_AUTHORS LightCrabPress
+# originally drawing for discord banner
+#LOBBY_ART_IMAGES lobbyart11
+#LOBBY_ART_AUTHORS Redsting
+# commissioned by Neth
+#LOBBY_ART_IMAGES lobbyart12
+#LOBBY_ART_AUTHORS Substance20
+# commissioned by Neth
+#LOBBY_ART_IMAGES lobbyart13
+#LOBBY_ART_AUTHORS Substance20
+# Art given by Sennen/Rasta
+#LOBBY_ART_IMAGES lobbyart14
+#LOBBY_ART_AUTHORS Sennen
