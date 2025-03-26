@@ -21,7 +21,7 @@ Space Station 14 это ремейк SS13, который работает на 
 ## Лицензия
 
 Содержимое, добавленное в этот репозиторий после коммита 40bc3537053889a74c5ebffad2e63cd3211f47ad, распространяется по лицензии GNU Affero General Public License версии 3.0, если не указано иное.
-См. [LICENSE-AGPLv3](./LICENSE-AGPLv3.txt).
+См. [LICENSE-AGPLv3](./LICENSE.txt).
 
 Содержимое, добавленное в этот репозиторий до коммита 40bc3537053889a74c5ebffad2e63cd3211f47ad распространяется по лицензии MIT, если не указано иное.
 См. [LICENSE-MIT](./LICENSE-MIT.TXT).
