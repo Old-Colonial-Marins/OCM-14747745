@@ -307,7 +307,7 @@ public sealed class ArrivalsSystem : EntitySystem
         if (ev?.Job?.Prototype != null)
         {
             if (ev.Job.Prototype == "Quinn" || ev.Job.Prototype == "Pretor" || ev.Job.Prototype == "Kseno" ||
-                ev.Job.Prototype == "Runi")
+                ev.Job.Prototype == "Runi" || ev.Job.Prototype == "King")
             {
                 var points = EntityQueryEnumerator<XenoSpawnComponent, TransformComponent>();
                 var possiblePositions = new List<EntityCoordinates>();
