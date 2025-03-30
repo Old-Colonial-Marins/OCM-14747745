@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 27
+        Piercing: 35
 
 - type: entity
   id: BulletRifleAP1024
@@ -30,4 +30,4 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 50

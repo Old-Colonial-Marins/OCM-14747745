@@ -141,6 +141,9 @@
 
 - type: playTimeTracker
   id: JobCrusher
+
+- type: playTimeTracker
+  id: JobKing
 #----------------------------------------------
 # - type: playTimeTracker
   # id: JobCargoTechnician

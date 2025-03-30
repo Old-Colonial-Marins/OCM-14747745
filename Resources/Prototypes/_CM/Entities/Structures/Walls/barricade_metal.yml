@@ -58,13 +58,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 250
+        damage: 150
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 100
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -101,13 +101,13 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 350
+          damage: 250
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
       - trigger:
           !type:DamageTrigger
-          damage: 250
+          damage: 150
         behaviors:
         - !type:PlaySoundBehavior
           sound:
@@ -174,13 +174,13 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 350
+          damage: 250
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
       - trigger:
           !type:DamageTrigger
-          damage: 250
+          damage: 150
         behaviors:
         - !type:PlaySoundBehavior
           sound:
@@ -213,13 +213,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 100
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 70
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -314,13 +314,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 350
+        damage: 200
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 250
+        damage: 100
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -371,13 +371,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 450
+        damage: 350
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 250
+        damage: 150
       behaviors:
       - !type:PlaySoundBehavior
         sound:
