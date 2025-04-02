@@ -68,6 +68,11 @@
   copyright: "NicBoone"
   source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
 
+- files: ["LobbyArt15.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Van (discord varttist)"
+  source: "https://cdn.discordapp.com/attachments/1312454983949484113/1346192252040380558/velvet_helicopter.png?ex=67ee2efb&is=67ecdd7b&hm=38a53ba967153be7435e7a5744b9757a500a0054a873eb25d5398515bbccc770&"
+
 # IF YOU ARE AN AUTHOR AND ARE DISSATISFIED WITH THE USE OF IMAGES, CONTACT US ON THE DISCORD SERVER.
 
 # cmss13-devs config for arts
