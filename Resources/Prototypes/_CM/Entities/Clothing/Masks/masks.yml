@@ -51,4 +51,16 @@
     sprite: _CM/Clothing/Mask/special_gas_mask.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
-  
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingSovietMaskGasMarine
+  name: противогаз
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Mask/soviet_gas_mask.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Mask/soviet_gas_mask.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
