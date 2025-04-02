@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakMarine
+  name: плащ ОПЗ
+  description: Помпезный плащ с гербом ОПЗ.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Neck/MarineCloak.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
