@@ -68,6 +68,11 @@
   copyright: "NicBoone"
   source: "https://github.com/cmss13-devs/cmss13/tree/master/icons/lobby"
 
+- files: ["LobbyArt15.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Vanic (https://boosty.to/varttist)"
+  source: "https://images.boosty.to/image/d1916c81-3c9e-4378-a318-8b47350702ed?change_time=1741024455&mw=1150"
+
 # IF YOU ARE AN AUTHOR AND ARE DISSATISFIED WITH THE USE OF IMAGES, CONTACT US ON THE DISCORD SERVER.
 
 # cmss13-devs config for arts

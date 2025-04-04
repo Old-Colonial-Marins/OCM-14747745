@@ -126,3 +126,50 @@
       - MechEquipmentGrabber
       - MechEquipmentGrabber
       - MechEquipmentGrabber
+
+- type: entity
+  id: VehicleTruck
+  parent: BaseVehicleCrane
+  name: Грузовик
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _CM/vehicle/cargo_tank.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: truck
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/truck_driving.ogg
+  - type: Mech
+    baseState: truck
+    openState: truck
+    brokenState: truck_damaged
+    mechToPilotDamageMultiplier: 0.75
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.25
+    baseSprintSpeed: 5.6
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+      mech-equipment-container:
+      - MechEquipmentGrabber
+      - MechEquipmentGrabber
+      - MechEquipmentGrabber
+  - type: Storage
+    grid:
+    - 0,0,12,5
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
