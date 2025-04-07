@@ -1,0 +1,31 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakMarine
+  name: плащ ОПЗ
+  description: Помпезный плащ с гербом ОПЗ.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Neck/MarineCloak.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakOfficer
+  name: офицерский плащ
+  description: Помпезный плащ для офицеров.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Neck/GeneralissimusCloack.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantiya
+  name: офицерская мантия
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Neck/Mantiya.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
