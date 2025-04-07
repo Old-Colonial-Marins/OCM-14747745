@@ -129,3 +129,25 @@
     sprite: _CM/Clothing/Head/Berets/WhiteCommandBeret.rsi
   - type: Clothing
     sprite: _CM/Clothing/Head/Berets/WhiteCommandBeret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGuard
+  name: гвардейский берет
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/guard.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/guard.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGuardPhones
+  name: гвардейский берет с наушниками
+  description:
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Berets/guard_headphones.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Berets/guard_headphones.rsi

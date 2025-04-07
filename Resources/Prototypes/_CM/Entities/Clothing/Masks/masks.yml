@@ -64,3 +64,15 @@
     sprite: _CM/Clothing/Mask/soviet_gas_mask.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskCoifGreen
+  name: зеленая маска
+  description: Закрывает всю голову за исключением глаз.
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Mask/green_coif.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Mask/green_coif.rsi
+  - type: IdentityBlocker
