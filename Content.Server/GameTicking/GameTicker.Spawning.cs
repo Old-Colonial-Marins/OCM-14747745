@@ -388,7 +388,8 @@ namespace Content.Server.GameTicking
                 {
                     var gridXform = Transform(gridUid);
 
-                    return new EntityCoordinates(gridUid, Vector2.Transform(toMap.Position, gridXform.InvWorldMatrix));
+                    return new EntityCoordinates(gridUid,
+                        gridXform.InvWorldMatrix.Transform(toMap.Position));
                 }
 
                 return spawn;
