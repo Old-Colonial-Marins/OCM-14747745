@@ -1,0 +1,25 @@
+- type: entity
+  id: metalgarbagedecorations
+  name: Железный обломок
+  description: Кусок сломанного железа. Больше ни на что не годен.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/garbage.rsi
+      state: metalgarbage
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable

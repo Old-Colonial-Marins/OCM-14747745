@@ -1,0 +1,37 @@
+- type: entity
+  id: DecorativeCampfire
+  name: Костёр
+  description: Сложенные поленья. Возможно, кто-то планирует его зажечь.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/campfire.rsi
+      state: campfire
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+    - type: Physical
+    - type: Anchorable
+
+- type: entity
+  id: DecorativeCampfireBurning
+  name: Горящий костёр
+  description: Огонь весело потрескивает. Лучше не лезть руками.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/campfire.rsi
+      state: burning
+    - type: PointLight
+      radius: 5
+      color: "#ffae42"  # тёплый оранжевый цвет
+      energy: 3.0
+      soft: true
+      castShadows: false
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+    - type: Physical
+    - type: Anchorable

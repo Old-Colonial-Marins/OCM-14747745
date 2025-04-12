@@ -1,0 +1,39 @@
+- type: entity
+  id: metalpile
+  name: Металлическая деталь
+  description: Большой металлический объект. Возможно, его можно использовать для чего-то.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/metalpile.rsi
+      state: pile
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:SpawnEntities
+              spawn:
+                Steel: !rand 5, 20   # Удача при спавне стали
+              offset: 0.0,0.0
+              chance: 1.0
+              randomChance:  # Добавляем шанс выпадения
+                - chance: 0.1   # 10% шанс выпадения 20 стали
+                  value: 20
+                - chance: 0.3   # 30% шанс выпадения 15 стали
+                  value: 15
+                - chance: 0.4   # 40% шанс выпадения 10 стали
+                  value: 10
+                - chance: 0.5   # 50% шанс выпадения 5 стали
+                  value: 5
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable

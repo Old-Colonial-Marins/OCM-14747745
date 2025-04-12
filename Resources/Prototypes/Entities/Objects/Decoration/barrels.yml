@@ -1,0 +1,103 @@
+- type: entity
+  id: DecorativeCanYellow
+  name: Жёлтая банка
+  description: Пустая жёлтая банка. Наверное, стояла тут давно.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/barrels.rsi
+      state: barrel_yellow
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 20
+          behaviors:
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable
+
+- type: entity
+  id: DecorativeCanBlue
+  name: Синяя банка
+  description: Пустая синяя банка. Никто не знает, зачем она тут.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/barrels.rsi
+      state: barrel_blue
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 20
+          behaviors:
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable
+
+- type: entity
+  id: DecorativeCanGreen
+  name: Зелёная банка
+  description: Зелёная банка. Пахнет старым лимонадом.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/barrels.rsi
+      state: barrel_green
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 20
+          behaviors:
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable
+
+- type: entity
+  id: DecorativeCanWhite
+  name: Белая банка
+  description: Белая банка с потёртостями. Кто-то явно пытался её открыть.
+  components:
+    - type: Sprite
+      sprite: Objects/Decorations/barrels.rsi
+      state: barrel_white
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 20
+          behaviors:
+            - !type:DeleteEntity
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Tag
+      tags:
+        - Decoration
+        - Breakable
+    - type: Physical
+    - type: Anchorable
