@@ -70,6 +70,7 @@
     # Actions
     - type: Xeno
       actions:
+        - ActionXenoPlantTurret #TGMC14      
         - ActionXenoStun
         - ActionXenoLayEgg
         - ActionXenoScreech
@@ -79,6 +80,7 @@
         - ActionXenoAcid
         - ActionDefilerDefaultSpit
         - ActionXenoRest
+    - type: PlantTurret
     - type: XenoLayEgg
     - type: XenoStun
     - type: XenoScreech
