@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by me",
+  "size": {
+    "x": 62,
+    "y": 23
+  },
+  "states": [
+    {
+      "name": "pile"
+    }
+  ]
+}
