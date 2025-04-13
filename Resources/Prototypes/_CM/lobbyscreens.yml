@@ -57,3 +57,7 @@
 - type: lobbyBackground
   id: CMlobbyScreen15
   background: /Textures/Corvax/LobbyScreens/xeno.png
+
+- type: lobbyBackground
+  id: CMlobbyScreen16
+  background: /Textures/_CM/LobbyScreens/LobbyArt15.png

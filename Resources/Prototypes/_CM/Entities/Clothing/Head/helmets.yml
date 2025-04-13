@@ -63,3 +63,25 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetGuard
+  name: гвардейский шлем
+  description:  
+  components:
+  - type: Sprite
+    sprite: _CM/Clothing/Head/Helmets/guard.rsi
+  - type: Clothing
+    sprite: _CM/Clothing/Head/Helmets/guard.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.60
+  - type: Tag
+    tags:
+    - WhitelistChameleon
