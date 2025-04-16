@@ -46,6 +46,7 @@
     - type: MobState
       allowedStates:
       - Alive
+      - Critical 
       - Dead
     - type: Puller
       needsHands: false
@@ -67,6 +68,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
+        200: Critical
         300: Dead
       stateAlertDict:
         Alive: XenoHealth

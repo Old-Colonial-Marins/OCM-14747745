@@ -13,4 +13,3 @@
         state: rage
       event: !type:XenoRageEvent
       checkCanAccess: false
-      

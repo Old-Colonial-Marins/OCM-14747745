@@ -31,6 +31,8 @@
           Base: alive
         Dead:
           Base: dead
+        Critical:
+          Base: critical
     - type: Item
       size: Huge
     - type: Physics
@@ -260,6 +262,8 @@
         Base: alive
       Dead:
         Base: dead
+      Critical:
+        Base: critical
   - type: Butcherable
     spawned:
     - id: FoodMeatXeno
