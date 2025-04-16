@@ -20,6 +20,7 @@
       key_slots:
       - EncryptionKeyCargo
       - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/cargo.rsi
   - type: Clothing
@@ -35,6 +36,7 @@
       key_slots:
       - EncryptionKeyCentCom
       - EncryptionKeyStationMaster
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/centcom.rsi
   - type: Clothing
@@ -59,6 +61,7 @@
     containers:
       key_slots:
       - EncryptionKeyStationMaster
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/command.rsi
   - type: Clothing
@@ -74,6 +77,7 @@
       key_slots:
       - EncryptionKeyEngineering
       - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/engineering.rsi
   - type: Clothing
@@ -89,6 +93,7 @@
       key_slots:
       - EncryptionKeyMedical
       - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/medical.rsi
   - type: Clothing
@@ -106,6 +111,7 @@
       key_slots:
       - EncryptionKeySecurity
       - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
@@ -121,6 +127,7 @@
       key_slots:
       - EncryptionKeyScience
       - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/science.rsi
   - type: Clothing
@@ -156,6 +163,7 @@
       containers:
         key_slots:
           - EncryptionKeyFreelance
+          - EncryptionKeyCommon
     - type: Sprite
       sprite: Clothing/Ears/Headsets/freelance.rsi
     - type: Clothing
