@@ -16,6 +16,8 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 
 namespace Content.Server.Mech.Equipment.EntitySystems;
 
@@ -124,44 +126,52 @@ public sealed class MechGrabberSystem : EntitySystem
     }
 
     private void OnInteract(EntityUid uid, MechGrabberComponent component, InteractNoHandEvent args)
+{
+    if (args.Handled || args.Target is not { } target)
+        return;
+
+    if (args.Target == args.User || component.DoAfter != null)
+        return;
+
+    if (TryComp<MetaDataComponent>(target, out var meta) &&
+        meta.EntityPrototype?.ID is { } protoId &&
+        component.BlacklistPrototypes.Contains(protoId))
     {
-        if (args.Handled || args.Target is not {} target)
-            return;
-
-        if (args.Target == args.User || component.DoAfter != null)
-            return;
-
-        if (TryComp<PhysicsComponent>(target, out var physics) && physics.BodyType == BodyType.Static ||
-            HasComp<WallMountComponent>(target) ||
-            HasComp<MobStateComponent>(target))
-        {
-            return;
-        }
-
-        if (Transform(target).Anchored)
-            return;
-
-        if (component.ItemContainer.ContainedEntities.Count >= component.MaxContents)
-            return;
-
-        if (!TryComp<MechComponent>(args.User, out var mech) || mech.PilotSlot.ContainedEntity == target)
-            return;
-
-        if (mech.Energy + component.GrabEnergyDelta < 0)
-            return;
-
-        if (!_interaction.InRangeUnobstructed(args.User, target))
-            return;
-
-        args.Handled = true;
-        component.AudioStream = _audio.PlayPvs(component.GrabSound, uid).Value.Entity;
-        var doAfterArgs = new DoAfterArgs(EntityManager, args.User, component.GrabDelay, new GrabberDoAfterEvent(), uid, target: target, used: uid)
-        {
-            BreakOnMove = true
-        };
-
-        _doAfter.TryStartDoAfter(doAfterArgs, out component.DoAfter);
+        return;
     }
+
+    if (TryComp<PhysicsComponent>(target, out var physics) && physics.BodyType == BodyType.Static ||
+        HasComp<WallMountComponent>(target) ||
+        HasComp<MobStateComponent>(target))
+    {
+        return;
+    }
+
+    if (Transform(target).Anchored)
+        return;
+
+    if (component.ItemContainer.ContainedEntities.Count >= component.MaxContents)
+        return;
+
+    if (!TryComp<MechComponent>(args.User, out var mech) || mech.PilotSlot.ContainedEntity == target)
+        return;
+
+    if (mech.Energy + component.GrabEnergyDelta < 0)
+        return;
+
+    if (!_interaction.InRangeUnobstructed(args.User, target))
+        return;
+
+    args.Handled = true;
+    component.AudioStream = _audio.PlayPvs(component.GrabSound, uid).Value.Entity;
+
+    var doAfterArgs = new DoAfterArgs(EntityManager, args.User, component.GrabDelay, new GrabberDoAfterEvent(), uid, target: target, used: uid)
+    {
+        BreakOnMove = true
+    };
+
+    _doAfter.TryStartDoAfter(doAfterArgs, out component.DoAfter);
+}
 
     private void OnMechGrab(EntityUid uid, MechGrabberComponent component, DoAfterEvent args)
     {
@@ -186,4 +196,29 @@ public sealed class MechGrabberSystem : EntitySystem
 
         args.Handled = true;
     }
+
+public void AddToBlacklist(EntityUid uid, EntityUid entityToBlacklist, MechGrabberComponent? component = null)
+{
+    if (!Resolve(uid, ref component))
+        return;
+
+    if (!TryComp<MetaDataComponent>(entityToBlacklist, out var meta) ||
+        meta.EntityPrototype?.ID is not { } protoId)
+        return;
+
+    if (!component.BlacklistPrototypes.Contains(protoId))
+        component.BlacklistPrototypes.Add(protoId);
+}
+
+public void RemoveFromBlacklist(EntityUid uid, EntityUid entityToRemove, MechGrabberComponent? component = null)
+{
+    if (!Resolve(uid, ref component))
+        return;
+
+    if (!TryComp<MetaDataComponent>(entityToRemove, out var meta) ||
+        meta.EntityPrototype?.ID is not { } protoId)
+        return;
+
+    component.BlacklistPrototypes.Remove(protoId);
+}
 }

@@ -1,8 +1,12 @@
 ﻿using System.Numerics;
 using System.Threading;
+using System.Collections.Generic;
 using Content.Shared.DoAfter;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 
 namespace Content.Server.Mech.Equipment.Components;
 
@@ -51,4 +55,10 @@ public sealed partial class MechGrabberComponent : Component
 
     [DataField, ViewVariables(VVAccess.ReadOnly)]
     public DoAfterId? DoAfter;
+
+    /// <summary>
+    /// List of entity prototype IDs that are blacklisted from being grabbed by this component.
+    /// </summary>
+    [DataField("blacklist", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
+    public List<string> BlacklistPrototypes = new();
 }
