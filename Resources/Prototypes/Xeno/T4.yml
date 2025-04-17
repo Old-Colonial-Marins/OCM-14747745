@@ -46,6 +46,7 @@
       thresholds:
         0: Alive
         1500: Dead
+        1400: Critical
     - type: Destructible
       thresholds:
         - trigger:
@@ -130,6 +131,7 @@
       thresholds:
         0: Alive
         1800: Dead
+        1700: Critical
     - type: Destructible
       thresholds:
       - trigger:
@@ -179,6 +181,7 @@
       thresholds:
         0: Alive
         1000: Dead
+        900: Critical
     - type: Destructible
       thresholds:
         - trigger:
@@ -241,6 +244,7 @@
       thresholds:
         0: Alive
         1900: Dead
+        1800: Critical
     - type: Destructible
       thresholds:
       - trigger:
