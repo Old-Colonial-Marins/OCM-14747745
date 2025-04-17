@@ -1054,3 +1054,5 @@
           - Sheet
           - RawMaterial
           - Ingot
+    - type: Anchorable
+      flags: Anchorable

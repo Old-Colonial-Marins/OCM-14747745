@@ -22,6 +22,18 @@
   - type: Sprite
     state: mecha_clamp
   - type: MechGrabber
+    blacklist:
+      - VehicleTank
+      - VehicleTankBattery
+      - VehicleTruck
+      - MechRipley
+      - MechRipleyBattery
+      - MechHonker
+      - MechHonkerBattery
+      - MechHamtr
+      - MechHamtrBattery
+      - MechVim
+      - MechVimBattery
   - type: UIFragment
     ui: !type:MechGrabberUi
   - type: ContainerContainer
@@ -37,6 +49,18 @@
   - type: Sprite
     state: mecha_clamp_small
   - type: MechGrabber
+    blacklist:
+      - VehicleTank
+      - VehicleTankBattery
+      - VehicleTruck
+      - MechRipley
+      - MechRipleyBattery
+      - MechHonker
+      - MechHonkerBattery
+      - MechHamtr
+      - MechHamtrBattery
+      - MechVim
+      - MechVimBattery
     maxContents: 4
     grabDelay: 3
     grabEnergyDelta: 20
