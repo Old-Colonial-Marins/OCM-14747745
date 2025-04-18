@@ -59,6 +59,7 @@
       thresholds:
         0: Alive
         5500: Dead
+        5400: Critical
     - type: Destructible
       thresholds:
       - trigger:
