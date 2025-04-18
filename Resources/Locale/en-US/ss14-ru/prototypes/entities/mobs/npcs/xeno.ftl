@@ -5,7 +5,7 @@ ent-MobFaceHugger = Лицехват
     .desc = Даруйте свои смертельные объятия неосторожному путнику.
 
 ent-MobLarvaXeno = Грудолом
-    .desc = Маленькая местная тварь. Она растёт!
+    .desc = Вам пиздец
 
 # Tier 1
 ent-MobRunnerXeno = Бегун
