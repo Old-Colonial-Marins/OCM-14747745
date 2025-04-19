@@ -71,6 +71,9 @@
         - !type:XenoEvolution
           prototype: MobWarlockXeno
           evolution: 1200
+        - !type:XenoEvolution
+          prototype: MobWidowXeno
+          evolution: 1200
     # Attack
     - type: MeleeWeapon
       damage:

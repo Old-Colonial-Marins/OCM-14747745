@@ -1,0 +1,47 @@
+- type: entity
+  parent: MobXenoBaseT3
+  id: MobWidowXeno
+  suffix: TGMC
+  name: Widow
+  components:
+    # Actions
+    - type: Xeno
+      actions:
+        - ActionXenoVines
+        - ActionXenoRest
+        - SummonSpiderling 
+    - type: Widow
+    - type: XenoVines
+    - type: SummonSpiderling
+      damage:
+        types:
+          Blunt: 100
+    # Attack
+    - type: MeleeWeapon
+      damage:
+        groups:
+          Brute: 35
+        types:
+          Structural: 50
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        680: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 800
+        behaviors:
+        - !type:GibBehavior { }
+    - type: Sprite
+      sprite: _TGMC14/Mobs/Xenoids/widow.rsi
+      timeUsage: 60
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.9
+        360: 0.85
+        420: 0.80
+        480: 0.75
+        540: 0.70
