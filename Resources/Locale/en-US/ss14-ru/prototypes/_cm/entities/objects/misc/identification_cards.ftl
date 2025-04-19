@@ -68,3 +68,7 @@ ent-PilotNormandyIDCard = Pilot Normandy dog tag
     .desc = { ent-IDCardMarine.desc }
 ent-PilotRaptorIDCard = Pilot Raptor dog tag
     .desc = { ent-IDCardMarine.desc }
+ent-PilotRaptorIDCard = Pilot Raptor dog tag
+    .desc = { ent-IDCardMarine.desc }
+ent-CorrespondentIDCard = Correspondent dog tag
+    .desc = { ent-IDCardMarine.desc }

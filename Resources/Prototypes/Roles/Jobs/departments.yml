@@ -106,6 +106,13 @@
     - PilotMech
 
 - type: department
+  id: Service
+  description: department-Service-description
+  color: "#3DCC1D"
+  roles:
+    - Correspondent
+
+- type: department
   id: Xeno
   description: department-Xeno-description
   color: "#4B0082"
