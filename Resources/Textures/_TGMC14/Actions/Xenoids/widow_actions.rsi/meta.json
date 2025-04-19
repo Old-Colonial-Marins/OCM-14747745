@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "Widow",
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "web_spit"
+    },
+    {
+      "name": "leash_ball"
+    },
+    {
+      "name": "heal_spiderling"
+    },
+    {
+      "name": "spawn_spiderling"
+    },
+    {
+      "name": "cannibalise_spiderling"
+    },
+    {
+      "name": "spiderling_mark"
+    }
+  ]
+}

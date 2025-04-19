@@ -1,0 +1,92 @@
+- type: entity
+  id: MobSpiderlingXeno
+  suffix: TGMC
+  name: Spiderling
+  parent:
+    - BaseMob
+    - MobAtmosExposed
+    - MobCombat
+    - MobBloodstream
+    - MobFlammable
+  components:
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+  - type: Body
+  - type: StandingState
+  - type: Xeno
+  - type: MovementIgnoreGravity
+  - type: GravityMovementSlow
+  - type: FriendlyFire
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _TGMC14/Mobs/Xenoids/spiderling.rsi
+      scale: 0.8, 0.8
+  - type: Physics
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 7.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 20
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Xeno
+  - type: Stamina
+    critThreshold: 15
+  - type: MovementAlwaysTouching
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatXeno
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 50
+    bloodReagent: FluorosulfuricAcid
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 10
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Speech
+    speechVerb: SmallMob
+  - type: NonSpreaderZombie
+  - type: NpcFactionMember
+    factions:
+    - Xeno
