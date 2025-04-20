@@ -4,7 +4,7 @@
   id: BaseMarine
   noSpawn: false
   components:
-  - type: TGMCPulling #TGMC
+  - type: MarinePulling #TGMC
   - type: FriendlyFire
   - type: FriendlyFireToggleable
     fireRateModifier: 0.6

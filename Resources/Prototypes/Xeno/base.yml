@@ -9,6 +9,7 @@
   id: MobXenoBase
   abstract: true
   components:
+    - type: XenoPulling #TGMC
     - type: Xeno
     - type: XenoEvolutions
     - type: XenoPlasma
