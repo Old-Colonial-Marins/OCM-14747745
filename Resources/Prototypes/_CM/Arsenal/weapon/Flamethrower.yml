@@ -80,7 +80,7 @@
     size: Normal
   - type: BallisticAmmoProvider
     mayTransfer: true
-    capacity: 300
+    capacity: 270
     proto: CartridgeFlamethrower
     whitelist:
       tags:
@@ -157,8 +157,8 @@
     impactEffect: BulletImpactEffect
     damage:
       types:
-        Heat: 25
-        Structural: 45
+        Heat: 15
+        Structural: 40
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
   - type: TimedDespawn
