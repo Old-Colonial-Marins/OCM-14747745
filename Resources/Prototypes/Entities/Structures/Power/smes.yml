@@ -108,3 +108,14 @@
   components:
   - type: Battery
     startingCharge: 0
+
+- type: entity
+  name: Корабельный СМЭС
+  parent: BaseSMES
+  id: SMESShip
+  description: Специально улучшенный СМЭС по заказу Министерства обороны, для долгого хранения энергии. 
+  suffix: Улучшенный, 24 Мвт
+  components:
+  - type: Battery
+    maxCharge: 24000000
+    startingCharge: 24000000
