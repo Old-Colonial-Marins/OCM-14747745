@@ -10,12 +10,6 @@
   access:
     - Service
     - Maintenance
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: JobRank
-        job: Correspondent
-
 - type: startingGear
   id: CorrespondentGear
   equipment:
