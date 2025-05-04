@@ -4,7 +4,7 @@
   noSpawn: true
   components:
   - type: InstantAction
-    useDelay: 30
+    useDelay: 15
     icon:
       sprite: _TGMC14/Actions/Xenoids/widow_actions.rsi
       state: spawn_spiderling
