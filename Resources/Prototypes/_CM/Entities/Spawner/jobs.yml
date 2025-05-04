@@ -513,3 +513,29 @@
     layers:
       - state: green
       - state: ertsecurity
+# Service -----------------------
+- type: entity
+  id: SpawnPointCorrespondent
+  parent: SpawnPointMarine
+  name: correspondent
+  suffix: SpawnMarineTGMS
+  components:
+    - type: SpawnPoint
+      job_id: Correspondent
+      spawn_type: Job
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ertsecurity
+
+- type: entity
+  id: SpawnPointMarineLate
+  parent: MarkerBase
+  suffix: Late Spawn
+  components:
+  - type: MarineSpawn
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: ertsecurity

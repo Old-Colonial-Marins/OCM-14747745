@@ -106,3 +106,6 @@ ent-SpawnPointMilitaryPoliceman = military policeman
 ent-SpawnPointMarineLate = { ent-MarkerBase }
     .suffix = Late Spawn
     .desc = { ent-MarkerBase.desc }
+ent-SpawnPointCorrespondent = correspondent
+    .suffix = SpawnMarineTGMS
+    .desc = { ent-SpawnPointMarine.desc }
