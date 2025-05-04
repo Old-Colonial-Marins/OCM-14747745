@@ -50,6 +50,12 @@
         crate: CrateEngineeringSecure
         entities:
         - CMMortar
+      - name: Ящик дронов(2x дронов)
+        cost: 17000
+        crate: CrateEngineeringSecure
+        entities:
+        - ToolboxDroneMarine
+        - ToolboxDroneMarine
       - name: Ящик турелей(2x турель)
         cost: 20000
         crate: CrateEngineeringSecure

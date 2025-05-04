@@ -44,6 +44,8 @@
         amount: 5
       - id: ClothingBeltUtility
         amount: 5
+      - id: ClothingEyesFpv
+        amount: 5
     - name: Подсумки
       entries:
       - id: CMPouchExplosive
@@ -85,6 +87,8 @@
       - id: BoxLighttube
         amount: 5
       - id: BoxLightbulb
+        amount: 5
+      - id: ToolboxDroneMarine
         amount: 5
       - id: ToolboxTurretMarine
         amount: 5
