@@ -19,6 +19,10 @@ public sealed partial class XenoExplosiveEvent : InstantActionEvent
 {
 }
 
+public sealed partial class FpvDroneExplosiveEvent : InstantActionEvent
+{
+}
+
 public sealed partial class XenoSpitEvent : WorldTargetActionEvent
 {
 }
