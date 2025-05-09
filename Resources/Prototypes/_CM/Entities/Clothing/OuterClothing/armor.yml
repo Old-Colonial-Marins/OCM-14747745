@@ -5,6 +5,11 @@
   components:
   - type: UnpoweredFlashlight
   - type: PointLight
+  - type: Sprite
+    layers:
+    - state: lightON
+    - sprite: Anjelo-sBasement\Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi
+  state: lightON
     enabled: false
     radius: 6
     energy: 1
