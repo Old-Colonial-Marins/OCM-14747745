@@ -1,32 +1,32 @@
-  # In-armor flashlight
-- type: entity
-  id: ClothingOuterArmorUnpoweredFlashlight
-  abstract: true
+# In-armor flashlight  
+- type: entity  
+  id: ClothingOuterArmorUnpoweredFlashlight  
+  abstract: true  
   components:
-  - type: UnpoweredFlashlight
-  - type: PointLight
-  - type: Sprite
-    layers:
-    - state: lightON
-    - sprite: Anjelo-sBasement\Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi
-      state: lightON
-      visible: false
-      map: [ "light" ]
-  - type: Clothing
-    equippedPrefix: off
-    clothingVisuals:
-      outerClothing:
-  - type: Appearance
-  - type: ToggleableLightVisuals
-    spriteLayer: light
-    clothingVisuals:
-      outerClothing:
-      - sprite: Anjelo-sBasement\Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi
-    enabled: false
-    radius: 6
-    energy: 1
-    mask: /Textures/Effects/LightMasks/cone.png
-    autoRot: true
+    - type: UnpoweredFlashlight  
+    - type: PointLight  
+    - type: Sprite  
+      layers:
+        - state: lightON  
+          sprite: Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi  
+          state: lightON  
+          visible: false  
+          map: [ "light" ]
+      - type: Clothing  
+        equippedPrefix: off  
+        clothingVisuals:
+          outerClothing:
+      - type: Appearance  
+      - type: ToggleableLightVisuals  
+        spriteLayer: light  
+        clothingVisuals:
+          outerClothing:
+            - sprite: Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi  
+        enabled: false  
+        radius: 6  
+        energy: 1  
+        mask: /Textures/Effects/LightMasks/cone.png  
+        autoRot: true
 
 - type: entity
   parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
