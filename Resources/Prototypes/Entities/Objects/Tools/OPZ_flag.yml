@@ -1,0 +1,8 @@
+type: entity  
+parent: RMCFlagCarriableBase  
+id: RMCFlagCarriableUN  
+name: Флаг ОПЗ  
+description: "Флаг на длинном штандарте, идеально подходит чтобы насаживать на него врагов и поднимать боевой дух солдат в разгар войны."
+components:
+  - type: Sprite  
+    sprite: Resources\Textures\_CM\Objects\Misc\flag.rsi
