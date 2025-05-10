@@ -9,7 +9,19 @@
     layers:
     - state: lightON
     - sprite: Anjelo-sBasement\Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi
-    state: lightON
+      state: lightON
+      visible: false
+      map: [ "light" ]
+  - type: Clothing
+    equippedPrefix: off
+    clothingVisuals:
+      outerClothing:
+  - type: Appearance
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      outerClothing:
+      - sprite: Anjelo-sBasement\Resources\Textures\_CM\Clothing\Outerclothing\Armor\armor_overlays.rsi
     enabled: false
     radius: 6
     energy: 1
