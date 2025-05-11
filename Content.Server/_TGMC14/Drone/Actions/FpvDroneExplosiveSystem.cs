@@ -21,7 +21,7 @@ public sealed class FpvDroneExplosiveSystem : SharedFpvDroneExplosiveSystem
         if (args.Handled)
             return;
 
-        _explosionSystem.QueueExplosion(ent, "Default", 200f, 5f, 100f, canCreateVacuum: false, user: ent,
+        _explosionSystem.QueueExplosion(ent, "Default", 300f, 1f, 100f, canCreateVacuum: false, user: ent,
             addLog: true);
 
         // _damageableSystem.TryChangeDamage(ent, ent.Comp.Damage);
