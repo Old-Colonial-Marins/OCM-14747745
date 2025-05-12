@@ -1,25 +1,26 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/5a73e8f825ff279e82949b9329783a9e3070e2da",
+  "copyright": "Taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/f2b3774f6ca9173e76e7783d88e3c2f765cd385f/icons/obj/items/clothing/glasses.dmi and https://github.com/cmss13-devs/cmss13/blob/0c23c26bc85b7ab45fdb212c84807f0215c0a53e/icons/mob/humans/onmob/eyes.dmi",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "icon"
+        "name": "icon",
+        "directions": 1,
+        "delays": [
+            [
+              1.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+        ]
     },
     {
       "name": "equipped-EYES",
-      "directions": 4
-    },
-    {
-      "name": "inhand-left",
-      "directions": 4
-    },
-    {
-      "name": "inhand-right",
       "directions": 4
     }
   ]
