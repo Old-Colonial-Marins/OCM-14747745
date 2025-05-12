@@ -126,6 +126,9 @@
 
 - type: playTimeTracker
   id: JobPilotNormandy
+# Pilots --------------------------------------
+- type: playTimeTracker
+  id: JobCorrespondent
 # Xeno ----------------------------------------
 - type: playTimeTracker
   id: JobKseno

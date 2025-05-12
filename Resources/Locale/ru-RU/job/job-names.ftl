@@ -74,6 +74,7 @@ job-name-militarypoliceman = Военный полицейский
 job-name-militarypoliceofficer = Офицер военной полиции
 job-name-militaryscientist = Военный учёный
 job-name-supplyofficer = Офицер тылового обеспечения
+job-name-correspondent = Корреспондент
 job-name-rigger = Такелажник
 job-name-militarymedic = Военный врач
 job-name-militarymainmedic = Главный врач
