@@ -31,8 +31,8 @@
 - type: entity
   parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
   id: ClothingOuterArmorMarineLight
-  name: M3-L pattern light armor
-  description: A lighter, cut down version of the standard M3 pattern armor. It sacrifices durability for more speed.
+  name: Легкая броня Xenonauter-L
+  description: Облегченная версия бронежилета Xenonauter, обладающая меньшими габаритами и весом, а в следствии и большей подвижностью её владельца.
   components:
   - type: Sprite
     sprite: _CM/Clothing/OuterClothing/Armor/light_armor.rsi
@@ -55,8 +55,8 @@
 - type: entity
   parent: [ClothingOuterBase, ClothingOuterArmorUnpoweredFlashlight]
   id: ClothingOuterArmorMarineMedium
-  name: M3 pattern marine armor
-  description: A standard Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. It has a small leather pouch strapped to it for limited storage.
+  name: Броня типа Xenonauter
+  description: A standard Colonial Marines M3 Pattern Chestplate. Стандартная бевая броня, уже какой год стоящая на вооружении колониальной пехоты, золотая середина в мире надёжности и защиты.
   components:
   - type: Sprite
     sprite: _CM/Clothing/OuterClothing/Armor/medium_armor.rsi
@@ -79,8 +79,8 @@
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterArmorMarineHeavy
-  name: M3-EOD pattern armor
-  description: A heavier version of the standard M3 pattern armor, the armor is primarily designed to withstand ballistic, explosive, and internal damage, with the drawback of increased bulk and thus reduced movement speed, alongside little additional protection from standard blunt force impacts and biological threats.
+  name: Тяжёлая броня Xenonauter-H
+  description: Утяжеленная версия стандартного варианта брони Xenonauter, обладает большей защитой, из-за чего тяжелее и габоритнее.
   components:
   - type: Sprite
     sprite: _CM/Clothing/OuterClothing/Armor/heavy_armor.rsi
