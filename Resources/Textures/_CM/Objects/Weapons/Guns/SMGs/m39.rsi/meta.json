@@ -41,6 +41,10 @@
     },
     {
       "name": "suppressor"
+    },
+    {
+      "name": "equipped-SUITSTORAGE",
+      "directions": 4
     }
   ]
 }
