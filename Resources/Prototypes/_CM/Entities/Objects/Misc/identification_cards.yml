@@ -477,3 +477,16 @@
     jobIcon: JobIconPilotMech
   - type: PresetIdCard
     job: PilotMech
+#Service--------------------------------
+- type: entity
+  parent: IDCardMarine
+  id: CorrespondentIDCard
+  name: Correspondent dog tag
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: IdCard
+    jobIcon: JobIconReporter
+  - type: PresetIdCard
+    job: Correspondent

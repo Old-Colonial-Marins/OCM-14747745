@@ -25,3 +25,4 @@ department-MedicalUnit = Медсанчасть
 department-ConstructionBattalion = Стройбат
 department-Xeno = Ксеноморфы
 department-Planetallow = Планета
+department-Service = Сервисный отдел
