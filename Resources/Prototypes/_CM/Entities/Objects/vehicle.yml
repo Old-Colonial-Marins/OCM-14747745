@@ -173,3 +173,17 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
+
+- type: entity
+  name: Truck spawner
+  id: CMTruckSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _CM/vehicle/cargo_tank.rsi
+        state: truck
+  - type: ConditionalSpawner
+    prototypes:
+      - VehicleTruck
