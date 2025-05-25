@@ -1,6 +1,6 @@
-ent-CMFPVDroneControl = Консоль FPV дрона
+ent-CMFPVDroneControl = консоль FPV дрона
     .desc = Контролируй свой FPV дрон и наблюдай мир через очки!
 ent-ClothingEyesFpv = FPV очки
     .desc = Серые защитные очки, изготовленые из высококласного полимера, который обеспечивает защиту от повреждений глаз всех видов.
-ent-ToolboxDroneMarine = Ящик с FPV
+ent-ToolboxDroneMarine = ящик с FPV
     .desc = Ящик, содержащий FPV дрон.
