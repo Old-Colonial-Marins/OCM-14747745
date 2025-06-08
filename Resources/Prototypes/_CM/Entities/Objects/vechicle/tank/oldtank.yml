@@ -1,0 +1,225 @@
+- type: entity
+  id: oldtank
+  parent: BaseMech
+  name: старий танк
+  description: ЧТО
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: _CM/vehicle/oldtank/oldtank.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: sidewinder    
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/_CM/Vehicle/tank_driving.ogg
+  - type: Mech
+    baseState: oldtankbase
+    openState: oldtank-open
+    brokenState: oldtank-broken
+    mechToPilotDamageMultiplier: 0
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    maxEquipmentAmount: 2
+    maxintegrity: 2000
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.5
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 40
+        Structural: 70
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.8,-0.8,0.8,0.8"
+        density: 100
+        mask:
+        - LargeMobMask
+        layer:
+        - MobLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2500
+      behaviors:
+        - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 4
+    totalIntensity: 200
+
+  - type: AccessReader
+    
+
+
+
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: true
+    radius: 6.5
+    softness: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+      mech-equipment-container:
+      - 65mmGun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+- type: entity
+  id: OldTankChassis
+  parent: BaseRipleyTankPart
+  name: Шасси старинного танка
+  description: An in-progress construction
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: ripley
+  - type: Sprite
+    sprite: _CM/vehicle/oldtank/oldtank_constract.rsi
+    noRot: true
+    state: oldtank_constract
+  - type: Construction
+    graph: oldtankGraph
+    node: start
+    defaultTarget: tank
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.001
+    sprintModifier: 0.001
+  - type: HeldSpeedModifier
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.2,-1.9,1.2,1.9"
+        density: 1000
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+
+- type: constructionGraph
+  id: oldtankGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: tank
+      steps:
+      - material: Steel
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 1
+
+
+      - material: Steel
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 1
+
+
+
+      - material: Steel
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 1
+
+
+      - material: Cable
+        amount: 30
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 4
+
+      - tag: TankMainGunCannon
+        name: Главная пушка танка
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 3
+
+      - tag: TankTrans
+        name: Гидромеханическая коробка передач
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 4
+
+      - tool: Welding
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 1
+
+      - component: PowerCell
+        name: Источник энергии
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechVisualLayers.Base"
+          data: 4
+
+
+
+      - tool: Welding
+        doAfter: 1
+
+  - node: tank
+    actions:
+    - !type:BuildMech
+      mechPrototype: oldtank

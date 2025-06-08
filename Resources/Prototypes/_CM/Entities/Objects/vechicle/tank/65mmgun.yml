@@ -1,0 +1,108 @@
+- type: entity
+  id: Magazine65mmGun
+  name: Magazine65mmGun
+  parent: BaseItem
+  components:
+
+  - type: BallisticAmmoProvider
+    proto: 65mmShell
+    capacity: 10000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/scatter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Large
+
+
+
+
+- type: entity
+  name: 65mmGun
+  parent: BaseMechWeapon
+  id: 65mmGun
+  description: a big gun
+  components:
+  - type: Sprite
+    state: mecha_scatter
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine65mmGun
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineShotgunMech
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+
+
+
+
+
+
+
+
+- type: entity
+  id: 65mmShell
+  name: 65mmShell
+  parent: BaseShellShotgun
+  components:
+
+
+
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+      - state: rpg
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: Pellet65mm
+    count: 1
+    spread: 0
+  - type: SpentAmmoVisuals
+    state: "slug"
+
+
+- type: entity
+  id: Pellet65mm
+  name: Pellet65mm
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: frag
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 300
+        Structural: 100
+
+
