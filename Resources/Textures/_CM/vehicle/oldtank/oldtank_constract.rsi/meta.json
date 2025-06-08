@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 100,
+    "y": 50
+  },
+  "states": [
+    {
+      "name": "oldtank_constract"
+    }
+  ]
+}
