@@ -1,0 +1,21 @@
+- type: job
+  id: Correspondent
+  name: job-name-correspondent
+  description: job-description-correspondent
+  playTimeTracker: JobCorrespondent
+  startingGear: CorrespondentGear
+  icon: "JobIconReporter"
+  supervisors: job-supervisors-commander
+  canBeAntag: false
+  access:
+    - Service
+    - Maintenance
+- type: startingGear
+  id: CorrespondentGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitReporter
+    id: CorrespondentIDCard
+    ears: ClothingHeadsetService
+    pocket1: EmergencyMedipen
+    back: ClothingBackpack
+    shoes: ClothingShoesColorWhite
